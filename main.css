@@ -1,0 +1,53 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid lightgray;
+}
+
+.app-title {
+  text-align: center;
+  margin: 25px auto;
+}
+
+.app {
+  width: 250px;
+  height: 550px;
+  margin: 25px auto;
+  /* border: 2px solid red; */
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th,
+td {
+  /* border: solid 1px black; */
+  word-wrap: break-word;
+}
+
+/* height prevents row expanding for multiline text
+  transform balances text displacement by div
+   */
+td div {
+  height: 0px;
+  transform: translateY(-15px);
+}
+
+td button {
+  font-size: 20px;
+  padding: 5px;
+}
