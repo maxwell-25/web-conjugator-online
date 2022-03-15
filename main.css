@@ -6,11 +6,29 @@
 }
 
 header {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-  height: 50px;
+  align-items: center; */
+  text-align: center;
+  height: 80px;
   border-bottom: 1px solid lightgray;
+}
+
+.title {
+  margin: 15px 0px
+}
+
+.nav {
+  display: inline-block;
+}
+
+.info {
+  margin: 30px 30px;
+  line-height: 20px;;
+}
+
+p {
+  margin-bottom: 25px;
 }
 
 .app-title {
