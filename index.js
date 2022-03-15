@@ -1,0 +1,1 @@
+document.getElementById("yo-ending").innerText = "-o"

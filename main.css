@@ -15,7 +15,7 @@ header {
 }
 
 #main-title {
-  margin: 15px 0px
+  margin: 15px 0px;
 }
 
 #nav {
@@ -23,12 +23,12 @@ header {
 }
 
 #nav a {
-  margin: 0px 15px
+  margin: 0px 15px;
 }
 
 .info {
   margin: 50px 30px;
-  line-height: 20px;;
+  line-height: 20px;
 }
 
 p {
