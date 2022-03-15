@@ -14,16 +14,20 @@ header {
   border-bottom: 1px solid lightgray;
 }
 
-.title {
+#main-title {
   margin: 15px 0px
 }
 
-.nav {
+#nav {
   display: inline-block;
 }
 
+#nav a {
+  margin: 0px 15px
+}
+
 .info {
-  margin: 30px 30px;
+  margin: 50px 30px;
   line-height: 20px;;
 }
 
@@ -31,14 +35,14 @@ p {
   margin-bottom: 25px;
 }
 
-.app-title {
+#app-title {
   text-align: center;
   margin: 25px auto;
 }
 
-.app {
+#app {
   width: 250px;
-  height: 550px;
+  height: 350px;
   margin: 25px auto;
   /* border: 2px solid red; */
 }
@@ -57,9 +61,8 @@ td {
   word-wrap: break-word;
 }
 
-/* height prevents row expanding for multiline text
-  transform balances text displacement by div
-   */
+/* height property prevents row expanding for multiline text;
+transform property balances text displacement caused by div */
 td div {
   height: 0px;
   transform: translateY(-15px);
