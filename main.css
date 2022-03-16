@@ -41,7 +41,8 @@ p {
 
 #app {
   margin: 25px auto;
-  width: 250px;
+  width: 260px;
+  padding: 5px;
   border: 2px solid black;
 }
 
