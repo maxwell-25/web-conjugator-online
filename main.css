@@ -39,15 +39,24 @@ p {
   margin-bottom: 25px;
 }
 
-#app-title {
-  text-align: center;
+#app {
   margin: 25px auto;
+  width: 250px;
+  border: 2px solid black;
 }
 
-#app {
+#app-title {
+  text-align: center;
+  margin-top: 15px;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+}
+
+#app-main {
   width: 250px;
   height: 350px;
-  margin: 25px auto;
+  margin: 15px auto;
   /* border: 2px solid red; */
 }
 
@@ -73,6 +82,6 @@ td div {
 }
 
 td button {
-  font-size: 20px;
+  font-size: 16px;
   padding: 5px;
 }
