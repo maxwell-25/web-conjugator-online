@@ -1,0 +1,37 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+header {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  text-align: center;
+  height: 80px;
+  border-bottom: 1px solid lightgray;
+}
+
+#main-title {
+  margin: 15px 0px;
+}
+
+#nav {
+  display: inline-block;
+}
+
+#nav a {
+  margin: 0px 15px;
+}
+
+.info {
+  margin: 50px 50px;
+  line-height: 20px;
+}
+
+.info h2,
+p {
+  margin-bottom: 25px;
+}
