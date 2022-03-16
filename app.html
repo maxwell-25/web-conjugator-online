@@ -12,17 +12,21 @@
     <title>Conjugator - Practice</title>
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/app.css">
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous">
+    </script>
+    <script>
+      $(function () {
+        $("#header").load("header.html");
+      });
+    </script>
   </head>
   <body>
-    <!-- HEADER - TO AUTOMATE WITH JAVASCRIPT-->
+    <!-- HEADER -->
     <header>
-      <div id="main-title"><h1>Conjugator</h1></div>
-      <nav id="nav">
-        <a href="index.html">Home</a>
-        <a href="#">Learn</a>
-        <a href="./app.html">Practice</a>
-        <a href="#">Test</a>
-      </div>
+      <div id="header"></div>
     </header>
     <!-- APPLICATION -->
     <div id="app">
