@@ -1,57 +1,104 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-weight: normal;
-}
-
 :root {
-  --heading-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  --text-font: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  --heading-font: "Montserrat", sans-serif;
+  --text-font: "Roboto", sans-serif;
 }
 
 /* GENERIC CLASSES */
 
-header {
-  text-align: center;
-  height: 80px;
-  border-bottom: 1px solid lightgray;
+html {
+  margin: 0px;
+  padding: 0px;
+  font-weight: normal;
 }
 
-h1,
+h1 {
+  font-family: var(--heading-font);
+}
+
 h2 {
   font-family: var(--heading-font);
+  margin-bottom: 40px;
 }
 
 p {
   font-family: var(--text-font);
+  color: #6e7076;
+  margin-bottom: 40px;
+  line-height: 25px;
 }
 
 /* HEADER */
 
-#main-title {
-  margin: 15px 0px;
-}
-
-#nav {
-  display: inline-block;
-}
-
-#nav a {
-  margin: 0px 15px;
+#js-header {
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 75px;
   font-family: var(--heading-font);
 }
 
-/* MAIN TEXT */
+/* sets flex-grow for left and right divs to 1, meaning:
+-only they will grow
+-they both get same widths - and will eventually distribute available space
+-center element will always be perfectly centered
+  */
+nav,
+.flex-dummy {
+  flex: 1;
+}
+
+img {
+  padding-left: 15px;
+  width: 20px;
+}
+
+.dropdown {
+  margin: 0px;
+  padding-left: 15px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+li {
+  display: block;
+  transition-duration: 0.5s;
+  line-height: 50px;
+}
+
+li:hover {
+  cursor: pointer;
+  /* background-color: grey; */
+}
+
+ul li ul {
+  opacity: 0;
+  transition: all 0.5s ease;
+  /* when display != none and position != absolute, dropdown items move border-bottom of #js-header */
+  /* position: absolute; */
+  display: none;
+}
+
+li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover {
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
+
+/* INFO */
 
 .info {
   margin: 50px 50px;
   line-height: 20px;
-}
-
-.info h2,
-p {
-  margin-bottom: 25px;
 }
 
 .info a {

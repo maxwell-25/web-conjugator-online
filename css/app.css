@@ -39,6 +39,7 @@ td {
   /* border: solid 1px black; */
   word-wrap: break-word;
   font-family: var(--text-font);
+  color: #6e7076;
 }
 
 /* height property prevents row expanding for multiline text;
@@ -46,25 +47,12 @@ td {
 td div {
   height: 18px;
   transform: translateY(-9px);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: var(--text-font);
 }
 
 td button {
   font-size: 16px;
+  font-family: var(--text-font);
   padding: 5px;
-  outline: none;
-  background-color: rgb(173, 200, 230);
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
   cursor: pointer;
-}
-
-td button:hover {
-  background-color: rgb(61, 127, 150);
-}
-
-td button:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
 }
