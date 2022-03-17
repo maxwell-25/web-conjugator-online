@@ -10,10 +10,15 @@
   --text-font: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-h1 {
-  font-family: var(--heading-font);
+/* GENERIC CLASSES */
+
+header {
+  text-align: center;
+  height: 80px;
+  border-bottom: 1px solid lightgray;
 }
 
+h1,
 h2 {
   font-family: var(--heading-font);
 }
@@ -22,14 +27,7 @@ p {
   font-family: var(--text-font);
 }
 
-header {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  text-align: center;
-  height: 80px;
-  border-bottom: 1px solid lightgray;
-}
+/* HEADER */
 
 #main-title {
   margin: 15px 0px;
@@ -43,6 +41,8 @@ header {
   margin: 0px 15px;
   font-family: var(--heading-font);
 }
+
+/* MAIN TEXT */
 
 .info {
   margin: 50px 50px;
