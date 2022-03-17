@@ -6,6 +6,7 @@
 }
 
 #app-title {
+  font-family: var(--heading-font);
   text-align: center;
   margin-top: 15px;
   margin-right: auto;
@@ -31,12 +32,13 @@ table {
 
 th {
   font-weight: normal;
+  font-family: var(--heading-font);
 }
 
 td {
   /* border: solid 1px black; */
   word-wrap: break-word;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: var(--text-font);
 }
 
 /* height property prevents row expanding for multiline text;
