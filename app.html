@@ -11,10 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conjugator - Practice</title>
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/app.css">
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
-    </script>
+    <link rel="stylesheet" href="./css/app.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
       $(function () {
         $("#header").load("header.html");
@@ -28,15 +26,14 @@
     </header>
     <!-- APPLICATION -->
     <div id="app">
-      <div id="app-title">
-        <h2>Present simple (-ar) <br>(stem +?)</h1>
-      </div>
+      <!-- not using "caption" tag as not included in table dimensions - causes issues with app border -->
+      <div id="app-title">Present simple (-ar) <br />(stem +?)</div>
       <div id="app-main">
         <table>
           <thead>
             <tr>
               <th>Person</th>
-              <th>?</th> 
+              <th>?</th>
               <th>Example</th>
             </tr>
           </thead>
@@ -66,7 +63,7 @@
               <!-- div allows control of row height for multiline text -->
               <td><div>vosotros/vosotras</div></td>
               <td></td>
-              <td></td>    
+              <td></td>
             </tr>
             <tr>
               <td>ellos/ellas</td>
@@ -76,7 +73,9 @@
           </tbody>
           <tfoot>
             <tr>
-              <td colspan=3><button onclick="showAnswer()">Show answer</button></td>
+              <td colspan="3">
+                <button onclick="showAnswer()">Show answer</button>
+              </td>
             </tr>
           </tfoot>
         </table>

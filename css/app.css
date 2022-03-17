@@ -20,22 +20,23 @@
   /* border: 2px solid red; */
 }
 
-#app h2 {
-  font-size: 16px;
-}
-
 table {
   width: 100%;
   height: 100%;
   table-layout: fixed;
+  /* border: 2px solid blue; */
   border-collapse: collapse;
   text-align: center;
 }
 
-th,
+th {
+  font-weight: normal;
+}
+
 td {
   /* border: solid 1px black; */
   word-wrap: break-word;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 /* height property prevents row expanding for multiline text;
@@ -43,6 +44,7 @@ td {
 td div {
   height: 18px;
   transform: translateY(-9px);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 td button {
