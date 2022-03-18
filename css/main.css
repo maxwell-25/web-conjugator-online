@@ -33,7 +33,7 @@ p {
   width: 100%;
   border-bottom: 1px solid lightgray;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
   margin-bottom: 75px;
   font-family: var(--heading-font);
@@ -44,14 +44,24 @@ p {
 -they both get same widths - and will eventually distribute available space
 -center element will always be perfectly centered
   */
-nav,
+nav {
+  flex: 1;
+  /* border: 2px solid black; */
+}
+
 .flex-dummy {
   flex: 1;
+  /* border: 2px solid black; */
+}
+
+#main-title {
+  /* border: 2px solid black; */
 }
 
 img {
   padding-left: 15px;
   width: 20px;
+  transform: translateY(8px);
 }
 
 .dropdown {
