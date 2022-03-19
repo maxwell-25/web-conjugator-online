@@ -9,14 +9,13 @@
   font-family: var(--heading-font);
 }
 
-/* FLEXBOX */
+/* HEADER FLEXBOX */
 
-/* sets flex-grow for left and right divs to 1, meaning:
-  -only they will grow
+/* set flex-grow for left and right divs (operating as spans) to 1, meaning:
+  -only these divs will grow
   -they both get same widths - and will eventually distribute available space
   -center element will always be perfectly centered
     */
-
 #button-container {
   flex: 1;
   /* border: 2px solid red; */
@@ -32,9 +31,9 @@
   /* border: 2px solid green; */
 }
 
-/* SIDENAV */
+/* NAV-SIDEBAR */
 
-/* Side nav button */
+/* Sidebar open button */
 #nav-button {
   width: 30px;
   border: none;
@@ -44,22 +43,32 @@
   cursor: pointer;
 }
 
-/* The side navigation menu */
-.sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+/* Sidebar menu */
+#nav-sidebar {
+  height: 100%;
+  width: 0; /* 0 width - change this with JavaScript for on open */
+  position: fixed;
+  z-index: 1;
+  top: 0;
   left: 0;
   background-color: white;
+  border: solid 1px lightgrey;
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  padding-top: 60px;
+  transition: 0.5s;
 }
 
-/* The navigation menu links */
-.sidenav a {
+/* Sidebar close button */
+#nav-sidebar .close-button {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Sidebar menu links */
+#nav-sidebar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -68,26 +77,16 @@
   transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
+#nav-sidebar a:hover {
   color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .close-button {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidenav {
+  #nav-sidebar {
     padding-top: 15px;
   }
-  .sidenav a {
+  #nav-sidebar a {
     font-size: 18px;
   }
 }

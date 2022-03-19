@@ -1,14 +1,12 @@
 <!-- SIDENAV OVERLAY -->
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="close-button" onclick="closeNav()"
-    >&times;</a
-  >
+<nav id="nav-sidebar">
+  <a href="#" class="close-button" onclick="closeNav()">&times;</a>
   <a href="./index.html">Welcome</a>
   <a href="#">Learn</a>
   <a href="./app.html">Practice</a>
   <a href="#">Test</a>
-</div>
-<!-- Use any element to open the sidenav -->
+</nav>
+<!-- Button for opening nav-sidebar, in container for flexbox -->
 <div id="button-container">
   <button id="nav-button" onclick="openNav()">
     <img
@@ -18,9 +16,9 @@
   </button>
 </div>
 <!-- MAIN TITLE -->
-<div id="main-title"><h1>Conjugator</h1></div>
+<div id="main-title"><h1>Conjugate</h1></div>
 <!-- DUMMY ELEMENT
-  (empty "dummy" element to allow balancing using "flex:1")-->
+  (empty "dummy" element to allow flex-layout balancing using "flex:1")-->
 <div class="flex-dummy"></div>
 <!-- JAVASCRIPT -->
 <script src="./js/header.js"></script>
