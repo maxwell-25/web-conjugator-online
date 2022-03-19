@@ -26,6 +26,11 @@
   /* border: 2px solid blue; */
 }
 
+#main-title a {
+  text-decoration: none;
+  color: black;
+}
+
 .flex-dummy {
   flex: 1;
   /* border: 2px solid green; */
@@ -52,7 +57,7 @@
   top: 0;
   left: 0;
   background-color: white;
-  border: solid 1px lightgrey;
+  border: 1px solid lightgrey;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px;
   transition: 0.5s;
