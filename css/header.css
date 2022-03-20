@@ -75,7 +75,7 @@
 #nav-sidebar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 18px;
   color: #818181;
   display: block;
   transition: 0.3s;
@@ -85,12 +85,8 @@
   color: #f1f1f1;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  #nav-sidebar {
-    padding-top: 15px;
-  }
+@media screen and (min-width: 1000px) {
   #nav-sidebar a {
-    font-size: 18px;
+    font-size: 25px;
   }
 }

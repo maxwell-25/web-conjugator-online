@@ -11,7 +11,7 @@
 
 #app-menu button {
   font-family: var(--text-font);
-  font-size: 18px;
+  font-size: 16px;
 }
 
 /* APPLICATION - PRACTICE */
@@ -21,7 +21,7 @@
   width: 90%;
   padding: 5px;
   border: 2px solid black;
-  font-size: 20px;
+  font-size: 16px;
   display: none;
 }
 
@@ -32,8 +32,8 @@
 }
 
 #app-main {
-  width: 325px;
-  height: 500px;
+  width: 310px;
+  height: 370px;
   margin: 15px auto;
   /* border: 2px solid red; */
 }
@@ -62,13 +62,13 @@ td {
 /* height property prevents row expanding for multiline text;
   transform property balances text displacement caused by div */
 td div {
-  height: 30px;
+  height: 20px;
   transform: translateY(-9px);
   font-family: var(--text-font);
 }
 
 td button {
-  font-size: 20px;
+  font-size: 16px;
   font-family: var(--text-font);
   padding: 5px;
   cursor: pointer;
@@ -82,10 +82,11 @@ td button {
   }
   #app {
     width: 350px;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   #app-main {
     width: 325px;
     height: 400px;
+  }
 }
