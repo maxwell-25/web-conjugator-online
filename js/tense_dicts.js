@@ -38,7 +38,7 @@ var pretAr = {
     "ellos/ellas": "-aron"
 }
 
-pretEr = {
+var pretEr = {
     "title": "Preterite (-er)<br>(stem + ?)",
     "yo": "-í",
     "tú": "-iste",
@@ -48,7 +48,7 @@ pretEr = {
     "ellos/ellas": "-ieron"
 }
 
-pretIr = {
+var pretIr = {
     "title": "Preterite (-ir)<br>(stem + ?)",
     "yo": "-í",
     "tú": "-iste",
@@ -58,7 +58,7 @@ pretIr = {
     "ellos/ellas": "-ieron"
 }
 
-imperfAr = {
+var imperfAr = {
     "title": "Imperfect (-ar)<br>(stem + ?)",
     "yo": "-aba",
     "tú": "-abas",
@@ -68,7 +68,7 @@ imperfAr = {
     "ellos/ellas": "-aban"
 }
 
-imperfEr = {
+var imperfEr = {
     "title": "Imperfect (-er)<br>(stem + ?)",
     "yo": "-ía",
     "tú": "-ías",
@@ -78,7 +78,7 @@ imperfEr = {
     "ellos/ellas": "-ían"
 }
 
-imperfIr = {
+var imperfIr = {
     "title": "Imperfect (-ir)<br>(stem + ?)",
     "yo": "-ía",
     "tú": "-ías",
@@ -88,7 +88,7 @@ imperfIr = {
     "ellos/ellas": "-ían"
 }
 
-futAr = {
+var futAr = {
     "title": "Future (-ar)<br>(infinitive + ?)",
     "yo": "-é",
     "tú": "-ás",
@@ -98,7 +98,7 @@ futAr = {
     "ellos/ellas": "-án"
 }
 
-futEr = {
+var futEr = {
     "title": "Future (-er)<br>(infinitive + ?)",
     "yo": "-é",
     "tú": "-ás",
@@ -108,7 +108,7 @@ futEr = {
     "ellos/ellas": "-án"
 }
 
-futIr = {
+var futIr = {
     "title": "Future (-ir)<br>(infinitive + ?)",
     "yo": "-é",
     "tú": "-ás",
@@ -118,7 +118,7 @@ futIr = {
     "ellos/ellas": "-án"
 }
 
-condAr = {
+var condAr = {
     "title": "Conditional (-ar)<br>(infinitive + ?)",
     "yo": "-ía",
     "tú": "-ías",
@@ -128,7 +128,7 @@ condAr = {
     "ellos/ellas": "-ían"
 }
 
-condEr = {
+var condEr = {
     "title": "Conditional (-er)<br>(infinitive + ?)",
     "yo": "-ía",
     "tú": "-ías",
@@ -138,7 +138,7 @@ condEr = {
     "ellos/ellas": "-ían"
 }
 
-condIr = {
+var condIr = {
     "title": "Conditional (-ir)<br>(infinitive + ?)",
     "yo": "-ía",
     "tú": "-ías",
@@ -148,7 +148,7 @@ condIr = {
     "ellos/ellas": "-ían"
 }
 
-refAr = {
+var refAr = {
     "title": "Reflexive (-ar)<br>(? + verb)",
     "yo": "me",
     "tú": "te",
@@ -158,7 +158,7 @@ refAr = {
     "ellos/ellas": "se"
 }
 
-refEr = {
+var refEr = {
     "title": "Reflexive (-er)<br>(? + verb)",
     "yo": "me",
     "tú": "te",
@@ -168,7 +168,7 @@ refEr = {
     "ellos/ellas": "se"
 }
 
-refIr = {
+var refIr = {
     "title": "Reflexive (-ir)<br>(? + verb)",
     "yo": "me",
     "tú": "te",
@@ -178,7 +178,7 @@ refIr = {
     "ellos/ellas": "se"
 }
 
-presConAr = {
+var presConAr = {
     "title": "Present continuous (-ar)<br>(? -> stem + ??)",
     "yo": "estoy/<br>-ando",
     "tú": "estás/<br>-ando",
@@ -188,7 +188,7 @@ presConAr = {
     "ellos/ellas": "estan/<br>-ando"
 }
 
-presConEr = {
+var presConEr = {
     "title": "Present continuous (-er)<br>(? -> stem + ??)",
     "yo": "estoy/<br>-iendo",
     "tú": "estás/<br>-iendo",
@@ -198,7 +198,7 @@ presConEr = {
     "ellos/ellas": "estan/<br>-iendo"
 }
 
-presConIr = {
+var presConIr = {
     "title": "Present continuous (-ir)<br>(? -> stem + ??)",
     "yo": "estoy/<br>-iendo",
     "tú": "estás/<br>-iendo",
@@ -208,7 +208,7 @@ presConIr = {
     "ellos/ellas": "estan/<br>-iendo"
 }
 
-perfAr = {
+var perfAr = {
     "title": "Perfect (-ar)<br>(? -> stem + ??)",
     "yo": "he/<br>-ado",
     "tú": "has/<br>-ado",
@@ -218,7 +218,7 @@ perfAr = {
     "ellos/ellas": "han/<br>-ado"
 }
 
-perfEr = {
+var perfEr = {
     "title": "Perfect (-er)<br>(? -> stem + ??)",
     "yo": "he/<br>-ido",
     "tú": "has/<br>-ido",
@@ -228,7 +228,7 @@ perfEr = {
     "ellos/ellas": "han/<br>-ado"
 }
 
-perfIr = {
+var perfIr = {
     "title": "Perfect (-ir)<br>(? -> stem + ??)",
     "yo": "he/<br>-ido",
     "tú": "has/<br>-ido",
@@ -238,7 +238,7 @@ perfIr = {
     "ellos/ellas": "han/<br>-ido"
 }
 
-pluperfAr = {
+var pluperfAr = {
     "title": "Pluperfect (-ar)<br>(? -> stem + ??)",
     "yo": "había/<br>-ado",
     "tú": "habías/<br>-ado",
@@ -248,7 +248,7 @@ pluperfAr = {
     "ellos/ellas": "habían/<br>-ado"
 }
 
-pluperfEr = {
+var pluperfEr = {
     "title": "Pluperfect (-er)<br>(? -> stem + ??)",
     "yo": "había/<br>-ido",
     "tú": "habías/<br>-ido",
@@ -258,7 +258,7 @@ pluperfEr = {
     "ellos/ellas": "habían/<br>-ido"
 }
 
-pluperfIr = {
+var pluperfIr = {
     "title": "Pluperfect (-ir)<br>(? -> stem + ??)",
     "yo": "había/<br>-ido",
     "tú": "habías/<br>-ido",
@@ -268,7 +268,7 @@ pluperfIr = {
     "ellos/ellas": "habían/<br>-ido"
 }
 
-presSubjAr = {
+var presSubjAr = {
     "title": "Present subjunctive (-ar)<br>(stem + ?)",
     "yo": "-e",
     "tú": "-es",
@@ -278,7 +278,7 @@ presSubjAr = {
     "ellos/ellas": "-en",
 }
 
-presSubjEr = {
+var presSubjEr = {
     "title": "Present subjunctive (-er)<br>(stem + ?)",
     "yo": "-a",
     "tú": "-as",
@@ -288,7 +288,7 @@ presSubjEr = {
     "ellos/ellas": "-an",
 }
 
-presSubjIr = {
+var presSubjIr = {
     "title": "Present subjunctive (-ir)<br>(stem + ?)",
     "yo": "-a",
     "tú": "-as",
@@ -298,42 +298,42 @@ presSubjIr = {
     "ellos/ellas": "-an",
 }
 
-imperaPosAr = {
+var imperaPosAr = {
     "title": "Positive imperative (-ar)<br>(stem + ?)",
     "tú": "-a!",
     "nosotros/nosotras": "-emos!",
     "vosotros/vosotras": "-ad!"
 }
 
-imperaPosEr = {
+var imperaPosEr = {
     "title": "Positive imperative (-er)<br>(stem + ?)",
     "tú": "-e!",
     "nosotros/nosotras": "-amos!",
     "vosotros/vosotras": "-ed!"
 }
 
-imperaPosIr = {
+var imperaPosIr = {
     "title": "Positive imperative (-ir)<br>(stem + ?)",
     "tú": "-e!",
     "nosotros/nosotras": "-amos!",
     "vosotros/vosotras": "-id!"
 }
 
-imperaNegAr = {
+var imperaNegAr = {
     "title": 'Negative imperative (-ar)<br>("No" -> stem + ?)',
     "tú": "-es!",
     "nosotros/nosotras": "-emos!",
     "vosotros/vosotras": "-éis!"
 }
 
-imperaNegEr = {
+var imperaNegEr = {
     "title": 'Negative imperative (-er)<br>("No" -> stem + ?)',
     "tú": "-as!",
     "nosotros/nosotras": "-amos!",
     "vosotros/vosotras": "-áis!"
 }
 
-imperaNegIr = {
+var imperaNegIr = {
     "title": 'Negative imperative (-ir)<br>("No" -> stem + ?)',
     "tú": "-as!",
     "nosotros/nosotras": "-amos!",
