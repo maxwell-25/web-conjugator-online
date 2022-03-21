@@ -1,13 +1,14 @@
 // APP-MENU
 
 // Get id of any clicked button in app-menu div to use as currentTense
-function selectTense(buttonId){
-    buttonId = buttonId || window.event;
-    buttonId = buttonId.target || buttonId.srcElement;
-    if (buttonId.nodeName === 'BUTTON'){
-        currentTense = buttonId.id;
-        console.log("current tense: " + currentTense);
-        currentTenseDicts = [buttonId.id + "Ar", buttonId.id + "Er", buttonId.id + "Ir"]
+function selectTense(clickedButton){
+    clickedButton = clickedButton || window.event; // this needs updating - event is deprecated
+    clickedButton = clickedButton.target || clickedButton.srcElement;
+    if (clickedButton.nodeName === 'BUTTON'){
+        console.log("clicked button: ", clickedButton)
+        currentTense = clickedButton.id;
+        console.log("current tense: ", currentTense);
+        currentTenseDicts = [clickedButton.id + "Ar", clickedButton.id + "Er", clickedButton.id + "Ir"]
         console.log(currentTenseDicts)
         newTenseDict();
         appView();
@@ -18,12 +19,12 @@ function selectTense(buttonId){
 // *** update table view and call function for first person to test ***
 function newTenseDict(){
     currentTenseDict = currentTenseDicts[Math.floor(Math.random() * currentTenseDicts.length)];
-    console.log("current dict: " + window[currentTenseDict]);
+    console.log("current dict: ", window[currentTenseDict]);
     updateTableTitle();
 }
 
 function updateTableTitle(){
-    // console.log("current dict title: " + currentTenseDict.title)
+    // console.log("current dict title: ", currentTenseDict.title)
     document.getElementById("app-title").innerHTML=window[currentTenseDict].title;
 }
 
