@@ -2,39 +2,43 @@
 
 #app-menu {
   display: grid;
+  height: 70vh;
   width: 90%;
+  margin: 2vh auto;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px 20px;
-  grid-auto-rows: minmax(100px, 100px);
-  margin: 30px auto;
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
 }
 
 #app-menu button {
   font-family: var(--text-font);
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /* APPLICATION - PRACTICE */
 
 #app {
-  margin: 30px auto;
-  width: 90%;
-  padding: 5px;
-  border: 2px solid black;
-  font-size: 16px;
   display: none;
+  box-sizing: border-box;
+  height: 85vh;
+  width: 90%;
+  margin: 2vh auto;
+  border: 2px solid black;
+  font-size: 18px;
+  padding: 20px;
 }
 
 #app-title {
+  height: 10%;
   font-family: var(--heading-font);
   text-align: center;
-  margin: 15px auto;
+  margin: 0 auto;
 }
 
 #app-main {
-  width: 310px;
-  height: 370px;
-  margin: 15px auto;
+  height: 90%;
+  margin: 0 auto;
   /* border: 2px solid red; */
 }
 
@@ -62,31 +66,15 @@ td {
 /* height property prevents row expanding for multiline text;
   transform property balances text displacement caused by div */
 td div {
-  height: 20px;
+  height: 18px;
   transform: translateY(-9px);
   font-family: var(--text-font);
 }
 
 td button {
-  font-size: 16px;
+  font-size: 18px;
   font-family: var(--text-font);
   padding: 5px;
   cursor: pointer;
   margin-bottom: 10px;
-}
-
-/* Ensure app retains rectangular shape on wider screens */
-@media screen and (min-width: 480px) {
-  #app-menu {
-    width: 350px;
-  }
-  #app {
-    width: 350px;
-    font-size: 16px;
-  }
-
-  #app-main {
-    width: 325px;
-    height: 400px;
-  }
 }
