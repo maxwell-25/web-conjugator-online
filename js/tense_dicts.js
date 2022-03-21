@@ -1,4 +1,4 @@
-var presSimpAr = {
+var presAr = {
     "title": "Present simple (-ar)<br>(stem + ?)",
     "yo": "-o",
     "tú": "-as",
@@ -8,7 +8,7 @@ var presSimpAr = {
     "ellos/ellas": "-an",
 }
 
-var presSimpEr = {
+var presEr = {
     "title": "Present simple (-er)<br>(stem + ?)",
     "yo": "-o",
     "tú": "-es",
@@ -18,7 +18,7 @@ var presSimpEr = {
     "ellos/ellas": "-en",
 }
 
-var presSimpIr = {
+var presIr = {
     "title": "Present simple (-ir)<br>(stem + ?)",
     "yo": "-o",
     "tú": "-es",

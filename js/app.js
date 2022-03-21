@@ -7,38 +7,10 @@ function selectTense(buttonId){
     if (buttonId.nodeName === 'BUTTON'){
         currentTense = buttonId.id;
         console.log("current tense: " + currentTense);
-        newTenseDicts();
+        currentTenseDicts = [buttonId.id + "Ar", buttonId.id + "Er", buttonId.id + "Ir"]
+        console.log(currentTenseDicts)
         newTenseDict();
         appView();
-    }
-}
-
-function newTenseDicts(){
-    if (currentTense == "pres"){
-        currentTenseDicts = [presSimpAr, presSimpEr, presSimpIr];
-        console.log("current dicts: " + currentTenseDicts);
-    } else if (currentTense == "pret"){
-        currentTenseDicts = [pretAr, pretEr, pretIr];
-    } else if (currentTense == "imperf"){
-        currentTenseDicts = [imperfAr, imperfEr, imperfIr];
-    } else if (currentTense == "fut"){
-        currentTenseDicts = [futAr, futEr, futIr];
-    } else if (currentTense == "cond"){
-        currentTenseDicts = [condAr, condEr, condIr];
-    } else if (currentTense == "ref"){
-        currentTenseDicts = [refAr, refEr, refIr];
-    } else if (currentTense == "presCon"){
-        currentTenseDicts = [presConAr, presConEr, presConIr];
-    } else if (currentTense == "perf"){
-        currentTenseDicts = [perfAr, perfEr, perfIr];
-    } else if (currentTense == "pluperf"){
-        currentTenseDicts = [pluperfAr, pluperfEr, pluperfIr];
-    } else if (currentTense == "presSubj"){
-        currentTenseDicts = [presSubjAr, presSubjEr, presSubjIr];
-    } else if (currentTense == "imperaPos"){
-        currentTenseDicts = [imperaPosAr, imperaPosEr, imperaPosIr];
-    } else if (currentTense == "imperaNeg"){
-        currentTenseDicts = [imperaNegAr, imperaNegEr, imperaNegIr];
     }
 }
 
@@ -46,13 +18,13 @@ function newTenseDicts(){
 // *** update table view and call function for first person to test ***
 function newTenseDict(){
     currentTenseDict = currentTenseDicts[Math.floor(Math.random() * currentTenseDicts.length)];
-    console.log("current dict: " + currentTenseDict.title);
+    console.log("current dict: " + window[currentTenseDict]);
     updateTableTitle();
 }
 
 function updateTableTitle(){
     // console.log("current dict title: " + currentTenseDict.title)
-    document.getElementById("app-title").innerHTML=currentTenseDict.title;
+    document.getElementById("app-title").innerHTML=window[currentTenseDict].title;
 }
 
 function appView(){
