@@ -1,23 +1,50 @@
-// APP-MENU
+// GENERAL ARRAYS AND VARIABLES
 
-// Get id of any clicked button in app-menu div to use as currentTense and generate array of dicts (-ar, -er, -ir) for that tense
-function selectTense(clickedButton){
-    clickedButton = clickedButton || window.event; // this needs updating - event is deprecated
-    clickedButton = clickedButton.target || clickedButton.srcElement;
-    if (clickedButton.nodeName === 'BUTTON'){
-        // console.log("clicked button: ", clickedButton)
-        currentTense = clickedButton.id;
-        console.log("current tense: ", currentTense);
-        console.log("current tense: ", typeof(currentTense));
-        newTenseDicts();
-        newTenseDict();
-        newPerson();
-        appView();
-    }
+var personIds = ["yo_person", "tú_person", "él/ella_person", "nosotros/nosotras_person",
+"vosotros/vosotras_person", "ellos/ellas_person"]
+
+var endingIds = ["yo_ending", "tú_ending", "él/ella_ending", "nosotros/nosotras_ending",
+"vosotros/vosotras_ending", "ellos/ellas_ending"]
+
+var exampleIds = ["yo_example", "tú_example", "él/ella_example", "nosotros/nosotras_example",
+ "vosotros/vosotras_example", "ellos/ellas_example"]
+
+var tenses = ["pres", "pret", "imperf", "fut", "cond", "ref", "presCon", "perf", "pluperf", "presSubj", "imperaPos", "imperaNeg"]
+
+var count = 0
+var correct = 0
+var percentage = 0
+
+
+                    // APP-MENU
+
+// EVENT LISTENERS
+
+document.getElementById("pres").addEventListener("click", selectTense);
+document.getElementById("pret").addEventListener("click", selectTense);
+document.getElementById("imperf").addEventListener("click", selectTense);
+document.getElementById("fut").addEventListener("click", selectTense);
+document.getElementById("cond").addEventListener("click", selectTense);
+document.getElementById("ref").addEventListener("click", selectTense);
+document.getElementById("presCon").addEventListener("click", selectTense);
+document.getElementById("perf").addEventListener("click", selectTense);
+document.getElementById("pluperf").addEventListener("click", selectTense);
+document.getElementById("presSubj").addEventListener("click", selectTense);
+document.getElementById("imperaPos").addEventListener("click", selectTense);
+document.getElementById("imperaNeg").addEventListener("click", selectTense);
+
+
+// CUSTOM FUNCTIONS
+
+function selectTense(){
+    currentTense = this.id;
+    newTenseDicts();
+    newTenseDict(); 
+    appView();
 }
 
-// Generate currentTenseDicts as variables based on currentTense; possibility to recode this to occur automatically on the menu-button click (but requires dict to be converted to variable using window[] each time thereafter)
-function newTenseDicts(){
+// Generate currentTenseDicts as variables based on currentTense
+function newTenseDicts(tense){
     if (currentTense == "pres"){
         currentTenseDicts = [presAr, presEr, presIr];
     } else if (currentTense == "pret"){
@@ -45,14 +72,51 @@ function newTenseDicts(){
     }
 }
 
-// load new dict (-ar, -er, or -ir) from active list of CurrentTenseDicts ***AND REMOVE FROM LIST***
-// *** update table view and call function for first person to test ***
+// load new dict (-ar, -er, or -ir) from active list of CurrentTenseDicts and remove from list
 function newTenseDict(){
     currentTenseDict = currentTenseDicts[Math.floor(Math.random() * currentTenseDicts.length)];
-    console.log("current dict: ", currentTenseDict);
+
+    // remove currentTenseDict from currentTenseDicts
+    var currentDictIndex = currentTenseDicts.indexOf(currentTenseDict);
+    if(currentDictIndex !== -1) {
+        currentTenseDicts.splice(currentDictIndex, 1);
+    }
+    console.log("CURRENT DICTS AFTER DELETE:", currentTenseDicts)
 
     updateTableTitle();
-    updateEndingTitle()
+    updateEndingTitle();
+
+    newPerson();
+}
+
+function newPerson(){
+    console.log("CURRENT TENSE DICT:", currentTenseDict);
+    console.log("CURRENT TENSE DICT LENGTH:", Object.keys(currentTenseDict).length);
+    if(Object.keys(currentTenseDict).length > 0){
+        currentPerson = Object.keys(currentTenseDict)[Math.floor(Math.random() * Object.keys(currentTenseDict).length)];
+        console.log("current person: ", [currentPerson + "-per"]);
+
+
+        updateEndingTitle();
+        updateEndingBlanks();
+        updateExampleText();
+
+        document.getElementById([currentPerson + "-per"]).style.color="red";
+        document.getElementById([currentPerson + "-end"]).style.color="red";
+        document.getElementById([currentPerson + "-ex"]).style.color="red";
+    }
+    else if(Object.keys(currentTenseDict).length == 0 && Object.keys(currentTenseDict).length > 0){
+        // resetTable();
+        newTenseDict();
+        updateExampleText();
+    }
+    else if(Object.keys(currentTenseDict).length == 0 && Object.keys(currentTenseDict).length == 0){
+        percentage = (correct/count)*100
+
+        // saveScore();
+        // resetTable();
+        // resetCounts();
+    }
 }
 
 function appView(){
@@ -66,7 +130,7 @@ function updateTableTitle(){
     if(Object.keys(currentTenseDict).includes("title")){
         document.getElementById("app-title").innerHTML=currentTenseDict.title;
         delete currentTenseDict.title;
-        console.log("current dict after delete: ", currentTenseDict);
+        console.log("CURRENT DICT AFTER DELETE: ", currentTenseDict);
     }
 }
 
@@ -86,6 +150,11 @@ function updateEndingBlanks(){
     else{
         document.getElementById([currentPerson + "-end"]).innerHTML="?"
     }
+}
+
+function revealEnding(){
+    console.log(currentPerson + "-end");
+    document.getElementById([currentPerson + "-end"]).innerHTML=currentTenseDict[currentPerson];
 }
 
 function updateExampleText(){
@@ -152,31 +221,16 @@ function updateExampleText(){
     }
 }
 
-function newPerson(){
-    currentPerson = Object.keys(currentTenseDict)[Math.floor(Math.random() * Object.keys(currentTenseDict).length)];
-    console.log("current person: ", [currentPerson + "-per"]);
 
-    updateEndingTitle();
-    updateEndingBlanks();
-    updateExampleText();
+// EVENT LISTENERS
+document.getElementById("show-ans").addEventListener("click", showAnswer);
 
-    document.getElementById([currentPerson + "-per"]).style.color="red";
-    document.getElementById([currentPerson + "-end"]).style.color="red";
-}
-
-// document.getElementById("yo-per").style.color="red";
-// document.getElementById("yo-end").innerHTML="?"
-// document.getElementById("yo-end").style.color="red";
-// document.getElementById("yo-ex").innerHTML="habl-";
-// document.getElementById("yo-ex").style.color="red";
+// BUTTON FUNCTIONS
 
 function showAnswer(){
-    document.getElementById("yo-per").style.color="green";
-    document.getElementById("yo-end").innerHTML="-o"
-    document.getElementById("yo-end").style.color="green";
-    document.getElementById("yo-ex").innerHTML="hablo";
-    document.getElementById("yo-ex").style.color="green";
-}
+    revealEnding();
+    // revealExample();
+    }
 
 function back(){
     document.getElementById("app-menu").style.display="grid"
