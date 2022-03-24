@@ -105,7 +105,7 @@ function newPerson(){
         document.getElementById([currentPerson + "-end"]).style.color="red";
         document.getElementById([currentPerson + "-ex"]).style.color="red";
     }
-    else if(Object.keys(currentTenseDict).length == 0 && Object.keys(currentTenseDict).length > 0){
+    else if(Object.keys(currentTenseDict).length == 0 && Object.keys(currentTenseDicts).length > 0){
         // resetTable();
         newTenseDict();
         updateExampleText();
@@ -221,16 +221,64 @@ function updateExampleText(){
     }
 }
 
+function revealExample(){
+    if(currentTense == "presCon" || currentTense == "perf" || currentTense == "pluperf"){
+        // console.log("TEST: ", document.getElementById([currentPerson + "-ex"]).innerHTML.replace("___", currentTenseDict[currentPerson].split("/")[0]).replace("-", currentTenseDict[currentPerson].split("-")[1]));
+        document.getElementById([currentPerson + "-ex"]).innerHTML = document.getElementById([currentPerson + "-ex"]).innerHTML.replace("___", currentTenseDict[currentPerson].split("/")[0]).replace("-", currentTenseDict[currentPerson].split("-")[1]);
+    }
+    else if(currentTense == "ref"){
+        document.getElementById([currentPerson + "-ex"]).innerHTML = document.getElementById([currentPerson + "-ex"]).innerHTML.replace("?", currentTenseDict[currentPerson]);
+    }
+    else{
+        document.getElementById([currentPerson + "-ex"]).innerHTML = document.getElementById([currentPerson + "-ex"]).innerHTML.replace("-", currentTenseDict[currentPerson].substr(1));
+    }
+
+    answerView();
+}
+
+function questionView(){
+    console.log("question view");
+    document.getElementById("show-ans").style.display="block";
+    document.getElementById("got-it").style.display="none";
+    document.getElementById("try-again").style.display="none";
+    
+    updateEndingTitle();
+}
+
+function answerView(){
+    console.log("answer view");
+    document.getElementById("show-ans").style.display="None";
+    document.getElementById("got-it").style.display="inline-block";
+    document.getElementById("try-again").style.display="inline-block";
+}
 
 // EVENT LISTENERS
 document.getElementById("show-ans").addEventListener("click", showAnswer);
+
+document.getElementById("got-it").addEventListener("click", gotIt);
 
 // BUTTON FUNCTIONS
 
 function showAnswer(){
     revealEnding();
-    // revealExample();
+    revealExample();
     }
+
+function gotIt(){
+    count += 1;
+    correct +=1;
+    console.log("count: ", count);
+    console.log("correct: ", correct);
+
+    document.getElementById([currentPerson + "-per"]).style.color="green";
+    document.getElementById([currentPerson + "-end"]).style.color="green";
+    document.getElementById([currentPerson + "-ex"]).style.color="green";
+
+    delete currentTenseDict.currentPerson;
+    console.log("AFTER: ", currentTenseDict);
+    newPerson();
+    questionView();
+}
 
 function back(){
     document.getElementById("app-menu").style.display="grid"

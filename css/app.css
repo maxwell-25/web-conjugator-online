@@ -78,3 +78,15 @@ td button {
   cursor: pointer;
   margin-bottom: 10px;
 }
+
+#show-answer {
+  display: block;
+}
+
+#got-it {
+  display: none;
+}
+
+#try-again {
+  display: none;
+}
