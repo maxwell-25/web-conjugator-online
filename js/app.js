@@ -1,20 +1,16 @@
 // GENERAL ARRAYS AND VARIABLES
 
-var personIds = ["yo_person", "tú_person", "él/ella_person", "nosotros/nosotras_person",
-"vosotros/vosotras_person", "ellos/ellas_person"]
+var personIds = ["yo-per", "tú-per", "él/ella-per", "nosotros/nosotras-per", "vosotros/vosotras-per", "ellos/ellas-per"]
 
-var endingIds = ["yo_ending", "tú_ending", "él/ella_ending", "nosotros/nosotras_ending",
-"vosotros/vosotras_ending", "ellos/ellas_ending"]
+var endingIds = ["yo-end", "tú-end", "él/ella-end", "nosotros/nosotras-end", "vosotros/vosotras-end", "ellos/ellas-end"]
 
-var exampleIds = ["yo_example", "tú_example", "él/ella_example", "nosotros/nosotras_example",
- "vosotros/vosotras_example", "ellos/ellas_example"]
+var exampleIds = ["yo-ex", "tú-ex", "él/ella-ex", "nosotros/nosotras-ex", "vosotros/vosotras-ex", "ellos/ellas-ex"]
 
 var tenses = ["pres", "pret", "imperf", "fut", "cond", "ref", "presCon", "perf", "pluperf", "presSubj", "imperaPos", "imperaNeg"]
 
 var count = 0
 var correct = 0
 var percentage = 0
-
 
                     // APP-MENU
 
@@ -33,14 +29,26 @@ document.getElementById("presSubj").addEventListener("click", selectTense);
 document.getElementById("imperaPos").addEventListener("click", selectTense);
 document.getElementById("imperaNeg").addEventListener("click", selectTense);
 
+document.getElementById("show-ans").addEventListener("click", showAnswer);
+document.getElementById("app-back-btn").addEventListener("click", appBack);
+document.getElementById("got-it").addEventListener("click", gotIt);
+document.getElementById("try-again").addEventListener("click", tryAgain);
+
+document.getElementById("score-back-btn").addEventListener("click", scoreBack);
+
 
 // CUSTOM FUNCTIONS
 
 function selectTense(){
     currentTense = this.id;
     newTenseDicts();
-    newTenseDict(); 
+    newTenseDict();
     appView();
+}
+
+function appView(){
+    document.getElementById("app-menu").style.display="none"
+    document.getElementById("app").style.display="block"
 }
 
 // Generate currentTenseDicts as variables based on currentTense
@@ -77,11 +85,12 @@ function newTenseDict(){
     currentTenseDict = currentTenseDicts[Math.floor(Math.random() * currentTenseDicts.length)];
 
     // remove currentTenseDict from currentTenseDicts
+    // console.log("CURRENT DICTS BEFORE DELETE:", currentTenseDicts)
     var currentDictIndex = currentTenseDicts.indexOf(currentTenseDict);
     if(currentDictIndex !== -1) {
         currentTenseDicts.splice(currentDictIndex, 1);
     }
-    console.log("CURRENT DICTS AFTER DELETE:", currentTenseDicts)
+    // console.log("CURRENT DICTS AFTER DELETE:", currentTenseDicts)
 
     updateTableTitle();
     updateEndingTitle();
@@ -90,11 +99,11 @@ function newTenseDict(){
 }
 
 function newPerson(){
-    console.log("CURRENT TENSE DICT:", currentTenseDict);
-    console.log("CURRENT TENSE DICT LENGTH:", Object.keys(currentTenseDict).length);
+    // console.log("CURRENT TENSE DICT:", currentTenseDict);
+    // console.log("CURRENT TENSE DICT LENGTH:", Object.keys(currentTenseDict).length);
     if(Object.keys(currentTenseDict).length > 0){
         currentPerson = Object.keys(currentTenseDict)[Math.floor(Math.random() * Object.keys(currentTenseDict).length)];
-        console.log("current person: ", [currentPerson + "-per"]);
+        // console.log("current person: ", currentPerson);
 
 
         updateEndingTitle();
@@ -106,23 +115,31 @@ function newPerson(){
         document.getElementById([currentPerson + "-ex"]).style.color="red";
     }
     else if(Object.keys(currentTenseDict).length == 0 && Object.keys(currentTenseDicts).length > 0){
-        // resetTable();
+        resetTable();
         newTenseDict();
         updateExampleText();
     }
     else if(Object.keys(currentTenseDict).length == 0 && Object.keys(currentTenseDict).length == 0){
-        percentage = (correct/count)*100
-
-        // saveScore();
-        // resetTable();
-        // resetCounts();
+        percentage = (correct/count)*100;
+        saveScore();
+        resetTable();
+        resetCounts();
     }
 }
 
-function appView(){
-    document.getElementById("app-menu").style.display="none"
-    document.getElementById("app").style.display="block"
+function saveScore(){
+    // console.log("PERCENTAGE: ", percentage);
+    document.getElementById("score").innerHTML="Score: " + percentage + "%";
+    document.getElementById("app").style.display="none";
+    document.getElementById("score-container").style.display="flex";
+
 }
+
+function resetCounts(){
+    count = 0;
+    correct = 0;
+}
+
 
 // TEST-TABLE
 
@@ -130,7 +147,7 @@ function updateTableTitle(){
     if(Object.keys(currentTenseDict).includes("title")){
         document.getElementById("app-title").innerHTML=currentTenseDict.title;
         delete currentTenseDict.title;
-        console.log("CURRENT DICT AFTER DELETE: ", currentTenseDict);
+        // console.log("CURRENT DICT AFTER DELETE: ", currentTenseDict);
     }
 }
 
@@ -153,7 +170,7 @@ function updateEndingBlanks(){
 }
 
 function revealEnding(){
-    console.log(currentPerson + "-end");
+    // console.log(currentPerson + "-end");
     document.getElementById([currentPerson + "-end"]).innerHTML=currentTenseDict[currentPerson];
 }
 
@@ -210,13 +227,13 @@ function updateExampleText(){
     }
     else if(currentTense == "fut" || currentTense == "cond"){
         if(document.getElementById("app-title").innerHTML.includes("-ar")){
-            document.getElementById([currentPerson + "-ex"]).innerHTML="Hablar-"
+            document.getElementById([currentPerson + "-ex"]).innerHTML="hablar-"
         }
         else if(document.getElementById("app-title").innerHTML.includes("-er")){
-            document.getElementById([currentPerson + "-ex"]).innerHTML="Comer-"
+            document.getElementById([currentPerson + "-ex"]).innerHTML="comer-"
         }
         else if(document.getElementById("app-title").innerHTML.includes("-ir")){
-            document.getElementById([currentPerson + "-ex"]).innerHTML="Vivir-"
+            document.getElementById([currentPerson + "-ex"]).innerHTML="vivir-"
         }
     }
 }
@@ -237,8 +254,8 @@ function revealExample(){
 }
 
 function questionView(){
-    console.log("question view");
-    document.getElementById("show-ans").style.display="block";
+    // console.log("question view");
+    document.getElementById("show-ans").style.display="inline-block";
     document.getElementById("got-it").style.display="none";
     document.getElementById("try-again").style.display="none";
     
@@ -246,16 +263,27 @@ function questionView(){
 }
 
 function answerView(){
-    console.log("answer view");
-    document.getElementById("show-ans").style.display="None";
+    // console.log("answer view");
+    document.getElementById("show-ans").style.display="none";
     document.getElementById("got-it").style.display="inline-block";
     document.getElementById("try-again").style.display="inline-block";
 }
 
-// EVENT LISTENERS
-document.getElementById("show-ans").addEventListener("click", showAnswer);
+function resetTable(){
+    questionView();
 
-document.getElementById("got-it").addEventListener("click", gotIt);
+    for(i in personIds){
+        document.getElementById(personIds[i]).style.color="#6e7076";
+    }
+    for(i in endingIds){
+        document.getElementById(endingIds[i]).innerHTML="";
+        document.getElementById(endingIds[i]).style.color="#6e7076";
+    }
+    for(i in exampleIds){
+        document.getElementById(exampleIds[i]).innerHTML="";
+        document.getElementById(exampleIds[i]).style.color="#6e7076";
+    }
+}
 
 // BUTTON FUNCTIONS
 
@@ -267,20 +295,47 @@ function showAnswer(){
 function gotIt(){
     count += 1;
     correct +=1;
-    console.log("count: ", count);
-    console.log("correct: ", correct);
+    // console.log("count: ", count);
+    // console.log("correct: ", correct);
 
     document.getElementById([currentPerson + "-per"]).style.color="green";
     document.getElementById([currentPerson + "-end"]).style.color="green";
     document.getElementById([currentPerson + "-ex"]).style.color="green";
 
-    delete currentTenseDict.currentPerson;
-    console.log("AFTER: ", currentTenseDict);
+    // remove currentPerson from currentTenseDict
+    // console.log("BEFORE: ", currentTenseDict);
+    delete currentTenseDict[currentPerson];
+    // console.log("AFTER: ", currentTenseDict);
+
     newPerson();
     questionView();
 }
 
-function back(){
-    document.getElementById("app-menu").style.display="grid"
-    document.getElementById("app").style.display="none"
+function tryAgain(){
+    count += 1;
+    // console.log("count: ", count);
+    // console.log("correct: ", correct);
+
+    document.getElementById([currentPerson + "-per"]).style.color="#6e7076";
+    document.getElementById([currentPerson + "-end"]).style.color="#6e7076";
+    document.getElementById([currentPerson + "-ex"]).style.color="#6e7076";
+
+    document.getElementById([currentPerson + "-end"]).innerHTML="";
+    document.getElementById([currentPerson + "-ex"]).innerHTML="";
+
+    newPerson();
+    questionView();
+}
+
+function appBack(){
+    document.getElementById("app-menu").style.display="grid";
+    document.getElementById("app").style.display="none";
+
+    resetTable();
+    resetCounts();
+}
+
+function scoreBack(){
+    document.getElementById("app-menu").style.display="grid";
+    document.getElementById("score-container").style.display="none";
 }

@@ -79,8 +79,8 @@ td button {
   margin-bottom: 10px;
 }
 
-#show-answer {
-  display: block;
+#show-ans {
+  display: inline-block;
 }
 
 #got-it {
@@ -89,4 +89,26 @@ td button {
 
 #try-again {
   display: none;
+}
+
+/* SCORE SCREEN */
+
+#score-container {
+  display: none;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 85vh;
+  align-items: center;
+  justify-content: center;
+}
+
+#score {
+  font-size: 26px;
+}
+
+#score-back-btn {
+  font-size: 18px;
+  font-family: var(--text-font);
+  padding: 5px;
+  cursor: pointer;
 }
