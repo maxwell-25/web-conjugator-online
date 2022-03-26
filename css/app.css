@@ -4,16 +4,28 @@
   display: grid;
   height: 70vh;
   width: 90%;
-  margin: 2vh auto;
+  margin: 0 auto;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  padding: 20px;
   justify-content: center;
+}
+
+#menu-title {
+  text-align: center;
+  margin: 0;
+}
+
+#menu-title p {
+  font-family: var(--text-font);
+  font-size: 18px;
+  color: black;
+  padding: 0;
+  margin: 10%;
 }
 
 #app-menu button {
   font-family: var(--text-font);
-  font-size: 18px;
+  font-size: 16px;
 }
 
 /* APPLICATION - PRACTICE */
@@ -21,22 +33,47 @@
 #app {
   display: none;
   box-sizing: border-box;
-  height: 85vh;
+  height: 80vh;
   width: 90%;
   margin: 2vh auto;
   border: 2px solid black;
-  font-size: 18px;
+  font-size: 16px;
   padding: 20px;
 }
 
-#app-title {
-  height: 10%;
+#app-title-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--heading-font);
+  margin-bottom: 10px;
+  /* border: 2px solid blue; */
+}
+
+.app-flex-dummy {
+  flex: 1;
+  /* border: 2px solid green; */
+}
+
+#app-title {
+  flex: 4;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 10px;
+  /* border: 2px solid red; */
+}
+
+#app-btn-container {
+  flex: 1;
+  /* border: 2px solid green; */
+}
+
+#quit-btn {
+  cursor: pointer;
 }
 
 #app-main {
+  display: block;
   height: 90%;
   margin: 0 auto;
   /* border: 2px solid red; */
@@ -46,9 +83,9 @@ table {
   width: 100%;
   height: 100%;
   table-layout: fixed;
-  /* border: 2px solid blue; */
   border-collapse: collapse;
   text-align: center;
+  /* border: 2px solid blue; */
 }
 
 th {
@@ -72,7 +109,7 @@ td div {
 }
 
 td button {
-  font-size: 18px;
+  font-size: 16px;
   font-family: var(--text-font);
   padding: 5px;
   cursor: pointer;
@@ -83,12 +120,23 @@ td button {
   display: inline-block;
 }
 
+#quit-btn {
+  display: block;
+  font-size: 16px;
+  font-family: var(--text-font);
+  cursor: pointer;
+}
+
 #got-it {
   display: none;
+  width: 33.3%;
+  margin-right: 5px;
 }
 
 #try-again {
   display: none;
+  width: 33.3%;
+  margin-left: 5px;
 }
 
 /* SCORE SCREEN */

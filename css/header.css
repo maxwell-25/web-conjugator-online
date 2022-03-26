@@ -16,13 +16,14 @@
   -they both get same widths - and will eventually distribute available space
   -center element will always be perfectly centered
     */
-#button-container {
+#header-button-container {
   flex: 1;
   /* border: 2px solid red; */
 }
 
 #main-title {
-  flex: 0;
+  flex: 4;
+  text-align: center;
   /* border: 2px solid blue; */
 }
 

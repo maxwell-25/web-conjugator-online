@@ -37,24 +37,37 @@
       <div id="js-header"></div>
     </header>
     <!-- APPLICATION - MENU-->
-    <div id="app-menu">
-      <button class="menu-btn" id="pres">Present</button>
-      <button class="menu-btn" id="pret">Preterite</button>
-      <button class="menu-btn" id="imperf">Imperfect</button>
-      <button class="menu-btn" id="fut">Future</button>
-      <button class="menu-btn" id="cond">Conditional</button>
-      <button class="menu-btn" id="ref">Reflexive</button>
-      <button class="menu-btn" id="presCon">Present continuous</button>
-      <button class="menu-btn" id="perf">Perfect</button>
-      <button class="menu-btn" id="pluperf">Pluperfect</button>
-      <button class="menu-btn" id="presSubj">Present subjunctive</button>
-      <button class="menu-btn" id="imperaPos">Imperative (positive)</button>
-      <button class="menu-btn" id="imperaNeg">Imperative (negative)</button>
+    <div id="app-menu-all">
+      <div id="menu-title">
+        <p>Select a tense:</p>
+      </div>
+      <div id="app-menu">
+        <button class="menu-btn" id="pres">Present</button>
+        <button class="menu-btn" id="pret">Preterite</button>
+        <button class="menu-btn" id="imperf">Imperfect</button>
+        <button class="menu-btn" id="fut">Future</button>
+        <button class="menu-btn" id="cond">Conditional</button>
+        <button class="menu-btn" id="ref">Reflexive</button>
+        <button class="menu-btn" id="presCon">Present continuous</button>
+        <button class="menu-btn" id="perf">Perfect</button>
+        <button class="menu-btn" id="pluperf">Pluperfect</button>
+        <button class="menu-btn" id="presSubj">Present subjunctive</button>
+        <button class="menu-btn" id="imperaPos">Imperative (positive)</button>
+        <button class="menu-btn" id="imperaNeg">Imperative (negative)</button>
+      </div>
     </div>
     <!-- APPLICATION - PRACTICE -->
     <div id="app">
       <!-- not using "caption" tag as not included in table dimensions - causes issues with app border -->
-      <div id="app-title">UPDATE</div>
+      <div id="app-title-container">
+        <!-- DUMMY ELEMENT
+          (empty "dummy" element to allow flex-layout balancing using "flex:1")-->
+        <div class="app-flex-dummy"></div>
+        <div id="app-title">UPDATE</div>
+        <div id="app-btn-container">
+          <button id="quit-btn">Quit</button>
+        </div>
+      </div>
       <div id="app-main">
         <table>
           <thead>
@@ -104,11 +117,6 @@
                 <button id="show-ans">Show answer</button>
                 <button id="got-it">Got it!</button>
                 <button id="try-again">Try again</button>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="3">
-                <button id="app-back-btn">Back</button>
               </td>
             </tr>
           </tfoot>

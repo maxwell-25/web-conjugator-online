@@ -30,11 +30,11 @@ document.getElementById("imperaPos").addEventListener("click", selectTense);
 document.getElementById("imperaNeg").addEventListener("click", selectTense);
 
 document.getElementById("show-ans").addEventListener("click", showAnswer);
-document.getElementById("app-back-btn").addEventListener("click", appBack);
+document.getElementById("quit-btn").addEventListener("click", appQuit);
 document.getElementById("got-it").addEventListener("click", gotIt);
 document.getElementById("try-again").addEventListener("click", tryAgain);
 
-document.getElementById("score-back-btn").addEventListener("click", scoreBack);
+document.getElementById("score-back-btn").addEventListener("click", appQuit);
 
 
 // CUSTOM FUNCTIONS
@@ -47,36 +47,36 @@ function selectTense(){
 }
 
 function appView(){
-    document.getElementById("app-menu").style.display="none"
+    document.getElementById("app-menu-all").style.display="none"
     document.getElementById("app").style.display="block"
 }
 
 // Generate currentTenseDicts as variables based on currentTense
 function newTenseDicts(tense){
     if (currentTense == "pres"){
-        currentTenseDicts = [presAr, presEr, presIr];
+        currentTenseDicts = [JSON.parse(JSON.stringify(presAr)), JSON.parse(JSON.stringify(presEr)), JSON.parse(JSON.stringify(presIr))];
     } else if (currentTense == "pret"){
-        currentTenseDicts = [pretAr, pretEr, pretIr];
+        currentTenseDicts = [JSON.parse(JSON.stringify(pretAr)), JSON.parse(JSON.stringify(pretEr)), JSON.parse(JSON.stringify(pretIr))];
     } else if (currentTense == "imperf"){
-        currentTenseDicts = [imperfAr, imperfEr, imperfIr];
+        currentTenseDicts = [JSON.parse(JSON.stringify(imperfAr)), JSON.parse(JSON.stringify(imperfEr)), JSON.parse(JSON.stringify(imperfIr))];
     } else if (currentTense == "fut"){
-        currentTenseDicts = [futAr, futEr, futIr];
+        currentTenseDicts = [JSON.parse(JSON.stringify(futAr)), JSON.parse(JSON.stringify(futEr)), JSON.parse(JSON.stringify(futIr))];
     } else if (currentTense == "cond"){
-        currentTenseDicts = [condAr, condEr, condIr];
+        currentTenseDicts = [JSON.parse(JSON.stringify(condAr)), JSON.parse(JSON.stringify(condEr)), JSON.parse(JSON.stringify(condIr))];
     } else if (currentTense == "ref"){
-        currentTenseDicts = [refAr, refEr, refIr];
+        currentTenseDicts = [JSON.parse(JSON.stringify(refAr)), JSON.parse(JSON.stringify(refEr)), JSON.parse(JSON.stringify(refIr))];
     } else if (currentTense == "presCon"){
-        currentTenseDicts = [presConAr, presConEr, presConIr];
+        currentTenseDicts = [JSON.parse(JSON.stringify(presConAr)), JSON.parse(JSON.stringify(presConEr)), JSON.parse(JSON.stringify(presConIr))];
     } else if (currentTense == "perf"){
-        currentTenseDicts = [perfAr, perfEr, perfIr];
+        currentTenseDicts = [JSON.parse(JSON.stringify(perfAr)), JSON.parse(JSON.stringify(perfEr)),JSON.parse(JSON.stringify( perfIr))];
     } else if (currentTense == "pluperf"){
-        currentTenseDicts = [pluperfAr, pluperfEr, pluperfIr];
+        currentTenseDicts = [JSON.parse(JSON.stringify(pluperfAr)), JSON.parse(JSON.stringify(pluperfEr)), JSON.parse(JSON.stringify(pluperfIr))];
     } else if (currentTense == "presSubj"){
-        currentTenseDicts = [presSubjAr, presSubjEr, presSubjIr];
+        currentTenseDicts = [JSON.parse(JSON.stringify(presSubjAr)), JSON.parse(JSON.stringify(presSubjEr)), JSON.parse(JSON.stringify(presSubjIr))];
     } else if (currentTense == "imperaPos"){
-        currentTenseDicts = [imperaPosAr, imperaPosEr, imperaPosIr];
+        currentTenseDicts = [JSON.parse(JSON.stringify(imperaPosAr)), JSON.parse(JSON.stringify(imperaPosEr)), JSON.parse(JSON.stringify(imperaPosIr))];
     } else if (currentTense == "imperaNeg"){
-        currentTenseDicts = [imperaNegAr, imperaNegEr, imperaNegIr];
+        currentTenseDicts = [JSON.parse(JSON.stringify(imperaNegAr)), JSON.parse(JSON.stringify(imperaNegEr)), JSON.parse(JSON.stringify(imperaNegIr))];
     }
 }
 
@@ -120,7 +120,7 @@ function newPerson(){
         updateExampleText();
     }
     else if(Object.keys(currentTenseDict).length == 0 && Object.keys(currentTenseDict).length == 0){
-        percentage = (correct/count)*100;
+        percentage = parseInt((correct/count)*100);
         saveScore();
         resetTable();
         resetCounts();
@@ -327,8 +327,8 @@ function tryAgain(){
     questionView();
 }
 
-function appBack(){
-    document.getElementById("app-menu").style.display="grid";
+function appQuit(){
+    document.getElementById("app-menu-all").style.display="grid";
     document.getElementById("app").style.display="none";
 
     resetTable();
@@ -336,6 +336,6 @@ function appBack(){
 }
 
 function scoreBack(){
-    document.getElementById("app-menu").style.display="grid";
+    document.getElementById("app-menu-all").style.display="grid";
     document.getElementById("score-container").style.display="none";
 }
