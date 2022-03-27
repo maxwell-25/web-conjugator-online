@@ -320,21 +320,21 @@ var imperaPosIr = {
 }
 
 var imperaNegAr = {
-    "title": 'Negative imperative (-ar)<br>("No" -> stem + ?)',
+    "title": 'Negative imperative (-ar)<br>("no" -> stem + ?)',
     "tú": "-es!",
     "nosotros/nosotras": "-emos!",
     "vosotros/vosotras": "-éis!"
 }
 
 var imperaNegEr = {
-    "title": 'Negative imperative (-er)<br>("No" -> stem + ?)',
+    "title": 'Negative imperative (-er)<br>("no" -> stem + ?)',
     "tú": "-as!",
     "nosotros/nosotras": "-amos!",
     "vosotros/vosotras": "-áis!"
 }
 
 var imperaNegIr = {
-    "title": 'Negative imperative (-ir)<br>("No" -> stem + ?)',
+    "title": 'Negative imperative (-ir)<br>("no" -> stem + ?)',
     "tú": "-as!",
     "nosotros/nosotras": "-amos!",
     "vosotros/vosotras": "-áis!"

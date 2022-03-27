@@ -1,4 +1,4 @@
-// GENERAL ARRAYS AND VARIABLES
+// ARRAYS AND VARIABLES
 
 var personIds = ["yo-per", "tú-per", "él/ella-per", "nosotros/nosotras-per", "vosotros/vosotras-per", "ellos/ellas-per"]
 
@@ -12,7 +12,9 @@ var count = 0
 var correct = 0
 var percentage = 0
 
-                    // APP-MENU
+// recode this to draw from CSS variables
+var textColor = "rgba(110, 112, 118, 1)";
+var textFaded = "rgba(110, 112, 118, 0.3)";
 
 // EVENT LISTENERS
 
@@ -29,15 +31,14 @@ document.getElementById("presSubj").addEventListener("click", selectTense);
 document.getElementById("imperaPos").addEventListener("click", selectTense);
 document.getElementById("imperaNeg").addEventListener("click", selectTense);
 
-document.getElementById("show-ans").addEventListener("click", showAnswer);
 document.getElementById("quit-btn").addEventListener("click", appQuit);
+document.getElementById("show-ans").addEventListener("click", showAnswer);
 document.getElementById("got-it").addEventListener("click", gotIt);
 document.getElementById("try-again").addEventListener("click", tryAgain);
 
-document.getElementById("score-back-btn").addEventListener("click", appQuit);
+document.getElementById("score-back-btn").addEventListener("click", scoreBack);
 
-
-// CUSTOM FUNCTIONS
+// APP-MENU
 
 function selectTense(){
     currentTense = this.id;
@@ -51,7 +52,9 @@ function appView(){
     document.getElementById("app").style.display="block"
 }
 
-// Generate currentTenseDicts as variables based on currentTense
+// MAIN
+
+// Generate currentTenseDicts as nested arrays based on currentTense
 function newTenseDicts(tense){
     if (currentTense == "pres"){
         currentTenseDicts = [JSON.parse(JSON.stringify(presAr)), JSON.parse(JSON.stringify(presEr)), JSON.parse(JSON.stringify(presIr))];
@@ -80,12 +83,12 @@ function newTenseDicts(tense){
     }
 }
 
-// load new dict (-ar, -er, or -ir) from active list of CurrentTenseDicts and remove from list
+// load new dict (-ar, -er, or -ir) at random from active list of currentTenseDicts and remove from list
 function newTenseDict(){
     currentTenseDict = currentTenseDicts[Math.floor(Math.random() * currentTenseDicts.length)];
 
-    // remove currentTenseDict from currentTenseDicts
     // console.log("CURRENT DICTS BEFORE DELETE:", currentTenseDicts)
+    // this code returns a currentTenseDict at random from currentTenseDicts
     var currentDictIndex = currentTenseDicts.indexOf(currentTenseDict);
     if(currentDictIndex !== -1) {
         currentTenseDicts.splice(currentDictIndex, 1);
@@ -98,13 +101,21 @@ function newTenseDict(){
     newPerson();
 }
 
+// select new person (yo, tú, nosotros/nosotras, etc.) at random from currentTenseDict to test
 function newPerson(){
     // console.log("CURRENT TENSE DICT:", currentTenseDict);
     // console.log("CURRENT TENSE DICT LENGTH:", Object.keys(currentTenseDict).length);
+    // this code returs a currentPerson at random from currentTenseDict
     if(Object.keys(currentTenseDict).length > 0){
         currentPerson = Object.keys(currentTenseDict)[Math.floor(Math.random() * Object.keys(currentTenseDict).length)];
         // console.log("current person: ", currentPerson);
 
+        // block out persons unused in imperative tenses
+        if(currentTense == "imperaPos" || currentTense == "imperaNeg"){
+            document.getElementById("yo-per").style.color = textFaded;
+            document.getElementById("él/ella-per").style.color = textFaded;
+            document.getElementById("ellos/ellas-per").style.color = textFaded;
+        }
 
         updateEndingTitle();
         updateEndingBlanks();
@@ -122,8 +133,6 @@ function newPerson(){
     else if(Object.keys(currentTenseDict).length == 0 && Object.keys(currentTenseDict).length == 0){
         percentage = parseInt((correct/count)*100);
         saveScore();
-        resetTable();
-        resetCounts();
     }
 }
 
@@ -200,13 +209,13 @@ function updateExampleText(){
     }
     else if(currentTense == "imperaNeg"){
         if(document.getElementById("app-title").innerHTML.includes("-ar")){
-            document.getElementById([currentPerson + "-ex"]).innerHTML="No habl-"
+            document.getElementById([currentPerson + "-ex"]).innerHTML="no habl-"
         }
         else if(document.getElementById("app-title").innerHTML.includes("-er")){
-            document.getElementById([currentPerson + "-ex"]).innerHTML="No com-"
+            document.getElementById([currentPerson + "-ex"]).innerHTML="no com-"
         }
         else if(document.getElementById("app-title").innerHTML.includes("-ir")){
-            document.getElementById([currentPerson + "-ex"]).innerHTML="No decid-"
+            document.getElementById([currentPerson + "-ex"]).innerHTML="no decid-"
         }
     }
     else if(currentTense == "ref"){
@@ -273,15 +282,15 @@ function resetTable(){
     questionView();
 
     for(i in personIds){
-        document.getElementById(personIds[i]).style.color="#6e7076";
+        document.getElementById(personIds[i]).style.color=textColor;
     }
     for(i in endingIds){
         document.getElementById(endingIds[i]).innerHTML="";
-        document.getElementById(endingIds[i]).style.color="#6e7076";
+        document.getElementById(endingIds[i]).style.color=textColor;
     }
     for(i in exampleIds){
         document.getElementById(exampleIds[i]).innerHTML="";
-        document.getElementById(exampleIds[i]).style.color="#6e7076";
+        document.getElementById(exampleIds[i]).style.color=textColor;
     }
 }
 
@@ -316,9 +325,9 @@ function tryAgain(){
     // console.log("count: ", count);
     // console.log("correct: ", correct);
 
-    document.getElementById([currentPerson + "-per"]).style.color="#6e7076";
-    document.getElementById([currentPerson + "-end"]).style.color="#6e7076";
-    document.getElementById([currentPerson + "-ex"]).style.color="#6e7076";
+    document.getElementById([currentPerson + "-per"]).style.color=textColor;
+    document.getElementById([currentPerson + "-end"]).style.color=textColor;
+    document.getElementById([currentPerson + "-ex"]).style.color=textColor;
 
     document.getElementById([currentPerson + "-end"]).innerHTML="";
     document.getElementById([currentPerson + "-ex"]).innerHTML="";
@@ -338,4 +347,7 @@ function appQuit(){
 function scoreBack(){
     document.getElementById("app-menu-all").style.display="grid";
     document.getElementById("score-container").style.display="none";
+
+    resetTable();
+    resetCounts();
 }

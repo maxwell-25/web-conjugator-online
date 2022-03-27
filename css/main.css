@@ -1,6 +1,7 @@
 :root {
   --heading-font: "Montserrat", sans-serif;
   --text-font: "Roboto", sans-serif;
+  --text-color: rgba(110, 112, 118, 1);
 }
 
 /* GENERIC CLASSES */
@@ -23,7 +24,7 @@ h2 {
 p {
   font-family: var(--text-font);
   font-size: 18px;
-  color: #6e7076;
+  color: var(--text-color);
   margin-bottom: 40px;
   line-height: 25px;
 }
