@@ -46,8 +46,6 @@
 #app-title-container {
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: var(--heading-font);
   margin-bottom: 10px;
   /* border: 2px solid blue; */
@@ -72,6 +70,11 @@
 
 #quit-btn {
   cursor: pointer;
+  display: block;
+  font-family: var(--text-font);
+  height: 100%;
+  font-size: 15px;
+  margin: 0 auto;
 }
 
 #app-main {
@@ -119,27 +122,26 @@ td button {
 }
 
 #show-ans {
-  font-size: 15px;
   display: inline-block;
-}
-
-#quit-btn {
-  display: block;
   font-size: 15px;
-  font-family: var(--text-font);
-  cursor: pointer;
+  height: 7vh;
+  margin: auto 0;
 }
 
 #got-it {
   display: none;
+  font-size: 15px;
+  height: 7vh;
   width: 33.3%;
-  margin-right: 5px;
+  margin: auto 5px;
 }
 
 #try-again {
   display: none;
+  font-size: 15px;
+  height: 7vh;
   width: 33.3%;
-  margin-left: 5px;
+  margin: auto 5px;
 }
 
 /* SCORE SCREEN */
