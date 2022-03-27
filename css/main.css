@@ -2,6 +2,7 @@
   --heading-font: "Montserrat", sans-serif;
   --text-font: "Roboto", sans-serif;
   --text-color: rgba(110, 112, 118, 1);
+  --text-faded: rgba(110, 112, 118, 0.2);
 }
 
 /* GENERIC CLASSES */

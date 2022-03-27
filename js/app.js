@@ -12,10 +12,6 @@ var count = 0
 var correct = 0
 var percentage = 0
 
-// recode this to draw from CSS variables
-var textColor = "rgba(110, 112, 118, 1)";
-var textFaded = "rgba(110, 112, 118, 0.3)";
-
 // EVENT LISTENERS
 
 document.getElementById("pres").addEventListener("click", selectTense);
@@ -112,9 +108,11 @@ function newPerson(){
 
         // block out persons unused in imperative tenses
         if(currentTense == "imperaPos" || currentTense == "imperaNeg"){
-            document.getElementById("yo-per").style.color = textFaded;
-            document.getElementById("él/ella-per").style.color = textFaded;
-            document.getElementById("ellos/ellas-per").style.color = textFaded;
+            document.getElementById("yo-per").style.color=getComputedStyle(document.getElementById("yo-per")).getPropertyValue("--text-faded");
+
+            document.getElementById("él/ella-per").style.color=getComputedStyle(document.getElementById("él/ella-per")).getPropertyValue("--text-faded");
+
+            document.getElementById("ellos/ellas-per").style.color=getComputedStyle(document.getElementById("ellos/ellas-per")).getPropertyValue("--text-faded");
         }
 
         updateEndingTitle();
@@ -282,15 +280,17 @@ function resetTable(){
     questionView();
 
     for(i in personIds){
-        document.getElementById(personIds[i]).style.color=textColor;
+        document.getElementById(personIds[i]).style.color=getComputedStyle(document.getElementById(personIds[i])).getPropertyValue("--text-color");
+        
+        ;
     }
     for(i in endingIds){
         document.getElementById(endingIds[i]).innerHTML="";
-        document.getElementById(endingIds[i]).style.color=textColor;
+        document.getElementById(endingIds[i]).style.color=getComputedStyle(document.getElementById(personIds[i])).getPropertyValue("--text-color");
     }
     for(i in exampleIds){
         document.getElementById(exampleIds[i]).innerHTML="";
-        document.getElementById(exampleIds[i]).style.color=textColor;
+        document.getElementById(exampleIds[i]).style.color=getComputedStyle(document.getElementById(personIds[i])).getPropertyValue("--text-color");
     }
 }
 
@@ -325,9 +325,7 @@ function tryAgain(){
     // console.log("count: ", count);
     // console.log("correct: ", correct);
 
-    document.getElementById([currentPerson + "-per"]).style.color=textColor;
-    document.getElementById([currentPerson + "-end"]).style.color=textColor;
-    document.getElementById([currentPerson + "-ex"]).style.color=textColor;
+    document.getElementById([currentPerson + "-per"]).style.color=getComputedStyle(document.getElementById([currentPerson + "-per"])).getPropertyValue("--text-color");
 
     document.getElementById([currentPerson + "-end"]).innerHTML="";
     document.getElementById([currentPerson + "-ex"]).innerHTML="";
