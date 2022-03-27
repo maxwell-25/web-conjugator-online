@@ -180,92 +180,92 @@ var refIr = {
 
 var presConAr = {
     "title": "Present continuous (-ar)<br>(? -> stem + ??)",
-    "yo": "estoy/<br>-ando",
-    "tú": "estás/<br>-ando",
-    "él/ella": "está/<br>-ando",
-    "nosotros/nosotras": "estamos/<br>-ando",
-    "vosotros/vosotras": "estáis/<br>-ando",
-    "ellos/ellas": "estan/<br>-ando"
+    "yo": "estoy/-ando",
+    "tú": "estás/-ando",
+    "él/ella": "está/-ando",
+    "nosotros/nosotras": "estamos/-ando",
+    "vosotros/vosotras": "estáis/-ando",
+    "ellos/ellas": "estan/-ando"
 }
 
 var presConEr = {
     "title": "Present continuous (-er)<br>(? -> stem + ??)",
-    "yo": "estoy/<br>-iendo",
-    "tú": "estás/<br>-iendo",
-    "él/ella": "está/<br>-iendo",
-    "nosotros/nosotras": "estamos/<br>-iendo",
-    "vosotros/vosotras": "estáis/<br>-iendo",
-    "ellos/ellas": "estan/<br>-iendo"
+    "yo": "estoy/-iendo",
+    "tú": "estás/-iendo",
+    "él/ella": "está/-iendo",
+    "nosotros/nosotras": "estamos/-iendo",
+    "vosotros/vosotras": "estáis/-iendo",
+    "ellos/ellas": "estan/-iendo"
 }
 
 var presConIr = {
     "title": "Present continuous (-ir)<br>(? -> stem + ??)",
-    "yo": "estoy/<br>-iendo",
-    "tú": "estás/<br>-iendo",
-    "él/ella": "está/<br>-iendo",
-    "nosotros/nosotras": "estamos/<br>-iendo",
-    "vosotros/vosotras": "estáis/<br>-iendo",
-    "ellos/ellas": "estan/<br>-iendo"
+    "yo": "estoy/-iendo",
+    "tú": "estás/-iendo",
+    "él/ella": "está/-iendo",
+    "nosotros/nosotras": "estamos/-iendo",
+    "vosotros/vosotras": "estáis/-iendo",
+    "ellos/ellas": "estan/-iendo"
 }
 
 var perfAr = {
     "title": "Perfect (-ar)<br>(? -> stem + ??)",
-    "yo": "he/<br>-ado",
-    "tú": "has/<br>-ado",
-    "él/ella": "ha/<br>-ado",
-    "nosotros/nosotras": "hemos/<br>-ado",
-    "vosotros/vosotras": "habéis/<br>-ado",
-    "ellos/ellas": "han/<br>-ado"
+    "yo": "he/-ado",
+    "tú": "has/-ado",
+    "él/ella": "ha/-ado",
+    "nosotros/nosotras": "hemos/-ado",
+    "vosotros/vosotras": "habéis/-ado",
+    "ellos/ellas": "han/-ado"
 }
 
 var perfEr = {
     "title": "Perfect (-er)<br>(? -> stem + ??)",
-    "yo": "he/<br>-ido",
-    "tú": "has/<br>-ido",
-    "él/ella": "ha/<br>-ido",
-    "nosotros/nosotras": "hemos/<br>-ido",
-    "vosotros/vosotras": "habéis/<br>-ido",
-    "ellos/ellas": "han/<br>-ado"
+    "yo": "he/-ido",
+    "tú": "has/-ido",
+    "él/ella": "ha/-ido",
+    "nosotros/nosotras": "hemos/-ido",
+    "vosotros/vosotras": "habéis/-ido",
+    "ellos/ellas": "han/-ado"
 }
 
 var perfIr = {
     "title": "Perfect (-ir)<br>(? -> stem + ??)",
-    "yo": "he/<br>-ido",
-    "tú": "has/<br>-ido",
-    "él/ella": "ha/<br>-ido",
-    "nosotros/nosotras": "hemos/<br>-ido",
-    "vosotros/vosotras": "habéis/<br>-ido",
-    "ellos/ellas": "han/<br>-ido"
+    "yo": "he/-ido",
+    "tú": "has/-ido",
+    "él/ella": "ha/-ido",
+    "nosotros/nosotras": "hemos/-ido",
+    "vosotros/vosotras": "habéis/-ido",
+    "ellos/ellas": "han/-ido"
 }
 
 var pluperfAr = {
     "title": "Pluperfect (-ar)<br>(? -> stem + ??)",
-    "yo": "había/<br>-ado",
-    "tú": "habías/<br>-ado",
-    "él/ella": "había/<br>-ado",
-    "nosotros/nosotras": "habíamos/<br>-ado",
-    "vosotros/vosotras": "habíais/<br>-ado",
-    "ellos/ellas": "habían/<br>-ado"
+    "yo": "había/-ado",
+    "tú": "habías/-ado",
+    "él/ella": "había/-ado",
+    "nosotros/nosotras": "habíamos/-ado",
+    "vosotros/vosotras": "habíais/-ado",
+    "ellos/ellas": "habían/-ado"
 }
 
 var pluperfEr = {
     "title": "Pluperfect (-er)<br>(? -> stem + ??)",
-    "yo": "había/<br>-ido",
-    "tú": "habías/<br>-ido",
-    "él/ella": "había/<br>-ido",
-    "nosotros/nosotras": "habíamos/<br>-ido",
-    "vosotros/vosotras": "habíais/<br>-ido",
-    "ellos/ellas": "habían/<br>-ido"
+    "yo": "había/-ido",
+    "tú": "habías/-ido",
+    "él/ella": "había/-ido",
+    "nosotros/nosotras": "habíamos/-ido",
+    "vosotros/vosotras": "habíais/-ido",
+    "ellos/ellas": "habían/-ido"
 }
 
 var pluperfIr = {
     "title": "Pluperfect (-ir)<br>(? -> stem + ??)",
-    "yo": "había/<br>-ido",
-    "tú": "habías/<br>-ido",
-    "él/ella": "había/<br>-ido",
-    "nosotros/nosotras": "habíamos/<br>-ido",
-    "vosotros/vosotras": "habíais/<br>-ido",
-    "ellos/ellas": "habían/<br>-ido"
+    "yo": "había/-ido",
+    "tú": "habías/-ido",
+    "él/ella": "había/-ido",
+    "nosotros/nosotras": "habíamos/-ido",
+    "vosotros/vosotras": "habíais/-ido",
+    "ellos/ellas": "habían/-ido"
 }
 
 var presSubjAr = {

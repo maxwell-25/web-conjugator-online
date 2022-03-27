@@ -99,7 +99,7 @@ th {
 }
 
 td {
-  /* border: solid 1px black; */
+  border: solid 1px black;
   word-wrap: break-word;
   font-family: var(--text-font);
   color: var(--text-color);
