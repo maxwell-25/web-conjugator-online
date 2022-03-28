@@ -1,27 +1,38 @@
-<!-- SIDENAV OVERLAY -->
-<nav id="nav-sidebar">
-  <a href="#" class="close-button" onclick="closeNav()">&times;</a>
-  <a href="./index.html">Welcome</a>
-  <a href="#">Learn</a>
-  <a href="./app.html">Practice</a>
-  <a href="#">Test</a>
-</nav>
-<!-- SIDEBAR OPEN BUTTON
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header</title>
+  </head>
+  <body>
+    <!-- SIDENAV OVERLAY -->
+    <nav id="nav-sidebar">
+      <a href="#" class="close-button" onclick="closeNav()">&times;</a>
+      <a href="./index.html">Welcome</a>
+      <a href="#">Learn</a>
+      <a href="./app.html">Practice</a>
+      <a href="#">Test</a>
+    </nav>
+    <!-- SIDEBAR OPEN BUTTON
   (Button for opening nav-sidebar, in container for flexbox) -->
-<div id="header-button-container">
-  <button id="nav-button" onclick="openNav()">
-    <img
-      src="./images/bars-solid.svg"
-      alt="menu button comprising three horizontal lines"
-    />
-  </button>
-</div>
-<!-- MAIN TITLE -->
-<div id="main-title">
-  <h1><a href="./index.html">Conjugate</a></h1>
-</div>
-<!-- DUMMY ELEMENT
+    <div id="header-button-container">
+      <button id="nav-button" onclick="openNav()">
+        <img
+          src="./images/bars-solid.svg"
+          alt="menu button comprising three horizontal lines"
+        />
+      </button>
+    </div>
+    <!-- MAIN TITLE -->
+    <div id="main-title">
+      <h1><a href="./index.html">Conjugate</a></h1>
+    </div>
+    <!-- DUMMY ELEMENT
   (empty "dummy" element to allow flex-layout balancing using "flex-grow [shorthand flex]")-->
-<div class="flex-dummy"></div>
-<!-- CUSTOM JAVASCRIPT -->
-<script src="./js/header.js"></script>
+    <div class="flex-dummy"></div>
+    <!-- CUSTOM JAVASCRIPT -->
+    <script src="./js/header.js"></script>
+  </body>
+</html>
