@@ -5,7 +5,7 @@ var presAr = {
     "él/ella": "-a",
     "nosotros/nosotras": "-amos",
     "vosotros/vosotras": "-áis",
-    "ellos/ellas": "-an",
+    "ellos/ellas": "-an"
 }
 
 var presEr = {
@@ -15,7 +15,7 @@ var presEr = {
     "él/ella": "-e",
     "nosotros/nosotras": "-emos",
     "vosotros/vosotras": "-éis",
-    "ellos/ellas": "-en",
+    "ellos/ellas": "-en"
 }
 
 var presIr = {
@@ -25,7 +25,7 @@ var presIr = {
     "él/ella": "-e",
     "nosotros/nosotras": "-imos",
     "vosotros/vosotras": "-ís",
-    "ellos/ellas": "-en",
+    "ellos/ellas": "-en"
 }
 
 var pretAr = {
@@ -275,7 +275,7 @@ var presSubjAr = {
     "él/ella": "-e",
     "nosotros/nosotras": "-emos",
     "vosotros/vosotras": "-éis",
-    "ellos/ellas": "-en",
+    "ellos/ellas": "-en"
 }
 
 var presSubjEr = {
@@ -285,7 +285,7 @@ var presSubjEr = {
     "él/ella": "-a",
     "nosotros/nosotras": "-amos",
     "vosotros/vosotras": "-áis",
-    "ellos/ellas": "-an",
+    "ellos/ellas": "-an"
 }
 
 var presSubjIr = {
@@ -295,7 +295,7 @@ var presSubjIr = {
     "él/ella": "-a",
     "nosotros/nosotras": "-amos",
     "vosotros/vosotras": "-áis",
-    "ellos/ellas": "-an",
+    "ellos/ellas": "-an"
 }
 
 var imperaPosAr = {

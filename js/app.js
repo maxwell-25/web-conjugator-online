@@ -1,16 +1,16 @@
 // ARRAYS AND VARIABLES
 
-var personIds = ["yo-per", "tú-per", "él/ella-per", "nosotros/nosotras-per", "vosotros/vosotras-per", "ellos/ellas-per"]
+var personIds = ["yo-per", "tú-per", "él/ella-per", "nosotros/nosotras-per", "vosotros/vosotras-per", "ellos/ellas-per"];
 
-var endingIds = ["yo-end", "tú-end", "él/ella-end", "nosotros/nosotras-end", "vosotros/vosotras-end", "ellos/ellas-end"]
+var endingIds = ["yo-end", "tú-end", "él/ella-end", "nosotros/nosotras-end", "vosotros/vosotras-end", "ellos/ellas-end"];
 
-var exampleIds = ["yo-ex", "tú-ex", "él/ella-ex", "nosotros/nosotras-ex", "vosotros/vosotras-ex", "ellos/ellas-ex"]
+var exampleIds = ["yo-ex", "tú-ex", "él/ella-ex", "nosotros/nosotras-ex", "vosotros/vosotras-ex", "ellos/ellas-ex"];
 
-var tenses = ["pres", "pret", "imperf", "fut", "cond", "ref", "presCon", "perf", "pluperf", "presSubj", "imperaPos", "imperaNeg"]
+var tenses = ["pres", "pret", "imperf", "fut", "cond", "ref", "presCon", "perf", "pluperf", "presSubj", "imperaPos", "imperaNeg"];
 
-var count = 0
-var correct = 0
-var percentage = 0
+var count = 0;
+var correct = 0;
+var percentage = 0;
 
 // EVENT LISTENERS
 
@@ -44,8 +44,8 @@ function selectTense(){
 }
 
 function appView(){
-    document.getElementById("app-menu-all").style.display="none"
-    document.getElementById("app").style.display="block"
+    document.getElementById("app-menu-all").style.display="none";
+    document.getElementById("app").style.display="block";
 }
 
 // MAIN
@@ -160,19 +160,19 @@ function updateTableTitle(){
 
 function updateEndingTitle(){
     if(currentTense == "presCon" || currentTense == "perf" || currentTense == "pluperf"){
-        document.getElementById("title-ending").innerHTML="? / ??"
+        document.getElementById("title-ending").innerHTML="? / ??";
     }
     else{
-        document.getElementById("title-ending").innerHTML="?"
+        document.getElementById("title-ending").innerHTML="?";
     }
 }
 
 function updateEndingBlanks(){
     if(currentTense == "presCon" || currentTense == "perf" || currentTense == "pluperf"){
-        document.getElementById([currentPerson + "-end"]).innerHTML="? / ??"
+        document.getElementById([currentPerson + "-end"]).innerHTML="? / ??";
     }
     else{
-        document.getElementById([currentPerson + "-end"]).innerHTML="?"
+        document.getElementById([currentPerson + "-end"]).innerHTML="?";
     }
 }
 
@@ -185,62 +185,62 @@ function updateExampleText(){
     if(currentTense == "pres" || currentTense == "pret" || currentTense == "imperaPos" || currentTense == "imperf" || currentTense == "presSubj"){
         // console.log("PRINT: ", document.getElementById("app-title").innerHTML);
         if(document.getElementById("app-title").innerHTML.includes("-ar")){
-            document.getElementById([currentPerson + "-ex"]).innerHTML="habl-"
+            document.getElementById([currentPerson + "-ex"]).innerHTML="habl-";
         }
         else if(document.getElementById("app-title").innerHTML.includes("-er")){
-            document.getElementById([currentPerson + "-ex"]).innerHTML="com-"
+            document.getElementById([currentPerson + "-ex"]).innerHTML="com-";
         }
         else if(document.getElementById("app-title").innerHTML.includes("-ir")){
-            document.getElementById([currentPerson + "-ex"]).innerHTML="viv-"
+            document.getElementById([currentPerson + "-ex"]).innerHTML="viv-";
         }
     }
     else if(currentTense == "presCon" || currentTense == "perf" || currentTense == "pluperf"){
         if(document.getElementById("app-title").innerHTML.includes("-ar")){
-            document.getElementById([currentPerson + "-ex"]).innerHTML="___ habl-"
+            document.getElementById([currentPerson + "-ex"]).innerHTML="___ habl-";
         }
         else if(document.getElementById("app-title").innerHTML.includes("-er")){
-            document.getElementById([currentPerson + "-ex"]).innerHTML="___ com-"
+            document.getElementById([currentPerson + "-ex"]).innerHTML="___ com-";
         }
         else if(document.getElementById("app-title").innerHTML.includes("-ir")){
-            document.getElementById([currentPerson + "-ex"]).innerHTML="___ viv-"
+            document.getElementById([currentPerson + "-ex"]).innerHTML="___ viv-";
         }
     }
     else if(currentTense == "imperaNeg"){
         if(document.getElementById("app-title").innerHTML.includes("-ar")){
-            document.getElementById([currentPerson + "-ex"]).innerHTML="no habl-"
+            document.getElementById([currentPerson + "-ex"]).innerHTML="no habl-";
         }
         else if(document.getElementById("app-title").innerHTML.includes("-er")){
-            document.getElementById([currentPerson + "-ex"]).innerHTML="no com-"
+            document.getElementById([currentPerson + "-ex"]).innerHTML="no com-";
         }
         else if(document.getElementById("app-title").innerHTML.includes("-ir")){
-            document.getElementById([currentPerson + "-ex"]).innerHTML="no decid-"
+            document.getElementById([currentPerson + "-ex"]).innerHTML="no decid-";
         }
     }
     else if(currentTense == "ref"){
         if(document.getElementById("app-title").innerHTML.includes("-ar")){
-            document.getElementById([currentPerson + "-ex"]).innerHTML="? bañ" + presAr[currentPerson].substring(1)
+            document.getElementById([currentPerson + "-ex"]).innerHTML="? bañ" + presAr[currentPerson].substring(1);
         }
         else if(document.getElementById("app-title").innerHTML.includes("-er")){
-            document.getElementById([currentPerson + "-ex"]).innerHTML="? cre" + presEr[currentPerson].substring(1)
+            document.getElementById([currentPerson + "-ex"]).innerHTML="? cre" + presEr[currentPerson].substring(1);
         }
         else if(document.getElementById("app-title").innerHTML.includes("-ir")){
             if(currentPerson == "nosotros/nosotros" || currentPerson == "vosotros/vosotras"){
-                document.getElementById([currentPerson + "-ex"]).innerHTML="? dorm" + presIr[currentPerson].substring(1)
+                document.getElementById([currentPerson + "-ex"]).innerHTML="? dorm" + presIr[currentPerson].substring(1);
             }
             else{
-                document.getElementById([currentPerson + "-ex"]).innerHTML="? duerm" + presIr[currentPerson].substring(1)
+                document.getElementById([currentPerson + "-ex"]).innerHTML="? duerm" + presIr[currentPerson].substring(1);
             }
         }
     }
     else if(currentTense == "fut" || currentTense == "cond"){
         if(document.getElementById("app-title").innerHTML.includes("-ar")){
-            document.getElementById([currentPerson + "-ex"]).innerHTML="hablar-"
+            document.getElementById([currentPerson + "-ex"]).innerHTML="hablar-";
         }
         else if(document.getElementById("app-title").innerHTML.includes("-er")){
-            document.getElementById([currentPerson + "-ex"]).innerHTML="comer-"
+            document.getElementById([currentPerson + "-ex"]).innerHTML="comer-";
         }
         else if(document.getElementById("app-title").innerHTML.includes("-ir")){
-            document.getElementById([currentPerson + "-ex"]).innerHTML="vivir-"
+            document.getElementById([currentPerson + "-ex"]).innerHTML="vivir-";
         }
     }
 }
