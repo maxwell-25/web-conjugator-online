@@ -44,7 +44,7 @@ function selectTense(){
 }
 
 function appView(){
-    document.getElementById("app-menu-all").style.display="none";
+    document.getElementById("app-menu").style.display="none";
     document.getElementById("app").style.display="block";
 }
 
@@ -335,7 +335,7 @@ function tryAgain(){
 }
 
 function appQuit(){
-    document.getElementById("app-menu-all").style.display="grid";
+    document.getElementById("app-menu").style.display="grid";
     document.getElementById("app").style.display="none";
 
     resetTable();
@@ -343,7 +343,7 @@ function appQuit(){
 }
 
 function scoreBack(){
-    document.getElementById("app-menu-all").style.display="grid";
+    document.getElementById("app-menu").style.display="grid";
     document.getElementById("score-container").style.display="none";
 
     resetTable();

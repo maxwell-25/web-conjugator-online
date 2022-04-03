@@ -16,6 +16,7 @@ html {
 .title {
   font-family: var(--heading-font);
   font-size: 32px;
+  color: black;
 }
 
 h1 {

@@ -1,6 +1,6 @@
 /* APPLICATION MENU */
 
-#app-menu {
+#app-menu-grid {
   display: grid;
   height: 70vh;
   width: 90%;
@@ -10,12 +10,8 @@
   justify-content: center;
 }
 
-#menu-title {
+#app-menu-title {
   text-align: center;
-  margin: 0;
-}
-
-#menu-title p {
   font-family: var(--heading-font);
   font-size: 18px;
   color: black;
@@ -23,7 +19,7 @@
   margin: 5vh;
 }
 
-#app-menu button {
+#app-menu-grid button {
   font-family: var(--text-font);
   color: var(--text-color);
   background-color: white;
@@ -43,7 +39,7 @@
   padding: 5px;
 }
 
-#app-title-container {
+#app-header {
   width: 100%;
   display: flex;
   font-family: var(--heading-font);
@@ -78,7 +74,7 @@
   margin: 0 auto;
 }
 
-#app-main {
+#app-body {
   display: block;
   height: 90%;
   margin: 0 auto;
@@ -161,7 +157,7 @@ td button {
 }
 
 #score-back-btn {
-  /* font-size: 15px; */
+  font-size: 15px;
   font-family: var(--text-font);
   padding: 5px;
   cursor: pointer;
