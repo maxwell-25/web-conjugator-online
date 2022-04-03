@@ -21,21 +21,21 @@ html {
 
 h1 {
   font-family: var(--heading-font);
-  margin-bottom: 40px;
+  margin-top: 50px;
+  margin-bottom: 25px;
 }
 
 p {
   font-family: var(--text-font);
   font-size: 18px;
   color: var(--text-color);
-  margin-bottom: 40px;
   line-height: 25px;
 }
 
 /* MAIN */
 
 #index-main {
-  margin: 50px 50px;
+  margin: 10px 10px;
   line-height: 20px;
 }
 

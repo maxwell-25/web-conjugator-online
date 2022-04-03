@@ -1,0 +1,57 @@
+h2{
+    font-family: var(--heading-font);
+}
+
+#learn-main{
+    margin: 10px 10px;
+    line-height: 20px;
+  }
+
+#learn-nav{
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--heading-font);
+    /* border: 1px solid black; */
+}
+
+#learn-nav ul, li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#learn-main p{
+    margin: 20px auto;
+}
+
+#learn-main #intro-text{
+    margin-bottom: 50px;
+}
+
+#learn-article table{
+    font-family: var(--text-font);
+    display: block;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#learn-article th{
+    font-weight: normal;
+    font-family: var(--heading-font);
+    border: 1px solid lightgrey;
+  }
+  
+#learn-article td{
+    /* border: solid 1px black; */
+    font-family: var(--text-font);
+    color: var(--text-color);
+    text-align: center;
+    border: 1px solid lightgrey;
+  }
+
+#learn-article a{
+    display: block;
+    margin-bottom: 50px;
+    font-family: var(--heading-font);
+}
