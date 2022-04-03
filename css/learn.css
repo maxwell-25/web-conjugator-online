@@ -1,5 +1,6 @@
 h2{
     font-family: var(--heading-font);
+    padding-top: 20px;
 }
 
 #learn-main{
@@ -8,24 +9,24 @@ h2{
   }
 
 #learn-nav{
-    padding: 0;
-    box-sizing: border-box;
     font-family: var(--heading-font);
-    /* border: 1px solid black; */
+    padding: 10px;
+    border: 1px solid lightgrey;
 }
 
-#learn-nav ul, li{
-    margin: 0;
+#learn-nav ul{
+    margin: 0; 
     padding: 0;
     list-style-type: none;
+    line-height: 30px;
 }
 
 #learn-main p{
-    margin: 20px auto;
+    margin-bottom: 20px;
 }
 
 #learn-main #intro-text{
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 #learn-article table{
@@ -50,8 +51,8 @@ h2{
     border: 1px solid lightgrey;
   }
 
-#learn-article a{
+.to-top{
     display: block;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
     font-family: var(--heading-font);
 }
