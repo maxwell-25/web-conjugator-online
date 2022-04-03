@@ -31,14 +31,14 @@ p {
   line-height: 25px;
 }
 
-/* INFO */
+/* MAIN */
 
-.info {
+#index-main {
   margin: 50px 50px;
   line-height: 20px;
 }
 
-.info a {
+#index-main a {
   font-family: var(--text-font);
 }
 

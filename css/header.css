@@ -16,23 +16,20 @@
   -they both get same widths - and will eventually distribute available space
   -center element will always be perfectly centered
     */
-#header-button-container {
+#nav-open-btn-container {
   flex: 1;
   /* border: 2px solid red; */
 }
 
-#main-title {
+#header-title {
   flex: 4;
   text-align: center;
+  text-decoration: none;
+  color: black;
   /* border: 2px solid blue; */
 }
 
-#main-title a {
-  text-decoration: none;
-  color: black;
-}
-
-.flex-dummy {
+#header-flex-dummy {
   flex: 1;
   /* border: 2px solid green; */
 }
@@ -40,7 +37,7 @@
 /* NAV-SIDEBAR */
 
 /* Sidebar open button */
-#nav-button {
+#nav-open-btn {
   width: 30px;
   border: none;
   background: none;
@@ -65,7 +62,7 @@
 }
 
 /* Sidebar close button */
-#nav-sidebar .close-button {
+#nav-sidebar #nav-close-btn {
   position: absolute;
   top: 0;
   right: 25px;
@@ -83,12 +80,12 @@
   transition: 0.3s;
 }
 
-#nav-sidebar a:hover {
-  color: #f1f1f1;
-}
-
 @media screen and (min-width: 1000px) {
   #nav-sidebar a {
     font-size: 25px;
+  }
+
+  #nav-sidebar a:hover {
+    color: #f1f1f1;
   }
 }

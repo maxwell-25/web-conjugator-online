@@ -51,7 +51,7 @@
   /* border: 2px solid blue; */
 }
 
-.app-flex-dummy {
+#app-flex-dummy {
   flex: 1;
   /* border: 2px solid green; */
 }
@@ -64,7 +64,7 @@
   /* border: 2px solid red; */
 }
 
-#app-btn-container {
+#quit-btn-container {
   flex: 1;
   /* border: 2px solid green; */
 }

@@ -9,7 +9,7 @@
   <body>
     <!-- SIDENAV OVERLAY -->
     <nav id="nav-sidebar">
-      <a href="#" class="close-button" onclick="closeNav()">&times;</a>
+      <a href="#" id="nav-close-btn">&times;</a>
       <a href="./index.html">Welcome</a>
       <a href="#">Learn</a>
       <a href="./app.html">Practice</a>
@@ -17,21 +17,19 @@
     </nav>
     <!-- SIDEBAR OPEN BUTTON
   (Button for opening nav-sidebar, in container for flexbox) -->
-    <div id="header-button-container">
-      <button id="nav-button" onclick="openNav()">
+    <div id="nav-open-btn-container">
+      <button id="nav-open-btn" onclick="openNav()">
         <img
           src="./images/bars-solid.svg"
           alt="menu button comprising three horizontal lines"
         />
       </button>
     </div>
-    <!-- MAIN TITLE -->
-    <div id="main-title">
-      <div class="title"><a href="./index.html">Conjugate</a></div>
-    </div>
+    <!-- HEADER TITLE -->
+    <a href="./index.html" id="header-title" class="title">Conjugate</a>
     <!-- DUMMY ELEMENT
   (empty "dummy" element to allow flex-layout balancing using "flex-grow [shorthand flex]")-->
-    <div class="flex-dummy"></div>
+    <div id="header-flex-dummy"></div>
     <!-- CUSTOM JAVASCRIPT -->
     <script src="./js/header.js"></script>
   </body>
