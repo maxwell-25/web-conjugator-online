@@ -87,7 +87,7 @@ table {
   table-layout: fixed;
   border-collapse: collapse;
   text-align: center;
-  /* border: 2px solid blue; */
+  border: 2px solid blue;
 }
 
 th {
