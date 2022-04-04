@@ -335,7 +335,7 @@ function tryAgain(){
 }
 
 function appQuit(){
-    document.getElementById("app-menu").style.display="grid";
+    document.getElementById("app-menu").style.display="block";
     document.getElementById("app").style.display="none";
 
     resetTable();
@@ -343,7 +343,7 @@ function appQuit(){
 }
 
 function scoreBack(){
-    document.getElementById("app-menu").style.display="grid";
+    document.getElementById("app-menu").style.display="block";
     document.getElementById("score-container").style.display="none";
 
     resetTable();
