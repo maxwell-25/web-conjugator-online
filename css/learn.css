@@ -31,24 +31,28 @@ h2{
 
 #learn-article table{
     font-family: var(--text-font);
-    display: block;
     box-sizing: border-box;
     border-collapse: collapse;
     margin-bottom: 20px;
+    border: 1px solid black;
+    width: 100%;
 }
 
 #learn-article th{
     font-weight: normal;
     font-family: var(--heading-font);
-    border: 1px solid lightgrey;
+    /* border: 1px solid lightgrey; */
   }
+
+#learn-article th[scope=row] {
+    /* color: black;  */
+}
   
 #learn-article td{
-    /* border: solid 1px black; */
     font-family: var(--text-font);
     color: var(--text-color);
     text-align: center;
-    border: 1px solid lightgrey;
+    /* border: 1px solid lightgrey; */
   }
 
 .to-top{
