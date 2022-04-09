@@ -36,7 +36,7 @@
   width: 95%;
   margin: 5% auto;
   border: 1px solid black;
-  font-size: 15px;
+  font-size: 16px;
   padding: 5px;
 }
 
@@ -54,7 +54,7 @@
   margin: 1vw;
   cursor: pointer;
   font-family: var(--text-font);
-  font-size: 15px;
+  font-size: 16px;
 }
 
 table {
@@ -87,7 +87,7 @@ td div {
 }
 
 td button {
-  /* font-size: 15px; */
+  /* font-size: 16px; */
   font-family: var(--text-font);
   padding: 5px;
   cursor: pointer;
@@ -96,14 +96,14 @@ td button {
 
 #show-ans {
   display: inline-block;
-  font-size: 15px;
+  font-size: 16px;
   height: 7vh;
   margin: auto 0;
 }
 
 #got-it {
   display: none;
-  font-size: 15px;
+  font-size: 16px;
   height: 7vh;
   width: 33.3%;
   margin: auto 5px;
@@ -111,7 +111,7 @@ td button {
 
 #try-again {
   display: none;
-  font-size: 15px;
+  font-size: 16px;
   height: 7vh;
   width: 33.3%;
   margin: auto 5px;
@@ -133,7 +133,7 @@ td button {
 }
 
 #score-back-btn {
-  font-size: 15px;
+  font-size: 16px;
   font-family: var(--text-font);
   padding: 5px;
   cursor: pointer;

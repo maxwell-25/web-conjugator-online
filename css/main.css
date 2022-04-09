@@ -17,7 +17,7 @@ html {
 .title {
   font-family: var(--heading-font);
   font-weight: var(--heading-weight);
-  font-size: 32px;
+  font-size: 28px;
   color: black;
 }
 
@@ -30,7 +30,7 @@ h1 {
 
 p {
   font-family: var(--text-font);
-  font-size: 18px;
+  font-size: 16px;
   color: var(--text-color);
   line-height: 25px;
 }
