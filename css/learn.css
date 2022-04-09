@@ -1,5 +1,6 @@
 h2{
     font-family: var(--heading-font);
+    font-weight: var(--heading-weight);
     padding-top: 20px;
 }
 
@@ -8,25 +9,19 @@ h2{
     line-height: 20px;
   }
 
-#learn-nav{
-    font-family: var(--heading-font);
-    padding: 10px;
-    border: 1px solid lightgrey;
-}
-
-#learn-nav ul{
-    margin: 0; 
-    padding: 0;
-    list-style-type: none;
-    line-height: 30px;
-}
-
 #learn-main p{
     margin-bottom: 20px;
 }
 
-#learn-main #intro-text{
+#learn-main #learn-intro-text{
     margin-bottom: 20px;
+}
+
+#learn-main ul, li{
+    font-family: var(--text-font);
+    color: var(--text-color);
+    font-size: 18px;
+    line-height: 25px;
 }
 
 #learn-article table{
@@ -43,10 +38,6 @@ h2{
     font-family: var(--heading-font);
     /* border: 1px solid lightgrey; */
   }
-
-#learn-article th[scope=row] {
-    /* color: black;  */
-}
   
 #learn-article td{
     font-family: var(--text-font);
@@ -54,6 +45,19 @@ h2{
     text-align: center;
     /* border: 1px solid lightgrey; */
   }
+
+  #learn-nav{
+    font-family: var(--heading-font);
+    padding: 10px;
+    border: 1px solid lightgrey;
+}
+
+#learn-nav ul{
+    margin: 0; 
+    padding: 0;
+    list-style-type: none;
+    line-height: 30px;
+}
 
 .to-top{
     display: block;
