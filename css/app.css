@@ -30,6 +30,7 @@
 
 #app {
   display: none;
+  position: relative;
   box-sizing: border-box;
   height: 80vh;
   width: 95%;
@@ -39,39 +40,21 @@
   padding: 5px;
 }
 
-#app-header {
-  width: 100%;
-  display: flex;
-  font-family: var(--heading-font);
-  margin-bottom: 10px;
-  /* border: 2px solid blue; */
-}
-
-#app-flex-dummy {
-  flex: 1;
-  /* border: 2px solid green; */
-}
-
 #app-title {
-  flex: 4;
-  text-align: center;
-  margin: 0;
   font-size: 16px;
+  text-align: center;
+  margin: 10px auto;
   /* border: 2px solid red; */
 }
 
-#quit-btn-container {
-  flex: 1;
-  /* border: 2px solid green; */
-}
-
 #quit-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 1vw;
   cursor: pointer;
-  display: block;
   font-family: var(--text-font);
-  height: 100%;
   font-size: 15px;
-  margin: 0 auto;
 }
 
 table {

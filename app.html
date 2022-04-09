@@ -54,17 +54,11 @@
       </figure>
       <!-- APPLICATION - PRACTICE -->
       <figure id="app">
-        <!-- not using "caption" tag as not included in table dimensions - causes issues with app border -->
-        <div id="app-header">
-          <!-- DUMMY ELEMENT
-          (empty "dummy" element to allow flex-layout balancing using "flex:1")-->
-          <div id="app-flex-dummy"></div>
-          <div id="app-title" class="title">UPDATE</div>
-          <div id="quit-btn-container">
-            <button id="quit-btn">Quit</button>
-          </div>
-        </div>
+        <button id="quit-btn">x</button>
         <table id="app-body">
+          <caption id="app-title" class="title">
+            UPDATE
+          </caption>
           <thead>
             <tr>
               <th scope="col">Person</th>
