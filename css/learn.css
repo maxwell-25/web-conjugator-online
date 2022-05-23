@@ -31,9 +31,9 @@ h3{
 #learn-article table{
     font-family: var(--text-font);
     box-sizing: border-box;
-    border-collapse: collapse;
     margin-bottom: 20px;
-    border: 1px solid black;
+    border: 1px solid grey;
+    border-radius: .5em;
     width: 100%;
 }
 
@@ -54,6 +54,7 @@ h3{
     font-family: var(--heading-font);
     padding: 10px;
     border: 1px solid lightgrey;
+    border-radius: .5em;
 }
 
 #learn-nav ul{

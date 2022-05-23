@@ -21,9 +21,58 @@
 
 #app-menu-grid button {
   font-family: var(--text-font);
-  color: var(--text-color);
-  background-color: white;
+  color: black;
+  border-radius: 1em;
+  /* background-color: white; */
   font-size: 16px;
+}
+
+.menu-btn#pres {
+  background-color: lightblue;
+}
+
+.menu-btn#pret {
+  background-color: lightcoral;
+}
+
+.menu-btn#imperf {
+  background-color: lightcyan;
+}
+
+.menu-btn#fut {
+  background-color: lightgoldenrodyellow;
+}
+
+.menu-btn#cond {
+  background-color: lightgreen;
+}
+
+.menu-btn#ref {
+  background-color: lightpink;
+}
+
+.menu-btn#presCon {
+  background-color: lightsalmon;
+}
+
+.menu-btn#perf {
+  background-color: lightseagreen;
+}
+
+.menu-btn#pluperf {
+  background-color: lightskyblue;
+}
+
+.menu-btn#presSubj {
+  background-color: lightslategray;
+}
+
+.menu-btn#imperaPos {
+  background-color: lightsteelblue;
+}
+
+.menu-btn#imperaNeg {
+  background-color: lightyellow;
 }
 
 /* APPLICATION - PRACTICE */
@@ -35,7 +84,8 @@
   height: 80vh;
   width: 95%;
   margin: 5% auto;
-  border: 1px solid black;
+  border: 1px solid grey;
+  border-radius: 1em;
   font-size: 16px;
   padding: 5px;
 }
@@ -53,6 +103,7 @@
   top: 0;
   margin: 1vw;
   cursor: pointer;
+  border-radius: 0.6em;
   font-family: var(--text-font);
   font-size: 16px;
 }
@@ -90,6 +141,7 @@ td button {
   /* font-size: 16px; */
   font-family: var(--text-font);
   padding: 5px;
+  border-radius: 0.7em;
   cursor: pointer;
   margin-bottom: 10px;
 }
