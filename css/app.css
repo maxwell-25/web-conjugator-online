@@ -188,5 +188,6 @@ td button {
   font-size: 16px;
   font-family: var(--text-font);
   padding: 5px;
+  border-radius: 0.6em;
   cursor: pointer;
 }
