@@ -11,6 +11,18 @@ h3{
     font-size: 20px;
 }
 
+.ar-end{
+    color: red;
+}
+
+.er-end{
+    color: green;
+}
+
+.ir-end{
+    color: blue;
+}
+
 
 #learn-main{
     margin: 10px 10px;
