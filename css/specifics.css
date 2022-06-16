@@ -1,0 +1,47 @@
+/* || LEARN PAGE */
+
+#learn-article table{
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid grey;
+    border-radius: 0.5em; /* NOT WORKING */
+  }
+  
+  .ar-end{
+    color: red;
+  }
+  
+  .er-end{
+    color: green;
+  }
+  
+  .ir-end{
+    color: blue;
+  }
+  
+  #learn-nav{
+    font-family: var(--heading-font);
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: .5em;
+  }
+  
+  #learn-nav ul{
+    margin: 0; 
+    padding: 0;
+    list-style-type: none;
+    line-height: 30px;
+  }
+  
+  .to-top{
+    display: block;
+    margin-bottom: 35px;
+    font-family: var(--heading-font);
+  }
+
+  /* || APP PAGE */
+
+  #app-body{
+    width: 100%;
+    height: 90%;
+  }

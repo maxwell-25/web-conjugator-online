@@ -1,4 +1,4 @@
-/* JAVASCRIPT HEADER LOAD */
+/* || JAVASCRIPT HEADER LOAD */
 #js-header {
   width: 100%;
   height: 8vh;
@@ -9,7 +9,7 @@
   font-family: var(--heading-font);
 }
 
-/* HEADER FLEXBOX */
+/* || HEADER FLEXBOX */
 
 /* set flex-grow for left and right divs (operating as spans) to 1, meaning:
   -only these divs will grow
@@ -34,7 +34,7 @@
   /* border: 2px solid green; */
 }
 
-/* NAV-SIDEBAR */
+/* || NAV-SIDEBAR */
 
 /* Sidebar open button */
 #nav-open-btn {

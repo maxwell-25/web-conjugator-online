@@ -1,58 +1,82 @@
+/* || CUSTOM PROPERTIES */
+
 :root {
   --heading-font: "Montserrat", sans-serif;
-  --heading-weight: "normal";
-  --text-font: "Roboto", sans-serif;
+  --paragraph-font: "Roboto", sans-serif;
   --text-color: rgba(110, 112, 118, 1);
-  --text-faded: rgba(110, 112, 118, 0.2);
+  --text-faded: rgba(110, 112, 118, 0.2); /* CHANGE TO CLASS AND UPDATE IN CSS*/
 }
 
-/* GENERIC CLASSES */
+/* || GENERAL STYLES */
 
-html {
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
-}
-
-.title {
-  font-family: var(--heading-font);
-  font-weight: var(--heading-weight);
-  font-size: 28px;
-  color: black;
+main {
+  margin: 10px 10px;
+  /* line-height: 20px; */
 }
 
 h1 {
   font-family: var(--heading-font);
-  font-weight: var(--heading-weight);
-  margin-top: 50px;
-  margin-bottom: 25px;
+  font-weight: normal;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+h2{
+  font-family: var(--heading-font);
+  font-weight: normal;
+  margin-top: 2em;
+}
+
+h3{
+  font-family: var(--heading-font);
+  font-weight: normal;
+  margin-top: 2em;
 }
 
 p {
-  font-family: var(--text-font);
-  font-size: 16px;
+  font-family: var(--paragraph-font);
   color: var(--text-color);
+  font-size: 16px;
   line-height: 25px;
 }
 
-/* MAIN */
-
-#index-main {
-  margin: 10px 10px;
-  line-height: 20px;
-}
-
-#index-main a {
-  font-family: var(--text-font);
-}
-
-#ul, li{
-  font-family: var(--text-font);
+ul, ol{
+  font-family: var(--paragraph-font);
   color: var(--text-color);
   font-size: 16px;
-  line-height: 40px;
+  line-height: 25px;
 }
 
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: var(--heading-font);
+  /* border: 2px solid red; */
+}
+
+th {
+  font-family: var(--heading-font);
+  font-weight: normal;
+}
+
+td {
+  font-family: var(--paragraph-font);
+  color: var(--text-color);
+  word-wrap: break-word;
+  /* border: solid 1px black; */
+}
+
+
+/* || SITEWIDE */
+.title {
+  font-size: 28px;
+  /* color: black; */
+}
+
+
+/* || RESPONSIVE DESIGN */
 
 @media screen and (min-width: 1000px) {
   html {
