@@ -36,7 +36,7 @@
   .to-top{
     display: block;
     margin-bottom: 35px;
-    font-family: var(--heading-font);
+    font-family: var(--paragraph-font);
   }
 
   /* || APP PAGE */
