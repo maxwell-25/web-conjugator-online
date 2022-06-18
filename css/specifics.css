@@ -152,10 +152,10 @@
 
 #app-menu-grid button {
   font-family: var(--paragraph-font);
-  color: white;
+  color: var(--text-color);
   border-radius: 1em;
   font-size: 16px;
-  background-color: var(--my-blue);
+  background-color: white;
   height: 6.5em;
   width: 6em;
 }
