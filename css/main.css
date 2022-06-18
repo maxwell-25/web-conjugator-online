@@ -1,4 +1,4 @@
-/* || CUSTOM PROPERTIES */
+/* | CUSTOM PROPERTIES */
 
 :root {
   --heading-font: "Montserrat", sans-serif;
@@ -10,7 +10,7 @@
   --my-blue: rgb(110, 68, 255);
 }
 
-/* || GENERAL STYLES */
+/* | GENERAL STYLES */
 
 main {
   margin: 10px 10px;
@@ -79,17 +79,17 @@ td {
   /* border: solid 1px black; */
 }
 
-/* || UTILITIES */
+/* | UTILITIES */
 
 .title {
   font-size: 28px;
 }
 
 
-/* || SITEWIDE */
+/* | SITEWIDE */
 
 
-/* || RESPONSIVE DESIGN */
+/* | RESPONSIVE DESIGN */
 
 @media screen and (min-width: 1000px) {
   html {

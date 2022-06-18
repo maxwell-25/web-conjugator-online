@@ -1,6 +1,7 @@
-/* || HEADER */
+/* | HEADER */
 
-/* Javascript header load */
+/* || Javascript header load */
+
 #js-header {
   width: 100%;
   height: 8vh;
@@ -11,7 +12,8 @@
   font-family: var(--heading-font);
 }
 
-/* Header flexbox */
+/* || Header flexbox */
+
 /* Set flex-grow for left and right divs (operating as spans) to 1, meaning:
   -only these divs will grow
   -they both get same widths - and will eventually distribute available space
@@ -35,7 +37,8 @@
   /* border: 2px solid green; */
 }
 
-/* Nav-sidebar */
+/* || Nav-sidebar */
+
 /* Sidebar open button */
 #nav-open-btn {
   width: 30px;
@@ -46,7 +49,8 @@
   cursor: pointer;
 }
 
-/* Sidebar menu */
+/* || Sidebar menu */
+
 #nav-sidebar {
   height: 100%;
   width: 0; /* 0 width - change this with JavaScript for on open */
@@ -61,7 +65,8 @@
   transition: 0.5s;
 }
 
-/* Sidebar close button */
+/* || Sidebar close button */
+
 #nav-sidebar #nav-close-btn {
   position: absolute;
   top: 0;
@@ -70,7 +75,8 @@
   margin-left: 50px;
 }
 
-/* Sidebar menu links */
+/* || Sidebar menu links */
+
 #nav-sidebar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -80,7 +86,7 @@
   transition: 0.3s;
 }
 
-/* || LEARN PAGE */
+/* | LEARN PAGE */
 
 #learn-article table{
   width: 100%;
@@ -121,9 +127,10 @@
   font-family: var(--paragraph-font);
 }
 
-/* || APP PAGE */
+/* | APP PAGE */
 
-/* App menu */
+/* || App menu */
+
 #app-menu-title {
   text-align: center;
   font-family: var(--heading-font);
@@ -153,7 +160,8 @@
   width: 6em;
 }
 
-/* App body */
+/* ||| App */
+
 #app-body{
   width: 100%;
   height: 90%;
@@ -170,4 +178,80 @@
   border-radius: 1em;
   font-size: 16px;
   padding: 5px;
+}
+
+#app-title {
+  font-size: 16px;
+  margin: 10px auto;
+  /* border: 2px solid red; */
+}
+
+#quit-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 1vw;
+  border-radius: 0.6em;
+  font-family: var(--paragraph-font);
+  font-size: 16px;
+  background-color: white;
+}
+
+/* height property prevents row expanding for multiline text;
+  transform property balances text displacement caused by div */
+td div {
+  height: 18px;
+  transform: translateY(-9px);
+  font-family: var(--paragraph-font);
+}
+
+/* Generic button code  */
+td button {
+  font-size: 16px;
+  font-family: var(--paragraph-font);
+  padding: 5px;
+  border-radius: 0.7em;
+  height: 7vh;
+  margin: auto 0;
+}
+
+#show-ans {
+  display: inline-block;
+  background-color: white;
+}
+
+#got-it {
+  display: none;
+  width: 33.3%;
+  background-color: white;
+  color: var(--my-green);
+}
+
+#try-again {
+  display: none;
+  width: 33.3%;
+  background-color: white;
+  color: var(--my-red);
+}
+
+/* || Score screen */
+
+#score-container {
+  display: none;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 85vh;
+  align-items: center;
+  justify-content: center;
+}
+
+#score {
+  font-size: 26px;
+}
+
+#score-back-btn {
+  font-size: 16px;
+  font-family: var(--paragraph-font);
+  padding: 5px;
+  border-radius: 0.7em;
 }
