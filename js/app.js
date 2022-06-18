@@ -1,4 +1,4 @@
-// ARRAYS AND VARIABLES
+// | ARRAYS AND VARIABLES
 
 var personIds = ["yo-per", "tú-per", "él/ella-per", "nosotros/nosotras-per", "vosotros/vosotras-per", "ellos/ellas-per"];
 
@@ -12,7 +12,7 @@ var count = 0;
 var correct = 0;
 var percentage = 0;
 
-// EVENT LISTENERS
+// | EVENT LISTENERS
 
 document.getElementById("pres").addEventListener("click", selectTense);
 document.getElementById("pret").addEventListener("click", selectTense);
@@ -34,7 +34,7 @@ document.getElementById("try-again").addEventListener("click", tryAgain);
 
 document.getElementById("score-back-btn").addEventListener("click", scoreBack);
 
-// APP-MENU
+// | APP-MENU
 
 function selectTense(){
     currentTense = this.id;
@@ -48,7 +48,7 @@ function appView(){
     document.getElementById("app").style.display="block";
 }
 
-// MAIN
+// | MAIN
 
 // Generate currentTenseDicts as nested arrays based on currentTense
 function newTenseDicts(tense){
@@ -150,7 +150,7 @@ function resetCounts(){
 }
 
 
-// TEST-TABLE
+// | TEST-TABLE
 
 function updateTableTitle(){
     if(Object.keys(currentTenseDict).includes("title")){
@@ -296,7 +296,7 @@ function resetTable(){
     }
 }
 
-// BUTTON FUNCTIONS
+// | BUTTON FUNCTIONS
 
 function showAnswer(){
     revealEnding();
