@@ -119,9 +119,11 @@ function newPerson(){
         updateEndingBlanks();
         updateExampleText();
 
-        document.getElementById([currentPerson + "-per"]).style.color="red";
-        document.getElementById([currentPerson + "-end"]).style.color="red";
-        document.getElementById([currentPerson + "-ex"]).style.color="red";
+        document.getElementById([currentPerson + "-per"]).style.color=getComputedStyle(document.getElementById([currentPerson + "-per"])).getPropertyValue("--my-red");
+
+        document.getElementById([currentPerson + "-end"]).style.color=getComputedStyle(document.getElementById([currentPerson + "-end"])).getPropertyValue("--my-red");
+
+        document.getElementById([currentPerson + "-ex"]).style.color=getComputedStyle(document.getElementById([currentPerson + "-ex"])).getPropertyValue("--my-red");        
     }
     else if(Object.keys(currentTenseDict).length == 0 && Object.keys(currentTenseDicts).length > 0){
         resetTable();
@@ -307,9 +309,11 @@ function gotIt(){
     // console.log("count: ", count);
     // console.log("correct: ", correct);
 
-    document.getElementById([currentPerson + "-per"]).style.color="green";
-    document.getElementById([currentPerson + "-end"]).style.color="green";
-    document.getElementById([currentPerson + "-ex"]).style.color="green";
+    document.getElementById([currentPerson + "-per"]).style.color=getComputedStyle(document.getElementById([currentPerson + "-per"])).getPropertyValue("--my-green");
+
+    document.getElementById([currentPerson + "-end"]).style.color=getComputedStyle(document.getElementById([currentPerson + "-end"])).getPropertyValue("--my-green");
+
+    document.getElementById([currentPerson + "-ex"]).style.color=getComputedStyle(document.getElementById([currentPerson + "-ex"])).getPropertyValue("--my-green");
 
     // remove currentPerson from currentTenseDict
     // console.log("BEFORE: ", currentTenseDict);

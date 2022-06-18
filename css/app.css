@@ -1,76 +1,39 @@
 /* || APPLICATION MENU */
 
-#app-menu-grid {
-  display: grid;
-  height: 70vh;
-  width: 90%;
-  margin: 0 auto;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  justify-content: center;
-}
-
-#app-menu-title {
-  text-align: center;
-  font-family: var(--heading-font);
-  font-size: 18px;
-  color: black;
-  padding: 0;
-  margin: 5vh;
-}
-
-#app-menu-grid button {
-  font-family: var(--paragraph-font);
-  color: black;
-  border-radius: 1em;
-  /* background-color: white; */
-  font-size: 16px;
-}
 
 .menu-btn#pres {
   background-color: lightblue;
 }
-
 .menu-btn#pret {
   background-color: lightcoral;
 }
-
 .menu-btn#imperf {
   background-color: lightcyan;
 }
-
 .menu-btn#fut {
   background-color: lightgoldenrodyellow;
 }
-
 .menu-btn#cond {
   background-color: lightgreen;
 }
-
 .menu-btn#ref {
   background-color: lightpink;
 }
-
 .menu-btn#presCon {
   background-color: lightsalmon;
 }
-
 .menu-btn#perf {
   background-color: lightseagreen;
 }
-
 .menu-btn#pluperf {
   background-color: lightskyblue;
 }
-
 .menu-btn#presSubj {
   background-color: lightslategray;
 }
-
 .menu-btn#imperaPos {
   background-color: lightsteelblue;
 }
-
 .menu-btn#imperaNeg {
   background-color: lightyellow;
 }

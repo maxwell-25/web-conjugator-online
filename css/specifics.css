@@ -1,47 +1,155 @@
+/* HEADER */
+
+/* Javascript header load */
+#js-header {
+  width: 100%;
+  height: 8vh;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--heading-font);
+}
+
+/* || Header flexbox */
+/* Set flex-grow for left and right divs (operating as spans) to 1, meaning:
+  -only these divs will grow
+  -they both get same widths - and will eventually distribute available space
+  -center element will always be perfectly centered
+    */
+#nav-open-btn-container {
+  flex: 1;
+  /* border: 2px solid red; */
+}
+
+#header-title {
+  flex: 4;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  /* border: 2px solid blue; */
+}
+
+#header-flex-dummy {
+  flex: 1;
+  /* border: 2px solid green; */
+}
+
+/* || Nav-sidebar */
+/* Sidebar open button */
+#nav-open-btn {
+  width: 30px;
+  border: none;
+  background: none;
+  margin-left: 15px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Sidebar menu */
+#nav-sidebar {
+  height: 100%;
+  width: 0; /* 0 width - change this with JavaScript for on open */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  border: 1px solid lightgrey;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+/* Sidebar close button */
+#nav-sidebar #nav-close-btn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Sidebar menu links */
+#nav-sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--text-color);
+  display: block;
+  transition: 0.3s;
+}
+
 /* || LEARN PAGE */
 
 #learn-article table{
     width: 100%;
     margin-bottom: 20px;
-    border: 1px solid grey;
+    border: 1px solid lightgrey;
     border-radius: 0.5em; /* NOT WORKING */
   }
   
-  .ar-end{
-    color: red;
-  }
+.ar-end{
+  color: var(--my-red);
+}
   
-  .er-end{
-    color: green;
-  }
+.er-end{
+  color: var(--my-green);
+}
   
-  .ir-end{
-    color: blue;
-  }
+.ir-end{
+  color: var(--my-blue);
+}
   
-  #learn-nav{
-    font-family: var(--heading-font);
-    padding: 10px;
-    border: 1px solid lightgrey;
-    border-radius: .5em;
-  }
+#learn-nav{
+  font-family: var(--heading-font);
+  padding: 10px;
+  border: 1px solid lightgrey;
+  border-radius: .5em;
+}
   
-  #learn-nav ul{
-    margin: 0; 
-    padding: 0;
-    list-style-type: none;
-    line-height: 30px;
-  }
+#learn-nav ul{
+  margin: 0; 
+  padding: 0;
+  list-style-type: none;
+  line-height: 30px;
+}
   
-  .to-top{
-    display: block;
-    margin-bottom: 35px;
-    font-family: var(--paragraph-font);
-  }
+.to-top{
+  display: block;
+  margin-bottom: 35px;
+  font-family: var(--paragraph-font);
+}
 
-  /* || APP PAGE */
+/* || APP PAGE */
 
-  #app-body{
-    width: 100%;
-    height: 90%;
-  }
+#app-menu-title {
+  text-align: center;
+  font-family: var(--heading-font);
+  font-size: 18px;
+  /* color: black; */
+  /* padding: 0; */
+  margin: 5vh;
+}
+
+#app-menu-grid {
+  display: grid;
+  height: 70vh;
+  /* width: 90%;
+  margin: 0 auto; */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: center;
+}
+
+#app-menu-grid button {
+  font-family: var(--paragraph-font);
+  /* color: black; */
+  border-radius: 1em;
+  font-size: 16px;
+}
+
+#app-body{
+  width: 100%;
+  height: 90%;
+}
