@@ -1,57 +1,4 @@
-/* || APPLICATION MENU */
-
-
-.menu-btn#pres {
-  background-color: lightblue;
-}
-.menu-btn#pret {
-  background-color: lightcoral;
-}
-.menu-btn#imperf {
-  background-color: lightcyan;
-}
-.menu-btn#fut {
-  background-color: lightgoldenrodyellow;
-}
-.menu-btn#cond {
-  background-color: lightgreen;
-}
-.menu-btn#ref {
-  background-color: lightpink;
-}
-.menu-btn#presCon {
-  background-color: lightsalmon;
-}
-.menu-btn#perf {
-  background-color: lightseagreen;
-}
-.menu-btn#pluperf {
-  background-color: lightskyblue;
-}
-.menu-btn#presSubj {
-  background-color: lightslategray;
-}
-.menu-btn#imperaPos {
-  background-color: lightsteelblue;
-}
-.menu-btn#imperaNeg {
-  background-color: lightyellow;
-}
-
 /* || APPLICATION - PRACTICE */
-
-#app {
-  display: none;
-  position: relative;
-  box-sizing: border-box;
-  height: 80vh;
-  width: 95%;
-  margin: 5% auto;
-  border: 1px solid grey;
-  border-radius: 1em;
-  font-size: 16px;
-  padding: 5px;
-}
 
 #app-title {
   font-size: 16px;
@@ -69,6 +16,7 @@
   border-radius: 0.6em;
   font-family: var(--paragraph-font);
   font-size: 16px;
+  background-color: white;
 }
 
 /* height property prevents row expanding for multiline text;
@@ -93,6 +41,7 @@ td button {
   font-size: 16px;
   height: 7vh;
   margin: auto 0;
+  background-color: white;
 }
 
 #got-it {
@@ -101,6 +50,8 @@ td button {
   height: 7vh;
   width: 33.3%;
   margin: auto 5px;
+  background-color: white;
+  color: var(--my-green);
 }
 
 #try-again {
@@ -109,6 +60,8 @@ td button {
   height: 7vh;
   width: 33.3%;
   margin: auto 5px;
+  background-color: white;
+  color: var(--my-red);
 }
 
 /* || SCORE SCREEN */
