@@ -2,7 +2,6 @@
 
 /* || Javascript header load */
 #js-header {
-  width: 100%;
   height: 8vh;
   border-bottom: 1px solid lightgrey;
   display: flex;
@@ -132,19 +131,17 @@
 #app-menu-title {
   text-align: center;
   font-family: var(--heading-font);
-  font-size: 18px;
-  /* color: black; */
-  /* padding: 0; */
+  font-size: 1.2em;
   margin: 5vh;
 }
 
 #app-menu-grid {
   display: grid;
-  height: 70vh;
-  width: 90%;
+  height: 100%;
+  width: 100%;
   margin: 0 auto;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 1em;
   justify-content: center;
 }
 
@@ -152,7 +149,7 @@
   font-family: var(--paragraph-font);
   color: var(--paragraph-color);
   border-radius: 1em;
-  font-size: 16px;
+  font-size: 1em;
   background-color: white;
   height: 6.5em;
   width: 6em;
@@ -161,27 +158,26 @@
 
 /* ||| App */
 
-#app-body{
-  width: 100%;
-  height: 90%;
-}
-
 #app {
   display: none;
   position: relative;
   box-sizing: border-box;
-  height: 80vh;
-  width: 95%;
-  margin: 5% auto;
+  width: 100%;
+  margin: 1em auto;
   border: 1px solid var(--paragraph-color);
   border-radius: 1em;
-  font-size: 16px;
-  padding: 5px;
+  font-size: 1em;
+  padding: 0.5em;
 }
 
 #app-title {
-  font-size: 16px;
-  margin: 10px auto;
+  margin: 0.2em auto;
+  /* border: 2px solid green; */
+}
+
+#app-body{
+  width: 100%;
+  height: 77vh;
   /* border: 2px solid red; */
 }
 
@@ -192,25 +188,26 @@
   margin: 1vw;
   border-radius: 0.6em;
   font-family: var(--paragraph-font);
-  font-size: 16px;
+  font-size: 1em;
   background-color: white;
 }
 
 /* height property prevents row expanding for multiline text;
   transform property balances text displacement caused by div */
 td div {
-  height: 18px;
-  transform: translateY(-9px);
+  height: 10px;
+  transform: translateY(-0.55em);
   font-family: var(--paragraph-font);
 }
 
 /* Generic button code  */
 td button {
-  font-size: 16px;
+  font-size: 1em;
   font-family: var(--paragraph-font);
-  padding: 5px;
+  padding: 0.3em;
   border-radius: 0.7em;
-  height: 7vh;
+  /* height: 7vh; */
+  height: 2.8em;
   margin: auto 0;
 }
 
@@ -245,22 +242,21 @@ td button {
 }
 
 #score {
-  font-size: 26px;
+  font-size: 1.6em;
 }
 
 #score-back-btn {
-  font-size: 16px;
+  font-size: 1.3em;
   font-family: var(--paragraph-font);
-  padding: 5px;
+  padding: 0.4em;
   border-radius: 0.7em;
 }
 
 /* | REPONSIVE DESIGN */
 
-
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 650px) {
   #nav-sidebar a {
-    font-size: 22px;
+    font-size: 1.5em;
   }
 
   #nav-sidebar a:hover {
@@ -276,4 +272,5 @@ td button {
   #learn-article table {
     width: 80%;
   }
+
 }

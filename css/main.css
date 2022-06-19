@@ -44,7 +44,6 @@ table {
   text-align: center;
   box-sizing: border-box;
   font-family: var(--heading-font); /* default to ensure captions etc. get captured */
-  /* border: 2px solid red; */
 }
 
 th {
@@ -55,8 +54,9 @@ th {
 td {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color);
+  height: 1em;
   word-wrap: break-word;
-  /* border: solid 1px black; */
+  border: solid 2px black;
 }
 
 /* | UTILITIES */
