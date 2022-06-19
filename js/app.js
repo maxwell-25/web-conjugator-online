@@ -283,9 +283,9 @@ function resetTable(){
 
     for(i in personIds){
         document.getElementById(personIds[i]).style.color=getComputedStyle(document.getElementById(personIds[i])).getPropertyValue("--paragraph-color");
-        
-        ;
+        document.getElementById(personIds[i]).style.opacity=1;
     }
+    
     for(i in endingIds){
         document.getElementById(endingIds[i]).innerHTML="";
         document.getElementById(endingIds[i]).style.color=getComputedStyle(document.getElementById(personIds[i])).getPropertyValue("--paragraph-color");
