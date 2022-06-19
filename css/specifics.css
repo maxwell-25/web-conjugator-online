@@ -195,7 +195,7 @@
 /* height property prevents row expanding for multiline text;
   transform property balances text displacement caused by div */
 td div {
-  height: 10px;
+  height: 1em;
   transform: translateY(-0.55em);
   font-family: var(--paragraph-font);
 }
