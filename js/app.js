@@ -108,11 +108,11 @@ function newPerson(){
 
         // block out persons unused in imperative tenses
         if(currentTense == "imperaPos" || currentTense == "imperaNeg"){
-            document.getElementById("yo-per").style.color=getComputedStyle(document.getElementById("yo-per")).getPropertyValue("--text-faded");
+            document.getElementById("yo-per").style.opacity=0.3;
 
-            document.getElementById("él/ella-per").style.color=getComputedStyle(document.getElementById("él/ella-per")).getPropertyValue("--text-faded");
+            document.getElementById("él/ella-per").style.opacity=0.3;
 
-            document.getElementById("ellos/ellas-per").style.color=getComputedStyle(document.getElementById("ellos/ellas-per")).getPropertyValue("--text-faded");
+            document.getElementById("ellos/ellas-per").style.opacity=0.3;
         }
 
         updateEndingTitle();
@@ -282,17 +282,17 @@ function resetTable(){
     questionView();
 
     for(i in personIds){
-        document.getElementById(personIds[i]).style.color=getComputedStyle(document.getElementById(personIds[i])).getPropertyValue("--text-color");
+        document.getElementById(personIds[i]).style.color=getComputedStyle(document.getElementById(personIds[i])).getPropertyValue("--paragraph-color");
         
         ;
     }
     for(i in endingIds){
         document.getElementById(endingIds[i]).innerHTML="";
-        document.getElementById(endingIds[i]).style.color=getComputedStyle(document.getElementById(personIds[i])).getPropertyValue("--text-color");
+        document.getElementById(endingIds[i]).style.color=getComputedStyle(document.getElementById(personIds[i])).getPropertyValue("--paragraph-color");
     }
     for(i in exampleIds){
         document.getElementById(exampleIds[i]).innerHTML="";
-        document.getElementById(exampleIds[i]).style.color=getComputedStyle(document.getElementById(personIds[i])).getPropertyValue("--text-color");
+        document.getElementById(exampleIds[i]).style.color=getComputedStyle(document.getElementById(personIds[i])).getPropertyValue("--paragraph-color");
     }
 }
 
@@ -329,7 +329,7 @@ function tryAgain(){
     // console.log("count: ", count);
     // console.log("correct: ", correct);
 
-    document.getElementById([currentPerson + "-per"]).style.color=getComputedStyle(document.getElementById([currentPerson + "-per"])).getPropertyValue("--text-color");
+    document.getElementById([currentPerson + "-per"]).style.color=getComputedStyle(document.getElementById([currentPerson + "-per"])).getPropertyValue("--paragraph-color");
 
     document.getElementById([currentPerson + "-end"]).innerHTML="";
     document.getElementById([currentPerson + "-ex"]).innerHTML="";

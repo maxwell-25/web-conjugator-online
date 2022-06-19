@@ -3,8 +3,7 @@
 :root {
   --heading-font: "Montserrat", sans-serif;
   --paragraph-font: "Roboto", sans-serif;
-  --text-color: rgb(74, 74, 74);
-  --text-faded: rgba(74, 74, 74, 0.3); /* CHANGE TO CLASS AND UPDATE IN JS*/
+  --paragraph-color: rgb(74, 74, 74);
   --my-red: rgb(211, 62, 67);
   --my-green: rgb(73, 159, 104);
   --my-blue: rgb(110, 68, 255);
@@ -13,49 +12,30 @@
 /* | GENERAL STYLES */
 
 main {
-  margin: 10px 10px;
-  /* line-height: 20px; */
+  margin: 1vh 3vw;
 }
 
-h1 {
+h1, h2, h3 {
   font-family: var(--heading-font);
   font-weight: normal;
-  margin-top: 2em;
-  margin-bottom: 1em;
-}
-
-h2 {
-  font-family: var(--heading-font);
-  font-weight: normal;
-  margin-top: 2em;
-}
-
-h3 {
-  font-family: var(--heading-font);
-  font-weight: normal;
-  margin-top: 2em;
 }
 
 p {
   font-family: var(--paragraph-font);
-  color: var(--text-color);
-  font-size: 16px;
-  line-height: 25px;
+  color: var(--paragraph-color);
+  font-size: 1em;
+  line-height: 1.5em;
 }
 
-a:link {
-  color: var(--my-blue)
-}
-
-a:visited {
+a:link, a:visited {
   color: var(--my-blue)
 }
 
 ul, ol {
   font-family: var(--paragraph-font);
-  color: var(--text-color);
-  font-size: 16px;
-  line-height: 25px;
+  color: var(--paragraph-color);
+  font-size: 1em;
+  line-height: 1.5em;
 }
 
 table {
@@ -63,7 +43,7 @@ table {
   border-collapse: collapse;
   text-align: center;
   box-sizing: border-box;
-  font-family: var(--heading-font);
+  font-family: var(--heading-font); /* default to ensure captions etc. get captured */
   /* border: 2px solid red; */
 }
 
@@ -74,7 +54,7 @@ th {
 
 td {
   font-family: var(--paragraph-font);
-  color: var(--text-color);
+  color: var(--paragraph-color);
   word-wrap: break-word;
   /* border: solid 1px black; */
 }
@@ -82,19 +62,31 @@ td {
 /* | UTILITIES */
 
 .title {
-  font-size: 28px;
+  font-size: 2em;
 }
 
 /* | RESPONSIVE DESIGN */
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 950px) {
 
   html {
-    margin: 0px 120px;
+    margin: 2vh 15vw;
+  }
+
+  main {
+    margin: 1vh 10vw;
+  }
+
+}
+
+@media screen and (min-width: 550px) and (max-width: 949px) {
+
+  html {
+    margin: 2vh 10vw;
   }
 
 
   main {
-    margin: 0px 100px;
+    margin: 1vh 5vw;
   }
 }
