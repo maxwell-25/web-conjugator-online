@@ -194,9 +194,9 @@
 
 /* height property prevents row expanding for multiline text;
   transform property balances text displacement caused by div */
-div {
+td div {
   height: 1.5em; /* div must be high enough to prevent table shifting around when javascript applied */
-  transform: translateY(-0.3em);
+  transform: translateY(-0.1em);
   font-family: var(--paragraph-font);
 }
 
