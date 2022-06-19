@@ -56,7 +56,7 @@ td {
   color: var(--paragraph-color);
   height: 1.5em;
   word-wrap: break-word;
-  /* border: solid 2px black; */
+  border: solid 2px black;
 }
 
 /* | UTILITIES */
