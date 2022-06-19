@@ -77,9 +77,9 @@
 /* || Sidebar menu links */
 
 #nav-sidebar a {
-  padding: 8px 8px 8px 40px;
+  padding: 0.5em 0.5em 0.5em 1.5em;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 1.5em;
   color: var(--paragraph-color);
   display: block;
   transition: 0.3s;
@@ -89,7 +89,7 @@
 
 #learn-article table{
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 1em;
   border: 1px solid lightgrey;
 }
   
@@ -107,21 +107,21 @@
   
 #learn-nav{
   font-family: var(--heading-font);
-  padding: 10px;
+  padding: 0.5em;
   border: 1px solid lightgrey;
-  border-radius: .5em;
+  border-radius: 1em;
 }
   
 #learn-nav ul{
   margin: 0; 
   padding: 0;
   list-style-type: none;
-  line-height: 30px;
+  line-height: 2em;
 }
   
 .to-top{
   display: block;
-  margin-bottom: 35px;
+  margin-bottom: 1.5em;
   font-family: var(--paragraph-font);
 }
 
