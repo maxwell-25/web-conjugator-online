@@ -193,12 +193,12 @@
   background-color: white;
 }
 
-/* height property prevents row expanding for multiline text (can only set max height on div, not on td). NOTE that for nosotros/nosotras-ex, the id in the html file is attached to the div, rather than the td, to ensure that it's caught as well when the text is added via javascript.
+/* height property prevents row expanding for multiline text (can only set max height on div, not on td). NOTE that, in the html, the ids are  attached to the divs, rather than the tds, to ensure that they're caught as well when the text is added via javascript.
 
-transform property balances text displacement caused by div */
+can add a transform property to balance text displacement caused by div */
 td div {
   height: 1.5em;
-  transform: translateY(-0.5em);
+  /* transform: translateY(-0.5em); */
   font-family: var(--paragraph-font);
 }
 

@@ -55,7 +55,7 @@ td {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color);
   height: 1.5em;
-  border: solid 2px black;
+  /* border: solid 2px black; */
   word-wrap: break-word;
 }
 
