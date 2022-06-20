@@ -23,18 +23,18 @@ h1, h2, h3 {
 p {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color);
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: 1.5em;
 }
 
-a:link, a:visited {
+a, a:link, a:visited {
   color: var(--my-blue)
 }
 
 ul, ol {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color);
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: 1.5em;
 }
 
@@ -44,6 +44,7 @@ table {
   text-align: center;
   box-sizing: border-box;
   font-family: var(--heading-font); /* default to ensure captions etc. get captured */
+  font-size: 1.2em;
 }
 
 th {

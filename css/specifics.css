@@ -122,6 +122,7 @@
   display: block;
   margin-bottom: 1.5em;
   font-family: var(--paragraph-font);
+  font-size: 1.2em;
 }
 
 /* | APP PAGE */
@@ -143,6 +144,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1em;
   justify-content: center;
+  font-size: 1.2em;
 }
 
 #app-menu-grid button {
@@ -189,7 +191,7 @@
   margin: 1vw;
   border-radius: 0.6em;
   font-family: var(--paragraph-font);
-  font-size: 1em;
+  font-size: 1.2em;
   background-color: white;
 }
 
@@ -247,7 +249,7 @@ td button {
 }
 
 #score-back-btn {
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-family: var(--paragraph-font);
   padding: 0.4em;
   border-radius: 0.7em;

@@ -226,7 +226,7 @@ function updateExampleText(){
             document.getElementById([currentPerson + "-ex"]).innerHTML="? cre" + presEr[currentPerson].substring(1);
         }
         else if(document.getElementById("app-title").innerHTML.includes("-ir")){
-            if(currentPerson == "nosotros/nosotros" || currentPerson == "vosotros/vosotras"){
+            if(currentPerson == "nosotros/nosotras" || currentPerson == "vosotros/vosotras"){
                 document.getElementById([currentPerson + "-ex"]).innerHTML="? dorm" + presIr[currentPerson].substring(1);
             }
             else{
