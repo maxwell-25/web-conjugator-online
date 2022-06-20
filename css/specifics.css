@@ -216,12 +216,15 @@ td button {
 
 #show-ans {
   display: inline-block;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   background-color: white;
 }
 
 #got-it {
   display: none;
   width: 33.3%;
+  margin-right: 0.5em;
   background-color: white;
   color: var(--my-green);
 }
@@ -229,6 +232,7 @@ td button {
 #try-again {
   display: none;
   width: 33.3%;
+  margin-left: 0.5em;
   background-color: white;
   color: var(--my-red);
 }
