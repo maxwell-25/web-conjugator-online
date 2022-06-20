@@ -178,6 +178,7 @@
 #app-body{
   width: 100%;
   height: 77vh;
+  table-layout: fixed;
   /* border: 2px solid red; */
 }
 
@@ -192,11 +193,12 @@
   background-color: white;
 }
 
-/* height property prevents row expanding for multiline text;
-  transform property balances text displacement caused by div */
+/* height property prevents row expanding for multiline text (can only set max height on div, not on td). NOTE that for nosotros/nosotras-ex, the id in the html file is attached to the div, rather than the td, to ensure that it's caught as well when the text is added via javascript.
+
+transform property balances text displacement caused by div */
 td div {
-  height: 1.5em; /* div must be high enough to prevent table shifting around when javascript applied */
-  transform: translateY(-0.1em);
+  height: 1.5em;
+  transform: translateY(-0.5em);
   font-family: var(--paragraph-font);
 }
 

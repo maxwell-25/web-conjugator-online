@@ -56,7 +56,6 @@ td {
   color: var(--paragraph-color);
   height: 1.5em;
   border: solid 2px black;
-  overflow: hidden;
   word-wrap: break-word;
 }
 
