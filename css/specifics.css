@@ -271,13 +271,13 @@ td button {
   }
 
   #learn-article table {
-    width: 70%;
+    width: 90%;
   }
 }
 
 @media screen and (min-width: 650px) and (max-width: 949px) {
   #learn-article table {
-    width: 80%;
+    width: 90%;
   }
 
 }
