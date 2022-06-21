@@ -28,7 +28,8 @@ p {
 }
 
 a, a:link, a:visited {
-  color: var(--my-blue)
+  color: var(--my-blue);
+  font-size: 1em;
 }
 
 ul, ol {
