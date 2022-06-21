@@ -122,7 +122,6 @@
   display: block;
   margin-bottom: 1.5em;
   font-family: var(--paragraph-font);
-  font-size: 1.2em;
 }
 
 /* | APP PAGE */
@@ -269,15 +268,4 @@ td button {
   #nav-sidebar a:hover {
     color: #f1f1f1;
   }
-
-  #learn-article table {
-    width: 90%;
-  }
-}
-
-@media screen and (min-width: 650px) and (max-width: 949px) {
-  #learn-article table {
-    width: 90%;
-  }
-
 }

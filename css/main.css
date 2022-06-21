@@ -29,7 +29,6 @@ p {
 
 a, a:visited {
   color: var(--my-blue);
-  font-size: 1em;
 }
 
 ul, ol {
