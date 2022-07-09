@@ -34,11 +34,11 @@ a, a:visited {
 ul, ol {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color);
-  line-height: 1.5em;
+  line-height: 2em;
 }
 
 span {
-  white-space: pre; /* stops Learn page verb ending explanations spilling over lines */
+  white-space: pre; /* prevents Learn page verb ending explanations from spilling over lines */
 }
 
 table {
@@ -46,7 +46,7 @@ table {
   border-collapse: collapse;
   text-align: center;
   box-sizing: border-box;
-  font-family: var(--heading-font); /* default to ensure captions etc. get captured */
+  font-family: var(--heading-font); /* default to ensure captions etc. are caught */
   font-size: 1em;
 }
 

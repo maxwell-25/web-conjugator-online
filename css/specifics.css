@@ -3,7 +3,7 @@
 /* || Javascript header load */
 #js-header {
   height: 8vh;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 0.1em solid lightgrey;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,7 @@
 
 /* || Header flexbox */
 
-/* Set flex-grow for left and right divs (operating as spans) to 1, meaning:
+/* Sets flex-grow for left and right divs (operating as spans) to 1, meaning:
   -only these divs will grow
   -they both get same widths - and will eventually distribute available space
   -center element will always be perfectly centered
@@ -57,7 +57,7 @@
   top: 0;
   left: 0;
   background-color: white;
-  border: 1px solid lightgrey;
+  border: 0.1em solid lightgrey;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 4em;
   transition: 0.5s;
@@ -89,7 +89,7 @@
 #learn-article table{
   width: 100%;
   margin-bottom: 1em;
-  border: 1px solid lightgrey;
+  border: 0.1em solid lightgrey;
 }
   
 .ar-end{
@@ -107,7 +107,7 @@
 #learn-nav{
   font-family: var(--heading-font);
   padding: 0.5em;
-  border: 1px solid lightgrey;
+  border: 0.1em solid lightgrey;
   border-radius: 1em;
 }
   
@@ -165,7 +165,7 @@
   box-sizing: border-box;
   width: 100%;
   margin: 1em auto;
-  border: 1px solid var(--paragraph-color);
+  border: 0.1em solid var(--paragraph-color);
   border-radius: 1em;
   font-size: 1em;
   padding: 0.5em;
