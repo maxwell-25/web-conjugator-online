@@ -23,7 +23,7 @@ h1, h2, h3 {
 p {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color);
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: 1.5em;
 }
 
@@ -34,7 +34,12 @@ a, a:visited {
 ul, ol {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color);
-  line-height: 2em;
+  line-height: 1.5em;
+  font-size: 1.2em;
+}
+
+ul ul li {
+  font-size: 1.2rem;
 }
 
 span {

@@ -84,6 +84,24 @@
   transition: 0.3s;
 }
 
+/* || Tooltip */
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+  text-align: center;
+  padding: 0.5em 0.5em;
+  margin-left: 2.5em;
+  border-radius: 0.5em;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+
 /* | LEARN PAGE */
 
 #learn-article table{
@@ -167,7 +185,7 @@
   margin: 1em auto;
   border: 0.1em solid var(--paragraph-color);
   border-radius: 1em;
-  font-size: 1em;
+  font-size: 1.2em;
   padding: 0.5em;
 }
 
