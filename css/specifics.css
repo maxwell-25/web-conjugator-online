@@ -39,7 +39,7 @@
 
 /* Sidebar open button */
 #nav-open-btn {
-  width: 2.2em;
+  width: 2.4em;
   border: none;
   background: none;
   margin-left: 1em;
@@ -68,17 +68,18 @@
 #nav-sidebar #nav-close-btn {
   position: absolute;
   top: 0;
-  right: 0.7em;
-  font-size: 2.2em;
-  margin-left: 1em;
+  right: 1.5rem;
+  font-size: 5rem;
+  padding: 0;
+  /* border: 1px solid black; */
 }
 
 /* || Sidebar menu links */
 
 #nav-sidebar a {
-  padding: 0.5em 0.5em 0.5em 1.5em;
+  padding: 1rem 1rem 1rem 2.5rem;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 2rem;
   color: var(--paragraph-color);
   display: block;
   transition: 0.3s;
@@ -91,11 +92,12 @@
   background-color: rgba(0,0,0,0.7);
   color: rgba(255,255,255,1);
   text-align: center;
-  padding: 0.3em 0.3em;
-  margin-left: 2em;
-  border-radius: 0.5em;
+  padding: 0.75rem 0.75rem;
+  border-radius: 2rem;
   position: absolute;
   z-index: 1;
+  font-size: 2rem;
+  margin-left: 2em;
 }
 
 .index-tooltip-text {
@@ -103,10 +105,11 @@
   background-color: rgba(0,0,0,0.7);
   color: rgba(255,255,255,1);
   text-align: center;
-  padding: 0.3em 0.3em;
-  border-radius: 0.5em;
+  padding: 0.75rem 0.75rem;
+  border-radius: 2rem;
   position: absolute;
   z-index: 1;
+  font-size: 2rem;
 }
 
 .tooltip:hover .tooltip-text {
@@ -142,7 +145,7 @@
   font-family: var(--heading-font);
   padding: 0.5em;
   border: 0.1em solid lightgrey;
-  border-radius: 1em;
+  border-radius: 2rem;
 }
   
 #learn-nav ul{
@@ -165,7 +168,7 @@
 #app-menu-title {
   text-align: center;
   font-family: var(--heading-font);
-  font-size: 1.2em;
+  font-size: 2.25rem;
   margin: 5vh;
 }
 
@@ -175,16 +178,16 @@
   width: 100%;
   margin: 0 auto;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1em;
+  gap: 1.5rem;
   justify-content: center;
-  font-size: 1.2em;
+  /* font-size: 2rem; */
 }
 
 #app-menu-grid button {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color);
-  border-radius: 1em;
-  font-size: 1em;
+  border-radius: 2rem;
+  font-size: 2rem;
   background-color: white;
   height: 6.5em;
   width: 6em;
@@ -200,13 +203,14 @@
   width: 100%;
   margin: 1em auto;
   border: 0.1em solid var(--paragraph-color);
-  border-radius: 1em;
-  font-size: 1.2em;
-  padding: 0.5em;
+  border-radius: 2rem;
+  /* font-size: 2rem; */
+  padding: 0.5rem;
 }
 
 #app-title {
   margin: 0.2em auto;
+  font-size: 2rem;
   /* border: 2px solid green; */
 }
 
@@ -214,17 +218,18 @@
   width: 100%;
   height: 77vh;
   table-layout: fixed;
+  font-size: 2rem;
   /* border: 2px solid red; */
 }
 
 #quit-btn {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 0.5rem;
+  top: 0.5rem;
   margin: 1vw;
-  border-radius: 0.6em;
+  border-radius: 1.5rem;
   font-family: var(--paragraph-font);
-  font-size: 1em;
+  font-size: 2rem;
   background-color: white;
 }
 
@@ -239,10 +244,10 @@ td div {
 
 /* Generic button code  */
 td button {
-  font-size: 1em;
+  font-size: 2rem;
   font-family: var(--paragraph-font);
   padding: 0.3em;
-  border-radius: 0.7em;
+  border-radius: 2rem;
   height: 2.8em;
   margin: auto 0;
 }
@@ -282,14 +287,14 @@ td button {
 }
 
 #score {
-  font-size: 1.6em;
+  font-size: 3rem;
 }
 
 #score-back-btn {
-  font-size: 1.2em;
+  font-size: 2rem;
   font-family: var(--paragraph-font);
   padding: 0.4em;
-  border-radius: 0.7em;
+  border-radius: 2rem;
 }
 
 /* | REPONSIVE DESIGN */

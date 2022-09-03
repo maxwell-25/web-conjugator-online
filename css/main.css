@@ -12,6 +12,7 @@
 /* | GENERAL STYLES */
 
 html {
+  /* base figure for rem calculations; see https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals */
   font-size: 10px;
 }
 
