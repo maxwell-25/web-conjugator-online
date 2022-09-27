@@ -38,7 +38,7 @@ h3 {
   font-size: 2.25rem;
 }
 
-p {
+p, li {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color);
   font-size: 2rem;
@@ -50,12 +50,13 @@ a, a:visited {
   font-size: 2rem;
 }
 
-ul, ol {
+/* Replaced with li rule above*/
+/* ul, ol {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color);
-  line-height: 1.5;
   font-size: 2rem;
-}
+  line-height: 1.5;
+} */
 
 span {
   white-space: pre; /* prevents Learn page verb ending descriptions from spilling over lines */
