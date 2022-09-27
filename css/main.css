@@ -58,7 +58,7 @@ ul, ol {
 }
 
 span {
-  white-space: pre; /* prevents Learn page verb ending explanations from spilling over lines */
+  white-space: pre; /* prevents Learn page verb ending descriptions from spilling over lines */
 }
 
 table {
@@ -79,7 +79,7 @@ td {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color);
   /* height: 1.5rem; */
-  /* border: solid 2px black; */
+  /* border: solid 0.2rem black; */
   word-wrap: break-word;
 }
 
