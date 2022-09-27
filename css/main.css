@@ -79,7 +79,7 @@ td {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color);
   /* height: 1.5rem; */
-  /* border: solid 0.2rem black; */
+  /* border: solid 2px black; */
   word-wrap: break-word;
 }
 
