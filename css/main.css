@@ -50,6 +50,10 @@ a, a:visited {
   font-size: 2rem;
 }
 
+a:active {
+  opacity: 0.5;
+}
+
 /* Replaced with li rule above */
 /* ul, ol {
   font-family: var(--paragraph-font);
