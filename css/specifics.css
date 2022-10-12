@@ -283,10 +283,10 @@ td button {
 #score-container {
   display: none;
   flex-direction: column;
-  box-sizing: border-box;
-  height: 85vh;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  height: 85vh;
 }
 
 #score {
