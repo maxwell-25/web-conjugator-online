@@ -177,12 +177,12 @@
 
 #app-menu-grid {
   display: grid;
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
   /* font-size: 2rem; */
 }
 
