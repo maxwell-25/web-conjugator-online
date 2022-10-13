@@ -29,7 +29,7 @@ var presIr = {
 }
 
 var pretAr = {
-    "title": "Preterite (-ar)<br>(stem + ?)",
+    "title": "Preterite (-ar)<br>e.g. \"I spoke\"",
     "yo": "-é",
     "tú": "-aste",
     "él/ella": "-ó",
@@ -39,7 +39,7 @@ var pretAr = {
 }
 
 var pretEr = {
-    "title": "Preterite (-er)<br>(stem + ?)",
+    "title": "Preterite (-er)<br>e.g. \"I ate\"",
     "yo": "-í",
     "tú": "-iste",
     "él/ella": "-ió",
@@ -49,7 +49,7 @@ var pretEr = {
 }
 
 var pretIr = {
-    "title": "Preterite (-ir)<br>(stem + ?)",
+    "title": "Preterite (-ir)<br>e.g. \"I lived\"",
     "yo": "-í",
     "tú": "-iste",
     "él/ella": "-ió",
@@ -59,7 +59,7 @@ var pretIr = {
 }
 
 var imperfAr = {
-    "title": "Imperfect (-ar)<br>(stem + ?)",
+    "title": "Imperfect (-ar)<br>e.g. \"I used to speak\"",
     "yo": "-aba",
     "tú": "-abas",
     "él/ella": "-aba",
@@ -69,7 +69,7 @@ var imperfAr = {
 }
 
 var imperfEr = {
-    "title": "Imperfect (-er)<br>(stem + ?)",
+    "title": "Imperfect (-er)<br>e.g. \"I used to eat\"",
     "yo": "-ía",
     "tú": "-ías",
     "él/ella": "-ía",
@@ -79,7 +79,7 @@ var imperfEr = {
 }
 
 var imperfIr = {
-    "title": "Imperfect (-ir)<br>(stem + ?)",
+    "title": "Imperfect (-ir)<br>e.g. \"I used to live\"",
     "yo": "-ía",
     "tú": "-ías",
     "él/ella": "-ía",
