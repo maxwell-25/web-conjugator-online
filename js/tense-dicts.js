@@ -1,5 +1,5 @@
 var presAr = {
-    "title": "Present simple (-ar)<br>(stem + ?)",
+    "title": "Present simple (-ar)<br>e.g. \"I speak\"",
     "yo": "-o",
     "tú": "-as",
     "él/ella": "-a",
@@ -9,7 +9,7 @@ var presAr = {
 }
 
 var presEr = {
-    "title": "Present simple (-er)<br>(stem + ?)",
+    "title": "Present simple (-er)<br>e.g. \"I eat\"",
     "yo": "-o",
     "tú": "-es",
     "él/ella": "-e",
@@ -19,7 +19,7 @@ var presEr = {
 }
 
 var presIr = {
-    "title": "Present simple (-ir)<br>(stem + ?)",
+    "title": "Present simple (-ir)<br>e.g. \"I live\"",
     "yo": "-o",
     "tú": "-es",
     "él/ella": "-e",
