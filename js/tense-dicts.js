@@ -89,7 +89,7 @@ var imperfIr = {
 }
 
 var futAr = {
-    "title": "Future (-ar)<br>(infinitive + ?)",
+    "title": "Future (-ar)<br>e.g. \"I will speak\"",
     "yo": "-é",
     "tú": "-ás",
     "él/ella": "-á",
@@ -99,7 +99,7 @@ var futAr = {
 }
 
 var futEr = {
-    "title": "Future (-er)<br>(infinitive + ?)",
+    "title": "Future (-er)<br>e.g. \"I will eat\"",
     "yo": "-é",
     "tú": "-ás",
     "él/ella": "-á",
@@ -109,7 +109,7 @@ var futEr = {
 }
 
 var futIr = {
-    "title": "Future (-ir)<br>(infinitive + ?)",
+    "title": "Future (-ir)<br>e.g. \"I will live\"",
     "yo": "-é",
     "tú": "-ás",
     "él/ella": "-á",
@@ -119,7 +119,7 @@ var futIr = {
 }
 
 var condAr = {
-    "title": "Conditional (-ar)<br>(infinitive + ?)",
+    "title": "Conditional (-ar)<br>e.g. \"I would speak\"",
     "yo": "-ía",
     "tú": "-ías",
     "él/ella": "-ía",
@@ -129,7 +129,7 @@ var condAr = {
 }
 
 var condEr = {
-    "title": "Conditional (-er)<br>(infinitive + ?)",
+    "title": "Conditional (-er)<br>e.g. \"I would eat\"",
     "yo": "-ía",
     "tú": "-ías",
     "él/ella": "-ía",
@@ -139,7 +139,7 @@ var condEr = {
 }
 
 var condIr = {
-    "title": "Conditional (-ir)<br>(infinitive + ?)",
+    "title": "Conditional (-ir)<br>e.g. \"I would live\"",
     "yo": "-ía",
     "tú": "-ías",
     "él/ella": "-ía",
@@ -149,7 +149,7 @@ var condIr = {
 }
 
 var refAr = {
-    "title": "Reflexive (-ar)<br>(? + verb)",
+    "title": "Reflexive (-ar)<br>e.g. \"I take a bath\"",
     "yo": "me",
     "tú": "te",
     "él/ella": "se",
@@ -159,7 +159,7 @@ var refAr = {
 }
 
 var refEr = {
-    "title": "Reflexive (-er)<br>(? + verb)",
+    "title": "Reflexive (-er)<br>e.g. \"I believe\"",
     "yo": "me",
     "tú": "te",
     "él/ella": "se",
@@ -169,7 +169,7 @@ var refEr = {
 }
 
 var refIr = {
-    "title": "Reflexive (-ir)<br>(? + verb)",
+    "title": "Reflexive (-ir)<br>e.g. \"I go to sleep\"",
     "yo": "me",
     "tú": "te",
     "él/ella": "se",
@@ -179,7 +179,7 @@ var refIr = {
 }
 
 var presConAr = {
-    "title": "Present continuous (-ar)<br>(? -> stem + ??)",
+    "title": "Present continuous (-ar)<br>e.g. \"I am speaking\"",
     "yo": "estoy/-ando",
     "tú": "estás/-ando",
     "él/ella": "está/-ando",
@@ -189,7 +189,7 @@ var presConAr = {
 }
 
 var presConEr = {
-    "title": "Present continuous (-er)<br>(? -> stem + ??)",
+    "title": "Present continuous (-er)<br>e.g. \"I am eating\"",
     "yo": "estoy/-iendo",
     "tú": "estás/-iendo",
     "él/ella": "está/-iendo",
@@ -199,7 +199,7 @@ var presConEr = {
 }
 
 var presConIr = {
-    "title": "Present continuous (-ir)<br>(? -> stem + ??)",
+    "title": "Present continuous (-ir)<br>e.g. \"I am living\"",
     "yo": "estoy/-iendo",
     "tú": "estás/-iendo",
     "él/ella": "está/-iendo",
@@ -209,7 +209,7 @@ var presConIr = {
 }
 
 var perfAr = {
-    "title": "Perfect (-ar)<br>(? -> stem + ??)",
+    "title": "Perfect (-ar)<br>e.g. \"I have spoken\"",
     "yo": "he/-ado",
     "tú": "has/-ado",
     "él/ella": "ha/-ado",
@@ -219,7 +219,7 @@ var perfAr = {
 }
 
 var perfEr = {
-    "title": "Perfect (-er)<br>(? -> stem + ??)",
+    "title": "Perfect (-er)<br>e.g. \"I have eaten\"",
     "yo": "he/-ido",
     "tú": "has/-ido",
     "él/ella": "ha/-ido",
@@ -229,7 +229,7 @@ var perfEr = {
 }
 
 var perfIr = {
-    "title": "Perfect (-ir)<br>(? -> stem + ??)",
+    "title": "Perfect (-ir)<br>e.g. \"I have lived\"",
     "yo": "he/-ido",
     "tú": "has/-ido",
     "él/ella": "ha/-ido",
@@ -239,7 +239,7 @@ var perfIr = {
 }
 
 var pluperfAr = {
-    "title": "Pluperfect (-ar)<br>(? -> stem + ??)",
+    "title": "Pluperfect (-ar)<br>e.g. \"I had spoken\"",
     "yo": "había/-ado",
     "tú": "habías/-ado",
     "él/ella": "había/-ado",
@@ -249,7 +249,7 @@ var pluperfAr = {
 }
 
 var pluperfEr = {
-    "title": "Pluperfect (-er)<br>(? -> stem + ??)",
+    "title": "Pluperfect (-er)<br>e.g. \"I had eaten\"",
     "yo": "había/-ido",
     "tú": "habías/-ido",
     "él/ella": "había/-ido",
@@ -259,7 +259,7 @@ var pluperfEr = {
 }
 
 var pluperfIr = {
-    "title": "Pluperfect (-ir)<br>(? -> stem + ??)",
+    "title": "Pluperfect (-ir)<br>e.g. \"I had lived\"",
     "yo": "había/-ido",
     "tú": "habías/-ido",
     "él/ella": "había/-ido",
@@ -269,7 +269,7 @@ var pluperfIr = {
 }
 
 var presSubjAr = {
-    "title": "Present subjunctive (-ar)<br>(stem + ?)",
+    "title": "Present subjunctive (-ar)<br>e.g. \"(If) I (were to) speak\"",
     "yo": "-e",
     "tú": "-es",
     "él/ella": "-e",
@@ -279,7 +279,7 @@ var presSubjAr = {
 }
 
 var presSubjEr = {
-    "title": "Present subjunctive (-er)<br>(stem + ?)",
+    "title": "Present subjunctive (-er)<br>e.g. \"(If) I (were to) eat\"",
     "yo": "-a",
     "tú": "-as",
     "él/ella": "-a",
@@ -289,7 +289,7 @@ var presSubjEr = {
 }
 
 var presSubjIr = {
-    "title": "Present subjunctive (-ir)<br>(stem + ?)",
+    "title": "Present subjunctive (-ir)<br>e.g. \"(If) I (were to) live\"",
     "yo": "-a",
     "tú": "-as",
     "él/ella": "-a",
@@ -299,42 +299,42 @@ var presSubjIr = {
 }
 
 var imperaPosAr = {
-    "title": "Positive imperative (-ar)<br>(stem + ?)",
+    "title": "Positive imperative (-ar)<br>e.g. \"Speak!\"",
     "tú": "-a!",
     "nosotros/nosotras": "-emos!",
     "vosotros/vosotras": "-ad!"
 }
 
 var imperaPosEr = {
-    "title": "Positive imperative (-er)<br>(stem + ?)",
+    "title": "Positive imperative (-er)<br>e.g. \"Eat!\"",
     "tú": "-e!",
     "nosotros/nosotras": "-amos!",
     "vosotros/vosotras": "-ed!"
 }
 
 var imperaPosIr = {
-    "title": "Positive imperative (-ir)<br>(stem + ?)",
+    "title": "Positive imperative (-ir)<br>e.g. \"Live!\"",
     "tú": "-e!",
     "nosotros/nosotras": "-amos!",
     "vosotros/vosotras": "-id!"
 }
 
 var imperaNegAr = {
-    "title": 'Negative imperative (-ar)<br>("no" -> stem + ?)',
+    "title": 'Negative imperative (-ar)<br>e.g. \"Don\'t speak!\"',
     "tú": "-es!",
     "nosotros/nosotras": "-emos!",
     "vosotros/vosotras": "-éis!"
 }
 
 var imperaNegEr = {
-    "title": 'Negative imperative (-er)<br>("no" -> stem + ?)',
+    "title": 'Negative imperative (-er)<br>e.g. \"Don\'t eat!\"',
     "tú": "-as!",
     "nosotros/nosotras": "-amos!",
     "vosotros/vosotras": "-áis!"
 }
 
 var imperaNegIr = {
-    "title": 'Negative imperative (-ir)<br>("no" -> stem + ?)',
+    "title": 'Negative imperative (-ir)<br>e.g. \"Don\'t live!\"',
     "tú": "-as!",
     "nosotros/nosotras": "-amos!",
     "vosotros/vosotras": "-áis!"
