@@ -100,6 +100,17 @@ td {
 
 /* | RESPONSIVE DESIGN */
 
+@media screen and (min-width: 550px) {
+
+  html {
+    margin: 2vh 10vw;
+  }
+
+  main {
+    margin: 1vh 7.5vw;
+  }
+}
+
 @media screen and (min-width: 950px) {
 
   html {
@@ -110,15 +121,4 @@ td {
     margin: 1vh 10vw;
   }
 
-}
-
-@media screen and (min-width: 550px) and (max-width: 949px) {
-
-  html {
-    margin: 2vh 10vw;
-  }
-
-  main {
-    margin: 1vh 7.5vw;
-  }
 }
