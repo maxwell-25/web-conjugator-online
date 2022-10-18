@@ -89,41 +89,6 @@
   transition: 0.3s;
 }
 
-/* || Tooltips */
-
-.tooltip-text {
-  visibility: hidden;
-  background-color: rgba(0,0,0,0.7);
-  color: rgba(255,255,255,1);
-  text-align: center;
-  padding: 0.75rem 0.75rem;
-  border-radius: 2rem;
-  position: absolute;
-  z-index: 1;
-  font-size: 2rem;
-  margin-left: 4rem;
-}
-
-.index-tooltip-text {
-  visibility: hidden;
-  background-color: rgba(0,0,0,0.7);
-  color: rgba(255,255,255,1);
-  text-align: center;
-  padding: 0.75rem 0.75rem;
-  border-radius: 2rem;
-  position: absolute;
-  z-index: 1;
-  font-size: 2rem;
-}
-
-.tooltip:hover .tooltip-text {
-  visibility: visible;
-}
-
-.tooltip:hover .index-tooltip-text {
-  visibility: visible;
-}
-
 /* | LEARN PAGE */
 
 #learn-article table{
@@ -303,38 +268,23 @@ td button {
 /* ||| Test */
 
 #test{
-  height: 83.5vh;
-  border: 2px solid green;
+  vertical-align: middle;
+  margin-top: 25rem;
+  border: 2px solid black;
 }
 
 #test-body{
-  border: 2px solid red;
   margin: auto;
+  font-size: 2.5rem;
+  /* border: 2px solid red; */
 }
 
-
-/* #app {
-  display: none;
-  position: relative;
-  box-sizing: border-box;
-  width: 100%;
-  margin: 1rem auto;
-  border: 0.1rem solid var(--paragraph-color);
-  border-radius: 2rem;
-  font-size: 2rem;
-  padding: 0.5rem;
+#test-body thead{
+  height: 7.5rem;
+  /* border: 2px solid black; */
 }
 
-#app-title {
-  margin: 0.2rem auto;
-  font-size: 2rem;
-  border: 2px solid green;
+#test-body td{
+  height: 7.5rem;
+  /* border: 2px solid black; */
 }
-
-#app-body{
-  width: 100%;
-  height: 77vh;
-  table-layout: fixed;
-  font-size: 2rem;
-  border: 2px solid red;
-} */
