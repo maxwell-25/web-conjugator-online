@@ -269,7 +269,7 @@ var pluperfIr = {
 }
 
 var presSubjAr = {
-    "title": "Present subjunctive (-ar)<br>e.g. \"(I hope that) I speak (good Spanish)\"",
+    "title": "Present subjunctive (-ar)<br>e.g. \"(I want) you (to) speak (with me)\"",
     "yo": "-e",
     "tú": "-es",
     "él/ella": "-e",
@@ -279,7 +279,7 @@ var presSubjAr = {
 }
 
 var presSubjEr = {
-    "title": "Present subjunctive (-er)<br>e.g. \"(I hope that) I eat (politely)\"",
+    "title": "Present subjunctive (-er)<br>e.g. \"(I want) you (to) eat (with me)\"",
     "yo": "-a",
     "tú": "-as",
     "él/ella": "-a",
@@ -289,7 +289,7 @@ var presSubjEr = {
 }
 
 var presSubjIr = {
-    "title": "Present subjunctive (-ir)<br>e.g. \"(I hope that) I live (a long time)\"",
+    "title": "Present subjunctive (-ir)<br>e.g. \"(I want) you (to) live (with me)\"",
     "yo": "-a",
     "tú": "-as",
     "él/ella": "-a",
