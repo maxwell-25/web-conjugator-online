@@ -299,3 +299,42 @@ td button {
   padding: 0.8rem;
   border-radius: 2rem;
 }
+
+/* ||| Test */
+
+#test{
+  height: 83.5vh;
+  border: 2px solid green;
+}
+
+#test-body{
+  border: 2px solid red;
+  margin: auto;
+}
+
+
+/* #app {
+  display: none;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 1rem auto;
+  border: 0.1rem solid var(--paragraph-color);
+  border-radius: 2rem;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+#app-title {
+  margin: 0.2rem auto;
+  font-size: 2rem;
+  border: 2px solid green;
+}
+
+#app-body{
+  width: 100%;
+  height: 77vh;
+  table-layout: fixed;
+  font-size: 2rem;
+  border: 2px solid red;
+} */
