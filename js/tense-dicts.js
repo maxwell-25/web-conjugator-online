@@ -1,4 +1,4 @@
-var presAr = {
+const presAr = {
     "title": "Present simple (-ar)<br>e.g. \"I speak\"",
     "yo": "-o",
     "tú": "-as",
@@ -8,7 +8,7 @@ var presAr = {
     "ellos/ellas": "-an"
 }
 
-var presEr = {
+const presEr = {
     "title": "Present simple (-er)<br>e.g. \"I eat\"",
     "yo": "-o",
     "tú": "-es",
@@ -18,7 +18,7 @@ var presEr = {
     "ellos/ellas": "-en"
 }
 
-var presIr = {
+const presIr = {
     "title": "Present simple (-ir)<br>e.g. \"I live\"",
     "yo": "-o",
     "tú": "-es",
@@ -28,7 +28,7 @@ var presIr = {
     "ellos/ellas": "-en"
 }
 
-var pretAr = {
+const pretAr = {
     "title": "Preterite (-ar)<br>e.g. \"I spoke\"",
     "yo": "-é",
     "tú": "-aste",
@@ -38,7 +38,7 @@ var pretAr = {
     "ellos/ellas": "-aron"
 }
 
-var pretEr = {
+const pretEr = {
     "title": "Preterite (-er)<br>e.g. \"I ate\"",
     "yo": "-í",
     "tú": "-iste",
@@ -48,7 +48,7 @@ var pretEr = {
     "ellos/ellas": "-ieron"
 }
 
-var pretIr = {
+const pretIr = {
     "title": "Preterite (-ir)<br>e.g. \"I lived\"",
     "yo": "-í",
     "tú": "-iste",
@@ -58,7 +58,7 @@ var pretIr = {
     "ellos/ellas": "-ieron"
 }
 
-var imperfAr = {
+const imperfAr = {
     "title": "Imperfect (-ar)<br>e.g. \"I used to speak\"",
     "yo": "-aba",
     "tú": "-abas",
@@ -68,7 +68,7 @@ var imperfAr = {
     "ellos/ellas": "-aban"
 }
 
-var imperfEr = {
+const imperfEr = {
     "title": "Imperfect (-er)<br>e.g. \"I used to eat\"",
     "yo": "-ía",
     "tú": "-ías",
@@ -78,7 +78,7 @@ var imperfEr = {
     "ellos/ellas": "-ían"
 }
 
-var imperfIr = {
+const imperfIr = {
     "title": "Imperfect (-ir)<br>e.g. \"I used to live\"",
     "yo": "-ía",
     "tú": "-ías",
@@ -88,7 +88,7 @@ var imperfIr = {
     "ellos/ellas": "-ían"
 }
 
-var futAr = {
+const futAr = {
     "title": "Future (-ar)<br>e.g. \"I will speak\"",
     "yo": "-é",
     "tú": "-ás",
@@ -98,7 +98,7 @@ var futAr = {
     "ellos/ellas": "-án"
 }
 
-var futEr = {
+const futEr = {
     "title": "Future (-er)<br>e.g. \"I will eat\"",
     "yo": "-é",
     "tú": "-ás",
@@ -108,7 +108,7 @@ var futEr = {
     "ellos/ellas": "-án"
 }
 
-var futIr = {
+const futIr = {
     "title": "Future (-ir)<br>e.g. \"I will live\"",
     "yo": "-é",
     "tú": "-ás",
@@ -118,7 +118,7 @@ var futIr = {
     "ellos/ellas": "-án"
 }
 
-var condAr = {
+const condAr = {
     "title": "Conditional (-ar)<br>e.g. \"I would speak\"",
     "yo": "-ía",
     "tú": "-ías",
@@ -128,7 +128,7 @@ var condAr = {
     "ellos/ellas": "-ían"
 }
 
-var condEr = {
+const condEr = {
     "title": "Conditional (-er)<br>e.g. \"I would eat\"",
     "yo": "-ía",
     "tú": "-ías",
@@ -138,7 +138,7 @@ var condEr = {
     "ellos/ellas": "-ían"
 }
 
-var condIr = {
+const condIr = {
     "title": "Conditional (-ir)<br>e.g. \"I would live\"",
     "yo": "-ía",
     "tú": "-ías",
@@ -148,7 +148,7 @@ var condIr = {
     "ellos/ellas": "-ían"
 }
 
-var refAr = {
+const refAr = {
     "title": "Reflexive (-ar)<br>e.g. \"I take a bath\"",
     "yo": "me",
     "tú": "te",
@@ -158,7 +158,7 @@ var refAr = {
     "ellos/ellas": "se"
 }
 
-var refEr = {
+const refEr = {
     "title": "Reflexive (-er)<br>e.g. \"I believe\"",
     "yo": "me",
     "tú": "te",
@@ -168,7 +168,7 @@ var refEr = {
     "ellos/ellas": "se"
 }
 
-var refIr = {
+const refIr = {
     "title": "Reflexive (-ir)<br>e.g. \"I go to sleep\"",
     "yo": "me",
     "tú": "te",
@@ -178,7 +178,7 @@ var refIr = {
     "ellos/ellas": "se"
 }
 
-var presConAr = {
+const presConAr = {
     "title": "Present continuous (-ar)<br>e.g. \"I am speaking\"",
     "yo": "estoy/-ando",
     "tú": "estás/-ando",
@@ -188,7 +188,7 @@ var presConAr = {
     "ellos/ellas": "estan/-ando"
 }
 
-var presConEr = {
+const presConEr = {
     "title": "Present continuous (-er)<br>e.g. \"I am eating\"",
     "yo": "estoy/-iendo",
     "tú": "estás/-iendo",
@@ -198,7 +198,7 @@ var presConEr = {
     "ellos/ellas": "estan/-iendo"
 }
 
-var presConIr = {
+const presConIr = {
     "title": "Present continuous (-ir)<br>e.g. \"I am living\"",
     "yo": "estoy/-iendo",
     "tú": "estás/-iendo",
@@ -208,7 +208,7 @@ var presConIr = {
     "ellos/ellas": "estan/-iendo"
 }
 
-var perfAr = {
+const perfAr = {
     "title": "Perfect (-ar)<br>e.g. \"I have spoken\"",
     "yo": "he/-ado",
     "tú": "has/-ado",
@@ -218,7 +218,7 @@ var perfAr = {
     "ellos/ellas": "han/-ado"
 }
 
-var perfEr = {
+const perfEr = {
     "title": "Perfect (-er)<br>e.g. \"I have eaten\"",
     "yo": "he/-ido",
     "tú": "has/-ido",
@@ -228,7 +228,7 @@ var perfEr = {
     "ellos/ellas": "han/-ado"
 }
 
-var perfIr = {
+const perfIr = {
     "title": "Perfect (-ir)<br>e.g. \"I have lived\"",
     "yo": "he/-ido",
     "tú": "has/-ido",
@@ -238,7 +238,7 @@ var perfIr = {
     "ellos/ellas": "han/-ido"
 }
 
-var pluperfAr = {
+const pluperfAr = {
     "title": "Pluperfect (-ar)<br>e.g. \"I had spoken\"",
     "yo": "había/-ado",
     "tú": "habías/-ado",
@@ -248,7 +248,7 @@ var pluperfAr = {
     "ellos/ellas": "habían/-ado"
 }
 
-var pluperfEr = {
+const pluperfEr = {
     "title": "Pluperfect (-er)<br>e.g. \"I had eaten\"",
     "yo": "había/-ido",
     "tú": "habías/-ido",
@@ -258,7 +258,7 @@ var pluperfEr = {
     "ellos/ellas": "habían/-ido"
 }
 
-var pluperfIr = {
+const pluperfIr = {
     "title": "Pluperfect (-ir)<br>e.g. \"I had lived\"",
     "yo": "había/-ido",
     "tú": "habías/-ido",
@@ -268,7 +268,7 @@ var pluperfIr = {
     "ellos/ellas": "habían/-ido"
 }
 
-var presSubjAr = {
+const presSubjAr = {
     "title": "Present subjunctive (-ar)<br>e.g. \"(I want) you (to) speak (with me)\"",
     "yo": "-e",
     "tú": "-es",
@@ -278,7 +278,7 @@ var presSubjAr = {
     "ellos/ellas": "-en"
 }
 
-var presSubjEr = {
+const presSubjEr = {
     "title": "Present subjunctive (-er)<br>e.g. \"(I want) you (to) eat (with me)\"",
     "yo": "-a",
     "tú": "-as",
@@ -288,7 +288,7 @@ var presSubjEr = {
     "ellos/ellas": "-an"
 }
 
-var presSubjIr = {
+const presSubjIr = {
     "title": "Present subjunctive (-ir)<br>e.g. \"(I want) you (to) live (with me)\"",
     "yo": "-a",
     "tú": "-as",
@@ -298,42 +298,42 @@ var presSubjIr = {
     "ellos/ellas": "-an"
 }
 
-var imperaPosAr = {
+const imperaPosAr = {
     "title": "Positive imperative (-ar)<br>e.g. \"Speak!\"",
     "tú": "-a!",
     "nosotros/nosotras": "-emos!",
     "vosotros/vosotras": "-ad!"
 }
 
-var imperaPosEr = {
+const imperaPosEr = {
     "title": "Positive imperative (-er)<br>e.g. \"Eat!\"",
     "tú": "-e!",
     "nosotros/nosotras": "-amos!",
     "vosotros/vosotras": "-ed!"
 }
 
-var imperaPosIr = {
+const imperaPosIr = {
     "title": "Positive imperative (-ir)<br>e.g. \"Live!\"",
     "tú": "-e!",
     "nosotros/nosotras": "-amos!",
     "vosotros/vosotras": "-id!"
 }
 
-var imperaNegAr = {
+const imperaNegAr = {
     "title": 'Negative imperative (-ar)<br>e.g. \"Don\'t speak!\"',
     "tú": "-es!",
     "nosotros/nosotras": "-emos!",
     "vosotros/vosotras": "-éis!"
 }
 
-var imperaNegEr = {
+const imperaNegEr = {
     "title": 'Negative imperative (-er)<br>e.g. \"Don\'t eat!\"',
     "tú": "-as!",
     "nosotros/nosotras": "-amos!",
     "vosotros/vosotras": "-áis!"
 }
 
-var imperaNegIr = {
+const imperaNegIr = {
     "title": 'Negative imperative (-ir)<br>e.g. \"Don\'t live!\"',
     "tú": "-as!",
     "nosotros/nosotras": "-amos!",

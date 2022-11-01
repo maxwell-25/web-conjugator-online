@@ -1,22 +1,22 @@
 // | ARRAYS AND VARIABLES
 
-var personIds = ["yo-per", "tú-per", "él/ella-per", "nosotros/nosotras-per", "vosotros/vosotras-per", "ellos/ellas-per"];
+const personIds = ["yo-per", "tú-per", "él/ella-per", "nosotros/nosotras-per", "vosotros/vosotras-per", "ellos/ellas-per"];
 
-var endingIds = ["yo-end", "tú-end", "él/ella-end", "nosotros/nosotras-end", "vosotros/vosotras-end", "ellos/ellas-end"];
+const endingIds = ["yo-end", "tú-end", "él/ella-end", "nosotros/nosotras-end", "vosotros/vosotras-end", "ellos/ellas-end"];
 
-var exampleIds = ["yo-ex", "tú-ex", "él/ella-ex", "nosotros/nosotras-ex", "vosotros/vosotras-ex", "ellos/ellas-ex"];
+const exampleIds = ["yo-ex", "tú-ex", "él/ella-ex", "nosotros/nosotras-ex", "vosotros/vosotras-ex", "ellos/ellas-ex"];
 
-var tenses = ["pres", "pret", "imperf", "fut", "cond", "ref", "presCon", "perf", "pluperf", "presSubj", "imperaPos", "imperaNeg"];
+const tenses = ["pres", "pret", "imperf", "fut", "cond", "ref", "presCon", "perf", "pluperf", "presSubj", "imperaPos", "imperaNeg"];
 
-var count = 0;
-var correct = 0;
-var percentage = 0;
+let count = 0;
+let correct = 0;
+let percentage = 0;
 
-var currentTense;
-var currentTenseDicts;
-var currentTenseDict;
-var currentDictIndex;
-var currentPerson;
+let currentTense;
+let currentTenseDicts;
+let currentTenseDict;
+let currentDictIndex;
+let currentPerson;
 
 // | EVENT LISTENERS
 
