@@ -12,6 +12,12 @@ var count = 0;
 var correct = 0;
 var percentage = 0;
 
+var currentTense;
+var currentTenseDicts;
+var currentTenseDict;
+var currentDictIndex;
+var currentPerson;
+
 // | EVENT LISTENERS
 
 document.getElementById("pres").addEventListener("click", selectTense);
@@ -85,7 +91,7 @@ function newTenseDict(){
 
     // console.log("CURRENT DICTS BEFORE DELETE:", currentTenseDicts)
     // this code returns a currentTenseDict at random from currentTenseDicts
-    var currentDictIndex = currentTenseDicts.indexOf(currentTenseDict);
+    currentDictIndex = currentTenseDicts.indexOf(currentTenseDict);
     if(currentDictIndex !== -1) {
         currentTenseDicts.splice(currentDictIndex, 1);
     }
