@@ -8,6 +8,7 @@ const exampleIds = ["yo-ex", "tú-ex", "él/ella-ex", "nosotros/nosotras-ex", "v
 
 const tenses = ["pres", "pret", "imperf", "fut", "cond", "ref", "presCon", "perf", "pluperf", "presSubj", "imperaPos", "imperaNeg"];
 
+// DO I NEED TO REWRITE APP TO REMOVE GLOBAL VARS?
 let count = 0;
 let correct = 0;
 let percentage = 0;
@@ -287,18 +288,18 @@ function answerView(){
 function resetTable(){
     questionView();
 
-    for(i in personIds){
-        document.getElementById(personIds[i]).style.color=getComputedStyle(document.getElementById(personIds[i])).getPropertyValue("--paragraph-color");
-        document.getElementById(personIds[i]).style.opacity=1;
+    for(const personId in personIds){
+        document.getElementById(personIds[personId]).style.color=getComputedStyle(document.getElementById(personIds[personId])).getPropertyValue("--paragraph-color");
+        document.getElementById(personIds[personId]).style.opacity=1;
     }
     
-    for(i in endingIds){
-        document.getElementById(endingIds[i]).innerHTML="";
-        document.getElementById(endingIds[i]).style.color=getComputedStyle(document.getElementById(personIds[i])).getPropertyValue("--paragraph-color");
+    for(const personId in endingIds){
+        document.getElementById(endingIds[personId]).innerHTML="";
+        document.getElementById(endingIds[personId]).style.color=getComputedStyle(document.getElementById(personIds[personId])).getPropertyValue("--paragraph-color");
     }
-    for(i in exampleIds){
-        document.getElementById(exampleIds[i]).innerHTML="";
-        document.getElementById(exampleIds[i]).style.color=getComputedStyle(document.getElementById(personIds[i])).getPropertyValue("--paragraph-color");
+    for(const personId in exampleIds){
+        document.getElementById(exampleIds[personId]).innerHTML="";
+        document.getElementById(exampleIds[personId]).style.color=getComputedStyle(document.getElementById(personIds[personId])).getPropertyValue("--paragraph-color");
     }
 }
 
