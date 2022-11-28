@@ -58,7 +58,7 @@ function appView(){
 // | MAIN
 
 // Generate currentTenseDicts as nested arrays based on currentTense
-function newTenseDicts(tense){
+function newTenseDicts(){
     if (currentTense == "pres"){
         currentTenseDicts = [JSON.parse(JSON.stringify(presAr)), JSON.parse(JSON.stringify(presEr)), JSON.parse(JSON.stringify(presIr))];
     } else if (currentTense == "pret"){
