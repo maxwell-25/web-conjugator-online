@@ -21,18 +21,9 @@ let currentPerson;
 
 // | EVENT LISTENERS
 
-document.getElementById("pres").addEventListener("click", selectTense);
-document.getElementById("pret").addEventListener("click", selectTense);
-document.getElementById("imperf").addEventListener("click", selectTense);
-document.getElementById("fut").addEventListener("click", selectTense);
-document.getElementById("cond").addEventListener("click", selectTense);
-document.getElementById("ref").addEventListener("click", selectTense);
-document.getElementById("presCon").addEventListener("click", selectTense);
-document.getElementById("perf").addEventListener("click", selectTense);
-document.getElementById("pluperf").addEventListener("click", selectTense);
-document.getElementById("presSubj").addEventListener("click", selectTense);
-document.getElementById("imperaPos").addEventListener("click", selectTense);
-document.getElementById("imperaNeg").addEventListener("click", selectTense);
+for (const tense of tenses) {
+    document.getElementById(tense).addEventListener("click", selectTense);
+}
 
 document.getElementById("quit-btn").addEventListener("click", appQuit);
 document.getElementById("show-ans").addEventListener("click", showAnswer);
