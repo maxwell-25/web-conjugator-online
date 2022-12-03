@@ -50,29 +50,29 @@ function appView(){
 
 // Generate currentTenseDicts as nested arrays based on currentTense
 function newTenseDicts(){
-    if (currentTense == "pres"){
+    if (currentTense === "pres"){
         currentTenseDicts = [JSON.parse(JSON.stringify(presAr)), JSON.parse(JSON.stringify(presEr)), JSON.parse(JSON.stringify(presIr))];
-    } else if (currentTense == "pret"){
+    } else if (currentTense === "pret"){
         currentTenseDicts = [JSON.parse(JSON.stringify(pretAr)), JSON.parse(JSON.stringify(pretEr)), JSON.parse(JSON.stringify(pretIr))];
-    } else if (currentTense == "imperf"){
+    } else if (currentTense === "imperf"){
         currentTenseDicts = [JSON.parse(JSON.stringify(imperfAr)), JSON.parse(JSON.stringify(imperfEr)), JSON.parse(JSON.stringify(imperfIr))];
-    } else if (currentTense == "fut"){
+    } else if (currentTense === "fut"){
         currentTenseDicts = [JSON.parse(JSON.stringify(futAr)), JSON.parse(JSON.stringify(futEr)), JSON.parse(JSON.stringify(futIr))];
-    } else if (currentTense == "cond"){
+    } else if (currentTense === "cond"){
         currentTenseDicts = [JSON.parse(JSON.stringify(condAr)), JSON.parse(JSON.stringify(condEr)), JSON.parse(JSON.stringify(condIr))];
-    } else if (currentTense == "ref"){
+    } else if (currentTense === "ref"){
         currentTenseDicts = [JSON.parse(JSON.stringify(refAr)), JSON.parse(JSON.stringify(refEr)), JSON.parse(JSON.stringify(refIr))];
-    } else if (currentTense == "presCon"){
+    } else if (currentTense === "presCon"){
         currentTenseDicts = [JSON.parse(JSON.stringify(presConAr)), JSON.parse(JSON.stringify(presConEr)), JSON.parse(JSON.stringify(presConIr))];
-    } else if (currentTense == "perf"){
+    } else if (currentTense === "perf"){
         currentTenseDicts = [JSON.parse(JSON.stringify(perfAr)), JSON.parse(JSON.stringify(perfEr)),JSON.parse(JSON.stringify( perfIr))];
-    } else if (currentTense == "pluperf"){
+    } else if (currentTense === "pluperf"){
         currentTenseDicts = [JSON.parse(JSON.stringify(pluperfAr)), JSON.parse(JSON.stringify(pluperfEr)), JSON.parse(JSON.stringify(pluperfIr))];
-    } else if (currentTense == "presSubj"){
+    } else if (currentTense === "presSubj"){
         currentTenseDicts = [JSON.parse(JSON.stringify(presSubjAr)), JSON.parse(JSON.stringify(presSubjEr)), JSON.parse(JSON.stringify(presSubjIr))];
-    } else if (currentTense == "imperaPos"){
+    } else if (currentTense === "imperaPos"){
         currentTenseDicts = [JSON.parse(JSON.stringify(imperaPosAr)), JSON.parse(JSON.stringify(imperaPosEr)), JSON.parse(JSON.stringify(imperaPosIr))];
-    } else if (currentTense == "imperaNeg"){
+    } else if (currentTense === "imperaNeg"){
         currentTenseDicts = [JSON.parse(JSON.stringify(imperaNegAr)), JSON.parse(JSON.stringify(imperaNegEr)), JSON.parse(JSON.stringify(imperaNegIr))];
     }
 }
@@ -105,7 +105,7 @@ function newPerson(){
         // console.log("current person: ", currentPerson);
 
         // block out persons unused in imperative tenses
-        if(currentTense == "imperaPos" || currentTense == "imperaNeg"){
+        if(currentTense === "imperaPos" || currentTense === "imperaNeg"){
             document.getElementById("yo-per").style.opacity=0.3;
 
             document.getElementById("él/ella-per").style.opacity=0.3;
@@ -123,12 +123,12 @@ function newPerson(){
 
         document.getElementById([currentPerson + "-ex"]).style.color=getComputedStyle(document.getElementById([currentPerson + "-ex"])).getPropertyValue("--my-red");        
     }
-    else if(Object.keys(currentTenseDict).length == 0 && Object.keys(currentTenseDicts).length > 0){
+    else if(Object.keys(currentTenseDict).length === 0 && Object.keys(currentTenseDicts).length > 0){
         resetTable();
         newTenseDict();
         updateExampleText();
     }
-    else if(Object.keys(currentTenseDict).length == 0 && Object.keys(currentTenseDict).length == 0){
+    else if(Object.keys(currentTenseDict).length === 0 && Object.keys(currentTenseDict).length === 0){
         percentage = parseInt((correct/count)*100);
         saveScore();
     }
@@ -159,7 +159,7 @@ function updateTableTitle(){
 }
 
 function updateEndingTitle(){
-    if(currentTense == "presCon" || currentTense == "perf" || currentTense == "pluperf"){
+    if(currentTense === "presCon" || currentTense === "perf" || currentTense === "pluperf"){
         document.getElementById("title-ending").innerHTML="? / ??";
     }
     else{
@@ -168,7 +168,7 @@ function updateEndingTitle(){
 }
 
 function updateEndingBlanks(){
-    if(currentTense == "presCon" || currentTense == "perf" || currentTense == "pluperf"){
+    if(currentTense === "presCon" || currentTense === "perf" || currentTense === "pluperf"){
         document.getElementById([currentPerson + "-end"]).innerHTML="? / ??";
     }
     else{
@@ -182,7 +182,7 @@ function revealEnding(){
 }
 
 function updateExampleText(){
-    if(currentTense == "pres" || currentTense == "pret" || currentTense == "imperaPos" || currentTense == "imperf" || currentTense == "presSubj"){
+    if(currentTense === "pres" || currentTense === "pret" || currentTense === "imperaPos" || currentTense === "imperf" || currentTense === "presSubj"){
         // console.log("PRINT: ", document.getElementById("app-title").innerHTML);
         if(document.getElementById("app-title").innerHTML.includes("-ar")){
             document.getElementById([currentPerson + "-ex"]).innerHTML="habl-";
@@ -194,7 +194,7 @@ function updateExampleText(){
             document.getElementById([currentPerson + "-ex"]).innerHTML="viv-";
         }
     }
-    else if(currentTense == "presCon" || currentTense == "perf" || currentTense == "pluperf"){
+    else if(currentTense === "presCon" || currentTense === "perf" || currentTense === "pluperf"){
         if(document.getElementById("app-title").innerHTML.includes("-ar")){
             document.getElementById([currentPerson + "-ex"]).innerHTML="___ habl-";
         }
@@ -205,7 +205,7 @@ function updateExampleText(){
             document.getElementById([currentPerson + "-ex"]).innerHTML="___ viv-";
         }
     }
-    else if(currentTense == "imperaNeg"){
+    else if(currentTense === "imperaNeg"){
         if(document.getElementById("app-title").innerHTML.includes("-ar")){
             document.getElementById([currentPerson + "-ex"]).innerHTML="no habl-";
         }
@@ -216,7 +216,7 @@ function updateExampleText(){
             document.getElementById([currentPerson + "-ex"]).innerHTML="no decid-";
         }
     }
-    else if(currentTense == "ref"){
+    else if(currentTense === "ref"){
         if(document.getElementById("app-title").innerHTML.includes("-ar")){
             document.getElementById([currentPerson + "-ex"]).innerHTML="? bañ" + presAr[currentPerson].substring(1);
         }
@@ -224,7 +224,7 @@ function updateExampleText(){
             document.getElementById([currentPerson + "-ex"]).innerHTML="? cre" + presEr[currentPerson].substring(1);
         }
         else if(document.getElementById("app-title").innerHTML.includes("-ir")){
-            if(currentPerson == "nosotros/nosotras" || currentPerson == "vosotros/vosotras"){
+            if(currentPerson === "nosotros/nosotras" || currentPerson === "vosotros/vosotras"){
                 document.getElementById([currentPerson + "-ex"]).innerHTML="? dorm" + presIr[currentPerson].substring(1);
             }
             else{
@@ -232,7 +232,7 @@ function updateExampleText(){
             }
         }
     }
-    else if(currentTense == "fut" || currentTense == "cond"){
+    else if(currentTense === "fut" || currentTense === "cond"){
         if(document.getElementById("app-title").innerHTML.includes("-ar")){
             document.getElementById([currentPerson + "-ex"]).innerHTML="hablar-";
         }
@@ -246,11 +246,11 @@ function updateExampleText(){
 }
 
 function revealExample(){
-    if(currentTense == "presCon" || currentTense == "perf" || currentTense == "pluperf"){
+    if(currentTense === "presCon" || currentTense === "perf" || currentTense === "pluperf"){
         // console.log("TEST: ", document.getElementById([currentPerson + "-ex"]).innerHTML.replace("___", currentTenseDict[currentPerson].split("/")[0]).replace("-", currentTenseDict[currentPerson].split("-")[1]));
         document.getElementById([currentPerson + "-ex"]).innerHTML = document.getElementById([currentPerson + "-ex"]).innerHTML.replace("___", currentTenseDict[currentPerson].split("/")[0]).replace("-", currentTenseDict[currentPerson].split("-")[1]);
     }
-    else if(currentTense == "ref"){
+    else if(currentTense === "ref"){
         document.getElementById([currentPerson + "-ex"]).innerHTML = document.getElementById([currentPerson + "-ex"]).innerHTML.replace("?", currentTenseDict[currentPerson]);
     }
     else{
