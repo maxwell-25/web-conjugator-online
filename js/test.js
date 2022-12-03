@@ -1,14 +1,15 @@
 // | ARRAYS AND VARIABLES
 
-const tenses = ["Present simple", "Preterite", "Imperfect", "Future", "Conditional", "Reflexive", "Present continuous", "Perfect", "Pluperfect", "Present subjuntive", "Positive imperative", "Negative imperative"];
+const tenses = ["Present simple"];
 
 const persons = ["I", "you", "he/she", "we", "y'all", "they"];
 
 const verbs = {
-    "pass": "pasar",
-    "must": "deber",
-    "stay": "quedar",
-    "speak": "hablar"
+    "speak": "hablar",
+    "take": "tomar",
+    "live": "vivir",
+    "watch": "mirar",
+    "work": "trabajar"
 }
 
 let currentTense;
