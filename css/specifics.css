@@ -143,12 +143,13 @@
 #app-menu-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1rem;
   justify-content: center;
   height: 100%;
   width: 100%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   /* font-size: 2rem; */
+  /* border: 2px solid green; */
 }
 
 #app-menu-grid button {
@@ -157,8 +158,8 @@
   border-radius: 2rem;
   font-size: 2rem;
   background-color: white;
-  height: 12rem;
-  width: 12rem;
+  height: 11rem;
+  width: 11rem;
   margin: 0 auto;
 }
 
@@ -271,7 +272,7 @@ td button {
   width: 100%;
   position: relative;
   box-sizing: border-box;
-  margin-top: 20rem;
+  margin-top: 15rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin-left: auto;
@@ -288,6 +289,10 @@ td button {
 #test-body thead{
   height: 7.5rem;
   /* border: 2px solid black; */
+}
+
+#tense{
+  font-weight: bold;;
 }
 
 #test-body td{
