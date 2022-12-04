@@ -268,7 +268,7 @@ td button {
 
 /* ||| TEST PAGE */
 
-#test{
+#test {
   display: block;
   position: relative;
   box-sizing: border-box;
@@ -278,28 +278,29 @@ td button {
   padding-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid black;
+  /* border: 3px solid purple; */
 }
 
-#test-body{
+#test-body {
   margin: auto;
-  /* width: 100%; */
+  width: 100%;
   font-size: 2.5rem;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
-#test-body thead{
+#test-body thead {
   height: 7.5rem;
-  border: 2px solid black;
+  /* border: 2px solid green; */
 }
 
-#tense{
-  font-weight: bold;;
+#tense {
+  width: 100%;
+  font-weight: bold;
 }
 
-#test-body td{
+#test-body td {
   height: 7.5rem;
-  /* border: 2px solid black; */
+  /* border: 2px solid blue; */
 }
 
 #test-show-ans {
@@ -319,6 +320,7 @@ td button {
 
 #test-not-it {
   display: none;
+  font-size: 100%;
   width: 33.3%;
   margin-left: 0.5rem;
   background-color: white;

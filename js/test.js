@@ -39,11 +39,11 @@ function newTest(){
     currentPerson = Object.keys(persons)[Math.floor(Math.random() * Object.keys(persons).length)];
     console.log("currentPerson: " + currentPerson);
 
-    document.getElementById("English").innerHTML=persons[currentPerson] + " " + verbs[currentVerb];
+    document.getElementById("english").innerHTML=persons[currentPerson] + " " + verbs[currentVerb];
 }
 
 function revealEnding(){
-    document.getElementById("Spanish").innerHTML=currentVerb.slice(0,-2) + currentTense[currentPerson].slice(1);
+    document.getElementById("spanish").innerHTML=currentVerb.slice(0,-2) + currentTense[currentPerson].slice(1);
 }
 
 function questionView(){
@@ -59,7 +59,7 @@ function answerView(){
 }
 
 function resetTable(){
-    document.getElementById("Spanish").innerHTML="?";
+    document.getElementById("spanish").innerHTML="?";
 }
 
 // | BUTTON FUNCTIONS
