@@ -51,13 +51,13 @@ function updateTense(){
 }
 
 function newVerb(){
-    if (String(currentTense).includes("(-ar)")){
+    if (currentTense.title.includes("(-ar)")){
         currentVerb = Object.keys(arVerbs)[Math.floor(Math.random() * Object.keys(arVerbs).length)];
         console.log("current verb: " + currentVerb);
-    } else if (String(currentTense).includes("(-er")){
+    } else if (currentTense.title.includes("(-er")){
         currentVerb = Object.keys(erVerbs)[Math.floor(Math.random() * Object.keys(erVerbs).length)];
         console.log("current verb: " + currentVerb);
-    } else if (String(currentTense).includes("(-ir")){
+    } else if (currentTense.title.includes("(-ir")){
         currentVerb = Object.keys(irVerbs)[Math.floor(Math.random() * Object.keys(irVerbs).length)];
         console.log("current verb: " + currentVerb);
     }
@@ -73,7 +73,7 @@ function updateEnglish(){
     if (currentPerson == "él/ella") {
         document.getElementById("english").innerHTML=persons[currentPerson] + " " + arVerbs[currentVerb] + "s";
     } else {
-        document.getElementById("english").innerHTML=persons[currentPerson] + " " + currentVerb;
+        document.getElementById("english").innerHTML=persons[currentPerson] + " " + arVerbs[currentVerb];
     }
 }
 
