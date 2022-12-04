@@ -266,29 +266,31 @@ td button {
   border-radius: 2rem;
 }
 
-/* ||| Test */
+/* ||| TEST PAGE */
 
 #test{
-  width: 100%;
+  display: block;
   position: relative;
   box-sizing: border-box;
+  width: 100%;
   margin-top: 15rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
-  /* border: 2px solid black; */
+  border: 2px solid black;
 }
 
 #test-body{
   margin: auto;
+  /* width: 100%; */
   font-size: 2.5rem;
-  /* border: 2px solid red; */
+  border: 2px solid red;
 }
 
 #test-body thead{
   height: 7.5rem;
-  /* border: 2px solid black; */
+  border: 2px solid black;
 }
 
 #tense{
@@ -315,7 +317,7 @@ td button {
   color: var(--my-green);
 }
 
-#test-try-again {
+#test-not-it {
   display: none;
   width: 33.3%;
   margin-left: 0.5rem;
