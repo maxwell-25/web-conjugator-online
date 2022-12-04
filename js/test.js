@@ -3,7 +3,8 @@
 const tenses = [presAr, pretAr];
 
 const persons = {
-    "yo": "I"
+    "yo": "I",
+    "tú": "you"
 };
 // const persons = ["yo", "tú", "él/ella", "nosotros/nosotras", "vosotros/vosotras", "ellos/ellas"];
 
@@ -40,6 +41,8 @@ function newVerb(){
     console.log(currentVerb);
 
     document.getElementById("English").innerHTML=persons[currentPerson] + " " + verbs[currentVerb];
+
+    document.getElementById("Spanish").innerHTML=currentVerb.slice(0,-2) + currentTense[currentPerson].slice(1);
 }
 
 newVerb();
