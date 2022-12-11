@@ -14,21 +14,6 @@ const tenses = [
     imperaNegAr, imperaNegEr, imperaNegIr
 ];
 
-// const tenses = [
-//     presAr,
-//     pretAr,
-//     imperfAr,
-//     futAr,
-//     condAr,
-//     refAr,
-//     presConAr,
-//     perfAr,
-//     pluperfAr,
-//     presSubjAr,
-//     imperaPosAr,
-//     imperaNegAr,
-// ];
-
 const reflexiveTenses = [refAr, refEr, refIr];
 
 const persons = {
