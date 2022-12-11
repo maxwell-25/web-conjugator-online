@@ -79,7 +79,6 @@ function newVerb(){
 
 function newPerson(){
     if (currentTense.title.includes("imperative")){
-        console.log("test");
         const imperativePersons = {
         "tú": "you",
         "nosotros/nosotras": "we",
@@ -100,6 +99,8 @@ function newAnswer(){
         document.getElementById("spanish").innerHTML = currentTense[currentPerson].split("/")[0] + " " + currentVerb.slice(0,-2) + currentTense[currentPerson].split("-")[1];
     } else if (currentTense.title.includes("Future") || currentTense.title.includes("Conditional")) {
         document.getElementById("spanish").innerHTML = currentVerb + currentTense[currentPerson].slice(1);
+    } else if (currentTense.title.includes("Negative imperative")){
+        document.getElementById("spanish").innerHTML="no " + currentVerb.slice(0,-2) + currentTense[currentPerson].slice(1);
     } else if(currentTense.title.includes("Reflexive")){
         if(currentTense.title.includes("-ar")){
             const reflexiveEnding = presAr;
