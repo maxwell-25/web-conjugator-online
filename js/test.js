@@ -1,18 +1,33 @@
+// I THINK I CAN MASSIVELY CUT DOWN THE CODE IN APP.JS (ALL THE "IF TENSE ===" STUFF) BY USING VARIABLES IN MY CONST ARRAYS RATHER THAN STRINGS, THEN USING STRINGIFY TO CALL THEM)
+
 // | ARRAYS AND VARIABLES
 
 const arVerbs = {
-    hablar: "talk"
+    hablar: "To talk"
 };
 
 const erVerbs = {
-    comer: "to eat"
+    comer: "To eat"
 };
 
 const irVerbs = {
-    vivir: "live"
+    vivir: "To live"
 };
 
-const tenses = [presAr, presIr, pretAr];
+const tenses = [
+    presAr, presEr, presIr,
+    pretAr, pretEr, pretIr,
+    imperfAr, imperfEr, imperfIr,
+    futAr, futEr, futIr,
+    condAr, condEr, condIr,
+    refAr, refEr, refIr,
+    presConAr, presConEr, presConIr,
+    perfAr, perfEr, perfIr,
+    pluperfAr, pluperfEr, pluperfIr,
+    presSubjAr, presSubjEr, presSubjIr,
+    imperaPosAr, imperaPosEr, imperaPosIr,
+    imperaNegAr, imperaNegEr, imperaNegIr
+];
 
 const persons = {
     "yo": "I",
@@ -24,6 +39,7 @@ const persons = {
 };
 
 let currentVerb;
+let currentVerbType;
 let currentTense;
 let currentPerson;
 
@@ -33,9 +49,9 @@ document.getElementById("test-got-it").addEventListener("click", gotIt);
 document.getElementById("test-not-it").addEventListener("click", tryAgain);
 
 // | TEST
-
 function newTest(){
     updateTense();
+    newVerbType();
     newVerb();
     newPerson();
     updateEnglish();
@@ -43,24 +59,27 @@ function newTest(){
 
 function updateTense(){
     currentTense = tenses[Math.floor(Math.random() * tenses.length)];
-    console.log("current tense: " + currentTense.title);
-    // console.log("currentTense: " + JSON.stringify(currentTense.title).slice(1, JSON.stringify(currentTense.title.indexOf("("))));
+    console.log("currentTense.title: " + currentTense.title);
 
-    document.getElementById("tense").innerHTML=JSON.stringify(currentTense.title).slice(1, JSON.stringify(currentTense.title.indexOf("(")));
-    // I THINK I CAN MASSIVELY CUT DOWN THE CODE IN APP.JS (ALL THE "IF TENSE ===" STUFF) BY USING VARIABLES IN MY CONST ARRAYS RATHER THAN STRINGS, THEN USING STRINGIFY TO CALL THEM)
+    document.getElementById("tense").innerHTML=currentTense.title.slice(0, currentTense.title.indexOf("("));
+}
+
+function newVerbType(){
+    if (currentTense.title.includes("(-ar)")){
+        currentVerbType = arVerbs;
+        console.log("currentVerbType:", currentVerbType);
+    } else if (currentTense.title.includes("(-er)")){
+        currentVerbType = erVerbs;
+        console.log("currentVerbType:", currentVerbType);
+    } else if (currentTense.title.includes("(-ir)")){
+        currentVerbType = irVerbs;
+        console.log("currentVerbType:", currentVerbType);
+    }
 }
 
 function newVerb(){
-    if (currentTense.title.includes("(-ar)")){
-        currentVerb = Object.keys(arVerbs)[Math.floor(Math.random() * Object.keys(arVerbs).length)];
-        console.log("current verb: " + currentVerb);
-    } else if (currentTense.title.includes("(-er")){
-        currentVerb = Object.keys(erVerbs)[Math.floor(Math.random() * Object.keys(erVerbs).length)];
-        console.log("current verb: " + currentVerb);
-    } else if (currentTense.title.includes("(-ir")){
-        currentVerb = Object.keys(irVerbs)[Math.floor(Math.random() * Object.keys(irVerbs).length)];
-        console.log("current verb: " + currentVerb);
-    }
+    currentVerb = Object.keys(currentVerbType)[Math.floor(Math.random() * Object.keys(currentVerbType).length)];
+    console.log("current verb: " + currentVerb);
 }
 
 function newPerson(){
@@ -70,11 +89,7 @@ function newPerson(){
 
 
 function updateEnglish(){
-    if (currentPerson == "él/ella") {
-        document.getElementById("english").innerHTML=persons[currentPerson] + " " + arVerbs[currentVerb] + "s";
-    } else {
-        document.getElementById("english").innerHTML=persons[currentPerson] + " " + arVerbs[currentVerb];
-    }
+    document.getElementById("english").innerHTML=currentVerbType[currentVerb] + "<br />" + "(" + persons[currentPerson] + ")";
 }
 
 function newEnding(){
@@ -98,7 +113,6 @@ function resetTable(){
 }
 
 // | BUTTON FUNCTIONS
-
 function showAnswer() {
     newEnding();
     answerView()
