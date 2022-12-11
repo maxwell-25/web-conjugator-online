@@ -1,0 +1,120 @@
+const arVerbs = {
+    pasar: "to pass/happen",
+    quedar: "to stay/remain",
+    hablar: "to speak",
+    llevar: "to carry/bring",
+    dejar: "to leave/allow",
+    llamar: "to call",
+    tomar: "to take/drink",
+    tratar: "to treat/handle",
+    mirar: "to watch/look at",
+    esperar: "to wait for/hope",
+    entrar: "to enter",
+    trabajar: "to work",
+    terminar: "to finish",
+    necesitar: "to need",
+    resultar: "to turn out",
+    cambiar: "to change",
+    presentar: "to introduce",
+    crear: "to create",
+    considerar: "to consider",
+    acabar: "to finish",
+    ganar: "to win/gain",
+    formar: "to form",
+    aceptar: "to accept",
+    lograr: "to get",
+    preguntar: "to ask",
+    estudiar: "to study",
+    ayudar: "to help",
+    gustar: "to please",
+    escuchar: "to listen",
+    levantar: "to raise/lift",
+    intentar: "to try/attempt",
+    usar: "to use",
+    olvidar: "to forget",
+    ocupar: "to occupy",
+    fijar: "to fix",
+    comprar: "to buy",
+    evitar: "to avoid",
+    interesar: "to interest",
+    echar: "to throw",
+    importar: "to be important",
+    observar: "to observe",
+    imaginar: "to imagine",
+    desarrollar: "to develop/unroll/unfold",
+    señalar: "to point out/signal",
+    preparar: "to prepare",
+    faltar: "to lack/be missing",
+    acompañar: "to accompany",
+    desear: "to desire/wish",
+    enseñar: "to teach",
+    representar: "to represent",
+    mandar: "to order/to send",
+    asegurar: "to assure",
+    matar: "to kill",
+    guardar: "to guard/keep",
+    iniciar: "to initiate/begin",
+    bajar: "to lower/descend",
+    notar: "to note/observe",
+    cortar: "to cut",
+    aprovechar: "to take advantage of",
+    apoyar: "to support",
+    aumentar: "to increase",
+    abandonar: "to abandon",
+    quitar: "to remove",
+    conservar: "to conserve/preserve",
+    funcionar: "to function/run",
+    anunciar: "to announce",
+    comentar: "to comment on",
+    participar: "to participate",
+    escapar: "to escape",
+    tirar: "to throw/shoot,",
+    contestar: "to answer",
+    preocupar: "to worry",
+    prestar: "to lend",
+    pesar: "to weigh",
+    viajar: "to travel"
+};
+
+const erVerbs = {
+    deber: "to owe/ought to",
+    comprender: "to comprehend/understand",
+    correr: "to run",
+    comer: "to eat",
+    suceder: "to succeed/happen",
+    aprender: "to learn",
+    responder: "to respond",
+    vender: "to sell",
+    meter: "to put/place/insert",
+    pretender: "to attempt",
+    corresponder: "to correspond with",
+    depender: "to depend"
+};
+
+const irVerbs = {
+    vivir: "to live",
+    existir: "to exist",
+    ocurrir: "to occur/happen",
+    recibir: "to receive/greet",
+    permitir: "to permit",
+    partir: "to divide/leave",
+    cumplir: "to fulfil/carry out",
+    decidir: "to decide",
+    subir: "to go up/rise/climb/raise up",
+    sufrir: "to suffer/undergo",
+    compartir: "to divide (up)/share",
+    consistir: "to consist",
+    insistir: "to insist"
+};
+
+const reflexiveArVerbs = {
+    lavar: "To wash"
+};
+
+const reflexiveErVerbs = {
+    atrever: "To dare"
+};
+
+const reflexiveIrVerbs = {
+    aburrir: "To get bored"
+};

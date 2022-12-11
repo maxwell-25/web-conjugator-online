@@ -1,30 +1,4 @@
 // | ARRAYS AND VARIABLES
-
-const arVerbs = {
-    hablar: "To talk"
-};
-
-const erVerbs = {
-    comer: "To eat"
-};
-
-const irVerbs = {
-    vivir: "To live"
-};
-
-const reflexiveArVerbs = {
-    lavar: "To wash"
-};
-
-const reflexiveErVerbs = {
-    atrever: "To dare"
-};
-
-const reflexiveIrVerbs = {
-    aburrir: "To get bored"
-};
-
-
 const tenses = [
     presAr, presEr, presIr,
     pretAr, pretEr, pretIr,
