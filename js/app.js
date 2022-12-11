@@ -1,3 +1,5 @@
+// I THINK I CAN MASSIVELY CUT DOWN THE CODE IN APP.JS (ALL THE "IF TENSE ===" STUFF) BY USING VARIABLES IN MY CONST ARRAYS RATHER THAN STRINGS – AS I'VE DONE IN TEST.JS
+
 // | ARRAYS AND VARIABLES
 
 const personIds = ["yo-per", "tú-per", "él/ella-per", "nosotros/nosotras-per", "vosotros/vosotras-per", "ellos/ellas-per"];

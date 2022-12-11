@@ -1,5 +1,3 @@
-// I THINK I CAN MASSIVELY CUT DOWN THE CODE IN APP.JS (ALL THE "IF TENSE ===" STUFF) BY USING VARIABLES IN MY CONST ARRAYS RATHER THAN STRINGS, THEN USING STRINGIFY TO CALL THEM)
-
 // | ARRAYS AND VARIABLES
 
 const arVerbs = {
@@ -19,7 +17,7 @@ const reflexiveArVerbs = {
 };
 
 const reflexiveErVerbs = {
-    atreverse: "To dare"
+    atrever: "To dare"
 };
 
 const reflexiveIrVerbs = {
