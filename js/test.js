@@ -1,4 +1,8 @@
 // | ARRAYS AND VARIABLES
+
+const verbs = Object.assign({}, arVerbs, erVerbs, irVerbs);
+// reflexiveArVerbs, reflexiveErVerbs, reflexiveIrVerbs
+
 const tenses = [
     presAr, presEr, presIr,
     pretAr, pretEr, pretIr,
@@ -29,6 +33,7 @@ let currentVerb;
 let currentVerbType;
 let currentTense;
 let currentPerson;
+let verbSample;
 
 // | EVENT LISTENERS
 document.getElementById("test-show-ans").addEventListener("click", showAnswer);
@@ -37,11 +42,22 @@ document.getElementById("test-not-it").addEventListener("click", tryAgain);
 
 // | TEST
 function newTest(){
+    newVerbSample();
     updateTense();
-    newVerbType();
+    // newVerbType();
     newVerb();
     newPerson();
     updateEnglish();
+}
+
+function newVerbSample(){
+    verbSample = {};
+    for (let i = 0; i < 10; i++){
+        let currentKey = Object.keys(verbs)[Math.floor(Math.random() * Object.keys(verbs).length)];
+    // console.log("currentKey: ", currentKey); 
+    verbSample[currentKey] = verbs[currentKey];
+    }
+    console.log("verbSample: ", verbSample);
 }
 
 function updateTense(){
@@ -51,29 +67,29 @@ function updateTense(){
     document.getElementById("tense").innerHTML=currentTense.title.slice(0, currentTense.title.indexOf("("));
 }
 
-function newVerbType(){
-    if (currentTense.title.includes("Reflexive")){
-        if (currentTense.title.includes("(-ar)")){
-            currentVerbType = reflexiveArVerbs;
-        } else if (currentTense.title.includes("(-er)")){
-            currentVerbType = reflexiveErVerbs;
-        } else if (currentTense.title.includes("(-ir)")){
-            currentVerbType = reflexiveIrVerbs;
-        }
-    } else if (currentTense.title.includes("(-ar)")){
-        currentVerbType = arVerbs;
-        console.log("currentVerbType:", currentVerbType);
-    } else if (currentTense.title.includes("(-er)")){
-        currentVerbType = erVerbs;
-        console.log("currentVerbType:", currentVerbType);
-    } else if (currentTense.title.includes("(-ir)")){
-        currentVerbType = irVerbs;
-        console.log("currentVerbType:", currentVerbType);
-    }
-}
+// function newVerbType(){
+//     if (currentTense.title.includes("Reflexive")){
+//         if (currentTense.title.includes("(-ar)")){
+//             currentVerbType = reflexiveArVerbs;
+//         } else if (currentTense.title.includes("(-er)")){
+//             currentVerbType = reflexiveErVerbs;
+//         } else if (currentTense.title.includes("(-ir)")){
+//             currentVerbType = reflexiveIrVerbs;
+//         }
+//     } else if (currentTense.title.includes("(-ar)")){
+//         currentVerbType = arVerbs;
+//         console.log("currentVerbType:", currentVerbType);
+//     } else if (currentTense.title.includes("(-er)")){
+//         currentVerbType = erVerbs;
+//         console.log("currentVerbType:", currentVerbType);
+//     } else if (currentTense.title.includes("(-ir)")){
+//         currentVerbType = irVerbs;
+//         console.log("currentVerbType:", currentVerbType);
+//     }
+// }
 
 function newVerb(){
-    currentVerb = Object.keys(currentVerbType)[Math.floor(Math.random() * Object.keys(currentVerbType).length)];
+    currentVerb = Object.keys(verbSample)[Math.floor(Math.random() * Object.keys(verbSample).length)];
     console.log("current verb: " + currentVerb);
 }
 
@@ -91,7 +107,7 @@ function newPerson(){
 }
 
 function updateEnglish(){
-    document.getElementById("english").innerHTML=currentVerbType[currentVerb] + "<br />" + "(" + persons[currentPerson] + ")";
+    document.getElementById("english").innerHTML=verbSample[currentVerb] + "<br />" + "(" + persons[currentPerson] + ")";
 }
 
 function newAnswer(){
