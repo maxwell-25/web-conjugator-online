@@ -130,13 +130,13 @@ function newTest(){
 function newTestElements(){
     console.log("currentSample: ", currentSample);
     currentTestCluster = currentSample[0];
-    console.log("currentTestCluster: ", currentTestCluster);
+    // console.log("currentTestCluster: ", currentTestCluster);
     currentTestTense = currentTestCluster[0];
-    console.log("currentTestTense: ", currentTestTense);
+    // console.log("currentTestTense: ", currentTestTense);
     currentTestVerb = currentTestCluster[1];
-    console.log("currentTestVerb: ", currentTestVerb);
+    // console.log("currentTestVerb: ", currentTestVerb);
     currentTestPerson = currentTestCluster[2];
-    console.log("currentTestPerson: ", currentTestPerson);
+    // console.log("currentTestPerson: ", currentTestPerson);
 
     updateEnglish();
 }
