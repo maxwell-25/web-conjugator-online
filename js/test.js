@@ -244,10 +244,11 @@ function tryAgain(){
 }
 
 function scoreBack(){
-    document.getElementById("test").style.display="block";
     document.getElementById("score-container").style.display="none";
+    document.getElementById("test").style.display="block";
 
     newSample();
+    newTestElements();
     resetTable();
     resetCounts();
 }
