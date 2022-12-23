@@ -307,8 +307,7 @@ td button {
 #word-count {
   width: 100%;
   font-size: 1.9rem;
-  color: blue;
-}
+  color: var(--my-blue);}
 
 #tense {
   width: 100%;
