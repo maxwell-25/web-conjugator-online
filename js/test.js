@@ -5,20 +5,20 @@ const verbs = Object.assign({}, arVerbs, erVerbs, irVerbs);
 
 const tenses = [
     presAr, presEr, presIr,
-    // pretAr, pretEr, pretIr,
-    // imperfAr, imperfEr, imperfIr,
-    // futAr, futEr, futIr,
-    // condAr, condEr, condIr,
-    // refAr, refEr, refIr,
-    // presConAr, presConEr, presConIr,
-    // perfAr, perfEr, perfIr,
-    // pluperfAr, pluperfEr, pluperfIr,
-    // presSubjAr, presSubjEr, presSubjIr,
-    // imperaPosAr, imperaPosEr, imperaPosIr,
-    // imperaNegAr, imperaNegEr, imperaNegIr
+    pretAr, pretEr, pretIr,
+    imperfAr, imperfEr, imperfIr,
+    futAr, futEr, futIr,
+    condAr, condEr, condIr,
+    refAr, refEr, refIr,
+    presConAr, presConEr, presConIr,
+    perfAr, perfEr, perfIr,
+    pluperfAr, pluperfEr, pluperfIr,
+    presSubjAr, presSubjEr, presSubjIr,
+    imperaPosAr, imperaPosEr, imperaPosIr,
+    imperaNegAr, imperaNegEr, imperaNegIr
 ];
 
-// const reflexiveTenses = [refAr, refEr, refIr];
+const reflexiveTenses = [refAr, refEr, refIr];
 
 const persons = {
     "yo": "I",
