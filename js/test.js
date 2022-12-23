@@ -18,7 +18,7 @@ const tenses = [
     // imperaNegAr, imperaNegEr, imperaNegIr
 ];
 
-const reflexiveTenses = [refAr, refEr, refIr];
+// const reflexiveTenses = [refAr, refEr, refIr];
 
 const persons = {
     "yo": "I",
@@ -103,11 +103,9 @@ function newSample(){
     newSampleVerbType();
     newSampleVerb();
     newSamplePerson();
-    // newAnswer();
-    // console.log("currentSampleTense: ", currentSampleTense);
-    // console.log("currentSampleVerb: ", currentSampleVerb);
-    // console.log("currentSamplePerson: ", currentSamplePerson);
-    // console.log("currentAnswer: ", currentAnswer);
+    console.log("currentSampleTense: ", currentSampleTense);
+    console.log("currentSampleVerb: ", currentSampleVerb);
+    console.log("currentSamplePerson: ", currentSamplePerson);
     currentSample = [];
     let currentCluster = [];
     for (let i = 0; i < 10; i++){
@@ -115,6 +113,7 @@ function newSample(){
         // console.log("currentCluster: ", currentCluster);
         currentSample.push(currentCluster);
         newSampleTense();
+        newSampleVerbType();
         newSampleVerb();
         newSamplePerson();
     }
