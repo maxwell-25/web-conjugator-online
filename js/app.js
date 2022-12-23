@@ -141,7 +141,6 @@ function saveScore(){
     document.getElementById("score").innerHTML="Score: " + percentage + "%";
     document.getElementById("app").style.display="none";
     document.getElementById("score-container").style.display="flex";
-
 }
 
 function resetCounts(){
