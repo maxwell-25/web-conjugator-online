@@ -44,11 +44,14 @@ let currentAnswer;
 
 let count = 0;
 let correct = 0;
+let percentage = 0;
 
 // | EVENT LISTENERS
 document.getElementById("test-show-ans").addEventListener("click", showAnswer);
 document.getElementById("test-got-it").addEventListener("click", gotIt);
 document.getElementById("test-not-it").addEventListener("click", tryAgain);
+
+document.getElementById("score-back-btn").addEventListener("click", scoreBack);
 
 // | TEST
 function newSampleTense(){
@@ -189,16 +192,19 @@ function answerView(){
     document.getElementById("test-not-it").style.display="inline-block";
 }
 
-function scoreView(){
-    document.getElementById("test-show-ans").style.display="none";
-
-    document.getElementById("spanish").innerHTML="";
-    document.getElementById("tense").innerHTML = "";
-    document.getElementById("english").innerHTML = "Accuracy: " + (correct/count*100).toFixed(2) + "%";
-}
-
 function resetTable(){
     document.getElementById("spanish").innerHTML="?";
+}
+
+function saveScore(){
+    document.getElementById("score").innerHTML="Score: " + percentage + "%";
+    document.getElementById("test").style.display="none";
+    document.getElementById("score-container").style.display="flex";
+}
+
+function resetCounts(){
+    count = 0;
+    correct = 0;
 }
 
 // | BUTTON FUNCTIONS
@@ -221,7 +227,8 @@ function gotIt(){
         newTest();
     } else {
         console.log("GAME OVER")
-        scoreView();
+        percentage = parseInt((correct/count)*100);
+        saveScore();
     }
 }
 
@@ -234,6 +241,15 @@ function tryAgain(){
     questionView();
     resetTable();
     newTest();
+}
+
+function scoreBack(){
+    document.getElementById("test").style.display="block";
+    document.getElementById("score-container").style.display="none";
+
+    newSample();
+    resetTable();
+    resetCounts();
 }
 
 newTest();
