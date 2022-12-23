@@ -191,7 +191,7 @@
   /* border: 2px solid red; */
 }
 
-#quit-btn {
+#app-quit-btn {
   position: absolute;
   right: 0.5rem;
   top: 0.5rem;
@@ -244,9 +244,9 @@ td button {
   color: var(--my-red);
 }
 
-/* || Score screen */
+/* || App score screen */
 
-#score-container {
+#app-score-container {
   display: none;
   flex-direction: column;
   align-items: center;
@@ -255,11 +255,11 @@ td button {
   height: 85vh;
 }
 
-#score {
+#app-score {
   font-size: 3rem;
 }
 
-#score-back-btn {
+#app-score-back-btn {
   font-size: 2rem;
   font-family: var(--paragraph-font);
   padding: 0.8rem;
@@ -278,7 +278,18 @@ td button {
   padding-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
-  /* border: 3px solid purple; */
+  border: 0.1rem solid var(--paragraph-color);
+}
+
+#test-quit-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  margin: 1vw;
+  border-radius: 1.5rem;
+  font-family: var(--paragraph-font);
+  font-size: 2rem;
+  background-color: white;
 }
 
 #test-body {
@@ -324,4 +335,26 @@ td button {
   margin-left: 0.5rem;
   background-color: white;
   color: var(--my-red);
+}
+
+/* || Test score screen */
+
+#test-score-container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 85vh;
+}
+
+#test-score {
+  font-size: 3rem;
+}
+
+#test-score-back-btn {
+  font-size: 2rem;
+  font-family: var(--paragraph-font);
+  padding: 0.8rem;
+  border-radius: 2rem;
 }

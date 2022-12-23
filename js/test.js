@@ -48,11 +48,12 @@ let correct = 0;
 let percentage = 0;
 
 // | EVENT LISTENERS
+document.getElementById("test-quit-btn").addEventListener("click", testQuit);
 document.getElementById("test-show-ans").addEventListener("click", showAnswer);
 document.getElementById("test-got-it").addEventListener("click", gotIt);
 document.getElementById("test-not-it").addEventListener("click", tryAgain);
 
-document.getElementById("score-back-btn").addEventListener("click", scoreBack);
+document.getElementById("test-score-back-btn").addEventListener("click", scoreBack);
 
 // | TEST
 function newSampleTense(){
@@ -199,9 +200,9 @@ function resetTable(){
 }
 
 function saveScore(){
-    document.getElementById("score").innerHTML="Score: " + percentage + "%";
+    document.getElementById("test-score").innerHTML="Score: " + percentage + "%";
     document.getElementById("test").style.display="none";
-    document.getElementById("score-container").style.display="flex";
+    document.getElementById("test-score-container").style.display="flex";
 }
 
 function resetCounts(){
@@ -245,8 +246,14 @@ function tryAgain(){
     newTest();
 }
 
+function testQuit(){
+    window.location.href = "./index.html";
+    resetTable();
+    resetCounts();
+}
+
 function scoreBack(){
-    document.getElementById("score-container").style.display="none";
+    document.getElementById("test-score-container").style.display="none";
     document.getElementById("test").style.display="block";
 
     newSample();

@@ -27,12 +27,12 @@ for (const tense of tenses) {
     document.getElementById(tense).addEventListener("click", selectTense);
 }
 
-document.getElementById("quit-btn").addEventListener("click", appQuit);
+document.getElementById("app-quit-btn").addEventListener("click", appQuit);
 document.getElementById("show-ans").addEventListener("click", showAnswer);
 document.getElementById("got-it").addEventListener("click", gotIt);
 document.getElementById("try-again").addEventListener("click", tryAgain);
 
-document.getElementById("score-back-btn").addEventListener("click", scoreBack);
+document.getElementById("app-score-back-btn").addEventListener("click", scoreBack);
 
 // | APP-MENU
 
@@ -138,9 +138,9 @@ function newPerson(){
 
 function saveScore(){
     // console.log("PERCENTAGE: ", percentage);
-    document.getElementById("score").innerHTML="Score: " + percentage + "%";
+    document.getElementById("app-score").innerHTML="Score: " + percentage + "%";
     document.getElementById("app").style.display="none";
-    document.getElementById("score-container").style.display="flex";
+    document.getElementById("app-score-container").style.display="flex";
 }
 
 function resetCounts(){
@@ -347,7 +347,7 @@ function appQuit(){
 
 function scoreBack(){
     document.getElementById("app-menu").style.display="block";
-    document.getElementById("score-container").style.display="none";
+    document.getElementById("app-score-container").style.display="none";
 
     resetTable();
     resetCounts();
