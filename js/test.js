@@ -29,15 +29,16 @@ const persons = {
     "ellos/ellas": "they"
 };
 
+let currentSampleTense;
 let currentSampleVerb;
 let currentSampleVerbType;
-let currentSampleTense;
 let currentSamplePerson;
 let currentSample;
 
 let currentTestCluster;
 let currentTestTense;
 let currentTestVerb;
+let currentTestVerbType;
 let currentTestPerson;
 
 let currentAnswer;
@@ -103,13 +104,13 @@ function newSample(){
     newSampleVerbType();
     newSampleVerb();
     newSamplePerson();
-    console.log("currentSampleTense: ", currentSampleTense);
-    console.log("currentSampleVerb: ", currentSampleVerb);
-    console.log("currentSamplePerson: ", currentSamplePerson);
+    // console.log("currentSampleTense: ", currentSampleTense);
+    // console.log("currentSampleVerb: ", currentSampleVerb);
+    // console.log("currentSamplePerson: ", currentSamplePerson);
     currentSample = [];
     let currentCluster = [];
     for (let i = 0; i < 10; i++){
-        currentCluster = [currentSampleTense, currentSampleVerb, currentSamplePerson];
+        currentCluster = [currentSampleTense, currentSampleVerbType, currentSampleVerb, currentSamplePerson];
         // console.log("currentCluster: ", currentCluster);
         currentSample.push(currentCluster);
         newSampleTense();
@@ -132,9 +133,11 @@ function newTestElements(){
     // console.log("currentTestCluster: ", currentTestCluster);
     currentTestTense = currentTestCluster[0];
     // console.log("currentTestTense: ", currentTestTense);
-    currentTestVerb = currentTestCluster[1];
+    currentTestVerbType = currentTestCluster[1];
+    // console.log("currenTestVerbType: ", currentTestVerbType);
+    currentTestVerb = currentTestCluster[2];
     // console.log("currentTestVerb: ", currentTestVerb);
-    currentTestPerson = currentTestCluster[2];
+    currentTestPerson = currentTestCluster[3];
     // console.log("currentTestPerson: ", currentTestPerson);
 
     updateEnglish();
@@ -174,9 +177,9 @@ function newAnswer(){
 }
 
 function updateEnglish(){
-   document.getElementById("tense").innerHTML=currentTestTense.title.slice(0, currentTestTense.title.indexOf("("));
-
-    document.getElementById("english").innerHTML=currentSampleVerbType[currentTestVerb] + "<br />" + "(" + persons[currentTestPerson] + ")";
+   document.getElementById("tense").innerHTML=currentTestTense.title.slice(0, currentTestTense.title.indexOf("("))
+   
+   document.getElementById("english").innerHTML=currentTestVerbType[currentTestVerb] + "<br />" + "(" + persons[currentTestPerson] + ")";
 }
 
 function questionView(){
