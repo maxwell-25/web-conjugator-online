@@ -141,6 +141,8 @@ function newTestElements(){
     currentTestPerson = currentTestCluster[3];
     // console.log("currentTestPerson: ", currentTestPerson);
 
+    document.getElementById("word-count").innerHTML = "Words remaining: " + currentSample.length;
+
     updateEnglish();
 }
 
