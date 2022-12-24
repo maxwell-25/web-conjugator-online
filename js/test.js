@@ -14,8 +14,6 @@ const tenses = [
     imperaNegAr, imperaNegEr, imperaNegIr
 ];
 
-const reflexiveTenses = [refAr, refEr, refIr];
-
 const persons = {
     "yo": "I",
     "tú": "you",
@@ -116,19 +114,19 @@ function newAnswer(){
     if(currentTestTense.title.includes("Present continuous") || currentTestTense.title.includes("Perfect") || currentTestTense.title.includes("Pluperfect")){
         currentAnswer = currentTestTense[currentTestPerson].split("/")[0] + " " + JSON.stringify(Object.keys(currentTestVerb)).slice(2,-4) + currentTestTense[currentTestPerson].split("-")[1];
     } else if (currentTestTense.title.includes("Future") || currentTestTense.title.includes("Conditional")) {
-        currentAnswer = JSON.stringify(Object.keys(currentTestVerb)) + currentTestTense[currentTestPerson].slice(1);
+        currentAnswer = JSON.stringify(Object.keys(currentTestVerb)).slice(2,-2) + currentTestTense[currentTestPerson].slice(1);
     } else if (currentTestTense.title.includes("Negative imperative")){
         currentAnswer = "no " + JSON.stringify(Object.keys(currentTestVerb)).slice(2,-4) + currentTestTense[currentTestPerson].slice(1);
     } else if(currentTestTense.title.includes("Reflexive")){
         if(currentTestTense.title.includes("-ar")){
             const reflexiveEnding = presAr;
-            currentAnswer = currentTestTense[currentTestPerson] + " " + currentTestVerb.slice(2,-4) + reflexiveEnding[currentTestPerson].slice(1);
+            currentAnswer = currentTestTense[currentTestPerson] + " " + JSON.stringify(Object.keys(currentTestVerb)).slice(2,-4) + reflexiveEnding[currentTestPerson].slice(1);
         } else if(currentSampleTense.title.includes("-er")){
             const reflexiveEnding = presEr;
-            currentAnswer = currentTestTense[currentTestPerson] + " " + JSON.stringify(Object.keys(currentTestVerb).slice(2,-4)) + reflexiveEnding[currentTestPerson].slice(1);
+            currentAnswer = currentTestTense[currentTestPerson] + " " + JSON.stringify(Object.keys(currentTestVerb)).slice(2, -4) + reflexiveEnding[currentTestPerson].slice(1);
         } else if(currentTestTense.title.includes("-ir")){
             const reflexiveEnding = presIr;
-            currentAnswer = currentTestTense[currentTestPerson] + " " + JSON.stringify(Object.keys(currentTestVerb).slice(2,-4)) + reflexiveEnding[currentTestPerson].slice(1);
+            currentAnswer = currentTestTense[currentTestPerson] + " " + JSON.stringify(Object.keys(currentTestVerb)).slice(2,-4) + reflexiveEnding[currentTestPerson].slice(1);
         }
     } else {
         currentAnswer = JSON.stringify(Object.keys(currentTestVerb)).slice(2,-4) + currentTestTense[currentTestPerson].slice(1);
