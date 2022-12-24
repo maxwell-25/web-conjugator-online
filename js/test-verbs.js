@@ -108,13 +108,13 @@ const irVerbs = {
 };
 
 const reflexiveArVerbs = {
-    lavar: "To wash"
+    lavar: "to wash"
 };
 
 const reflexiveErVerbs = {
-    atrever: "To dare"
+    atrever: "to dare"
 };
 
 const reflexiveIrVerbs = {
-    aburrir: "To get bored"
+    aburrir: "to get bored"
 };

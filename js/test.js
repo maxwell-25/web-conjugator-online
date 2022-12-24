@@ -1,8 +1,4 @@
 // | ARRAYS AND VARIABLES
-
-const verbs = Object.assign({}, arVerbs, erVerbs, irVerbs);
-// reflexiveArVerbs, reflexiveErVerbs, reflexiveIrVerbs
-
 const tenses = [
     presAr, presEr, presIr,
     pretAr, pretEr, pretIr,
@@ -30,15 +26,14 @@ const persons = {
 };
 
 let currentSampleTense;
-let currentSampleVerb;
-let currentSampleVerbType;
+let currentSampleVerb = {};
 let currentSamplePerson;
 let currentSample;
 
 let currentTestCluster;
 let currentTestTense;
-let currentTestVerb;
 let currentTestVerbType;
+let currentTestVerb;
 let currentTestPerson;
 
 let currentAnswer;
@@ -58,33 +53,15 @@ document.getElementById("test-score-back-btn").addEventListener("click", scoreBa
 // | TEST - GENERATE SAMPLE
 function newSampleTense(){
     currentSampleTense = tenses[Math.floor(Math.random() * tenses.length)];
-    // console.log("currentSampleTense.title: " + currentSampleTense.title);
-}
-
-function newSampleVerbType(){
-    if (currentSampleTense.title.includes("Reflexive")){
-        if (currentSampleTense.title.includes("(-ar)")){
-            currentSampleVerbType = reflexiveArVerbs;
-        } else if (currentSampleTense.title.includes("(-er)")){
-            currentSampleVerbType = reflexiveErVerbs;
-        } else if (currentSampleTense.title.includes("(-ir)")){
-            currentSampleVerbType = reflexiveIrVerbs;
-        }
-    } else if (currentSampleTense.title.includes("(-ar)")){
-        currentSampleVerbType = arVerbs;
-        // console.log("currentSampleVerbType:", currentSampleVerbType);
-    } else if (currentSampleTense.title.includes("(-er)")){
-        currentSampleVerbType = erVerbs;
-        // console.log("currentSampleVerbType:", currentSampleVerbType);
-    } else if (currentSampleTense.title.includes("(-ir)")){
-        currentSampleVerbType = irVerbs;
-        // console.log("currentSampleVerbType:", currentSampleVerbType);
-    }
 }
 
 function newSampleVerb(){
-    currentSampleVerb = Object.keys(currentSampleVerbType)[Math.floor(Math.random() * Object.keys(currentSampleVerbType).length)];
-    // console.log("currentSampleVerb: " + currentSampleVerb);
+    const verbs = [arVerbs, erVerbs, irVerbs, reflexiveArVerbs, reflexiveErVerbs, reflexiveIrVerbs];
+    let verbType = verbs[Math.floor(Math.random() * verbs.length)];
+    let keys = Object.keys(verbType);
+    let key = keys[Math.floor(Math.random() * keys.length)];
+    let value = verbType[key];
+    currentSampleVerb = {[key]: value};
 }
 
 function newSamplePerson(){
@@ -101,83 +78,20 @@ function newSamplePerson(){
 }
 
 function newSample(){
-    newSampleTense();
-    newSampleVerbType();
-    newSampleVerb();
-    newSamplePerson();
-    // console.log("currentSampleTense: ", currentSampleTense);
-    // console.log("currentSampleVerb: ", currentSampleVerb);
-    // console.log("currentSamplePerson: ", currentSamplePerson);
     currentSample = [];
-    let currentCluster = [];
+    let currentSampleCluster = [];
     for (let i = 0; i < 10; i++){
-        currentCluster = [currentSampleTense, currentSampleVerbType, currentSampleVerb, currentSamplePerson];
-        // console.log("currentCluster: ", currentCluster);
-        currentSample.push(currentCluster);
         newSampleTense();
-        newSampleVerbType();
         newSampleVerb();
         newSamplePerson();
+        currentSampleCluster = [currentSampleTense, currentSampleVerb, currentSamplePerson];
+        currentSample.push(currentSampleCluster);
     }
-    // console.log("currentSample: ", currentSample);
 }
 
 newSample();
 
 // | TEST - RUN TEST
-
-function newAnswer(){
-    if(currentTestTense.title.includes("Present continuous") || currentTestTense.title.includes("Perfect") || currentTestTense.title.includes("Pluperfect")){
-        currentAnswer = currentTestTense[currentTestPerson].split("/")[0] + " " + currentTestVerb.slice(0,-2) + currentTestTense[currentTestPerson].split("-")[1];
-        // document.getElementById("spanish").innerHTML = currentAnswer;
-    } else if (currentTestTense.title.includes("Future") || currentTestTense.title.includes("Conditional")) {
-        currentAnswer = currentTestVerb + currentTestTense[currentTestPerson].slice(1);
-        // document.getElementById("spanish").innerHTML = currentAnswer;
-    } else if (currentTestTense.title.includes("Negative imperative")){
-        currentAnswer = "no " + currentTestVerb.slice(0,-2) + currentTestTense[currentTestPerson].slice(1);
-        // document.getElementById("spanish").innerHTML = currentAnswer;
-    } else if(currentTestTense.title.includes("Reflexive")){
-        if(currentTestTense.title.includes("-ar")){
-            const reflexiveEnding = presAr;
-            // console.log("refEnding:", reflexiveEnding[currentSamplePerson]);
-            currentAnswer = currentTestTense[currentTestPerson] + " " + currentTestVerb.slice(0,-2) + reflexiveEnding[currentTestPerson].slice(1);
-            // document.getElementById("spanish").innerHTML = currentAnswer;
-        } else if(currentSampleTense.title.includes("-er")){
-            const reflexiveEnding = presEr;
-            // console.log("refEnding:", reflexiveEnding[currentSamplePerson]);
-            currentAnswer = currentTestTense[currentTestPerson] + " " + currentTestVerb.slice(0,-2) + reflexiveEnding[currentTestPerson].slice(1);
-            // document.getElementById("spanish").innerHTML = currentAnswer;
-        } else if(currentTestTense.title.includes("-ir")){
-            const reflexiveEnding = presIr;
-            // console.log("refEnding:", reflexiveEnding[currentSamplePerson]);
-            currentAnswer = currentTestTense[currentTestPerson] + " " + currentTestVerb.slice(0,-2) + reflexiveEnding[currentTestPerson].slice(1);
-            // document.getElementById("spanish").innerHTML = currentAnswer;
-        }
-    } else {
-        currentAnswer = currentTestVerb.slice(0,-2) + currentTestTense[currentTestPerson].slice(1);
-        // document.getElementById("spanish").innerHTML = currentAnswer;
-    }
-}
-
-function revealHint(){
-    console.log("currentAnswer: ", currentAnswer);
-    let hint = "";
-    let words = currentAnswer.split(" ");
-    console.log("words: ", words);
-    for (let word in words){
-        // console.log(words[word][0] + "...");
-        hint += words[word][0] + "... ";
-        hint.trim();
-    }
-    console.log("hint: ", hint); 
-    document.getElementById("spanish").innerHTML = hint;
-}
-
-function updateEnglish(){
-   document.getElementById("tense").innerHTML=currentTestTense.title.slice(0, currentTestTense.title.indexOf("("))
-   
-   document.getElementById("english").innerHTML=currentTestVerbType[currentTestVerb] + "<br />" + "(" + persons[currentTestPerson] + ")";
-}
 
 function newTest(){
     console.log("currentSample: ", currentSample);
@@ -185,11 +99,9 @@ function newTest(){
     // console.log("currentTestCluster: ", currentTestCluster);
     currentTestTense = currentTestCluster[0];
     // console.log("currentTestTense: ", currentTestTense);
-    currentTestVerbType = currentTestCluster[1];
-    // console.log("currenTestVerbType: ", currentTestVerbType);
-    currentTestVerb = currentTestCluster[2];
+    currentTestVerb = currentTestCluster[1];
     // console.log("currentTestVerb: ", currentTestVerb);
-    currentTestPerson = currentTestCluster[3];
+    currentTestPerson = currentTestCluster[2];
     // console.log("currentTestPerson: ", currentTestPerson);
 
     document.getElementById("word-count").innerHTML = "Words remaining: " + currentSample.length;
@@ -198,6 +110,50 @@ function newTest(){
 
     newAnswer();
     revealHint();
+}
+
+function newAnswer(){
+    if(currentTestTense.title.includes("Present continuous") || currentTestTense.title.includes("Perfect") || currentTestTense.title.includes("Pluperfect")){
+        currentAnswer = currentTestTense[currentTestPerson].split("/")[0] + " " + JSON.stringify(Object.keys(currentTestVerb)).slice(2,-4) + currentTestTense[currentTestPerson].split("-")[1];
+    } else if (currentTestTense.title.includes("Future") || currentTestTense.title.includes("Conditional")) {
+        currentAnswer = JSON.stringify(Object.keys(currentTestVerb)) + currentTestTense[currentTestPerson].slice(1);
+    } else if (currentTestTense.title.includes("Negative imperative")){
+        currentAnswer = "no " + JSON.stringify(Object.keys(currentTestVerb)).slice(2,-4) + currentTestTense[currentTestPerson].slice(1);
+    } else if(currentTestTense.title.includes("Reflexive")){
+        if(currentTestTense.title.includes("-ar")){
+            const reflexiveEnding = presAr;
+            currentAnswer = currentTestTense[currentTestPerson] + " " + currentTestVerb.slice(2,-4) + reflexiveEnding[currentTestPerson].slice(1);
+        } else if(currentSampleTense.title.includes("-er")){
+            const reflexiveEnding = presEr;
+            currentAnswer = currentTestTense[currentTestPerson] + " " + JSON.stringify(Object.keys(currentTestVerb).slice(2,-4)) + reflexiveEnding[currentTestPerson].slice(1);
+        } else if(currentTestTense.title.includes("-ir")){
+            const reflexiveEnding = presIr;
+            currentAnswer = currentTestTense[currentTestPerson] + " " + JSON.stringify(Object.keys(currentTestVerb).slice(2,-4)) + reflexiveEnding[currentTestPerson].slice(1);
+        }
+    } else {
+        currentAnswer = JSON.stringify(Object.keys(currentTestVerb)).slice(2,-4) + currentTestTense[currentTestPerson].slice(1);
+    }
+    // console.log("answer: ", currentAnswer);
+}
+
+function revealHint(){
+    // console.log("currentAnswer: ", currentAnswer);
+    let hint = "";
+    let words = currentAnswer.split(" ");
+    // console.log("words: ", words);
+    for (let word in words){
+        // console.log(words[word][0] + "...");
+        hint += words[word][0] + "... ";
+        hint.trim();
+    }
+    // console.log("hint: ", hint); 
+    document.getElementById("spanish").innerHTML = hint;
+}
+
+function updateEnglish(){
+   document.getElementById("tense").innerHTML=currentTestTense.title.slice(0, currentTestTense.title.indexOf("("))
+   
+   document.getElementById("english").innerHTML=JSON.stringify(Object.values(currentTestVerb)).slice(2, -2) + "<br />" + "(" + persons[currentTestPerson] + ")";
 }
 
 function revealAnswer(){
