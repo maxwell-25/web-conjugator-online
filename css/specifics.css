@@ -304,10 +304,15 @@ td button {
   /* border: 2px solid green; */
 }
 
+#spanish {
+  color: var(--my-red);
+}
+
 #word-count {
   width: 100%;
   font-size: 1.9rem;
-  color: var(--my-blue);}
+  color: var(--my-blue);
+}
 
 #tense {
   width: 100%;
