@@ -193,9 +193,9 @@
 
 #app-quit-btn {
   position: absolute;
-  right: 0.5rem;
-  top: 0.5rem;
-  margin: 1vw;
+  right: 0.4rem;
+  top: 0.4rem;
+  margin: 0.2vw;
   border-radius: 1.5rem;
   font-family: var(--paragraph-font);
   font-size: 2rem;
