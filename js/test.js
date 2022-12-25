@@ -65,13 +65,15 @@ function newSampleVerb(){
         } else if (currentSampleTense.title.includes("(-ir)")){
             verbType = reflexiveIrVerbs;
         }
-    } else if (currentSampleTense.title.includes("(-ar)")){
+    } else if (!currentSampleTense.title.includes("Reflexive")){
+        if (currentSampleTense.title.includes("(-ar)")){
         verbType = arVerbs;
     } else if (currentSampleTense.title.includes("(-er)")){
         verbType = erVerbs;
     } else if (currentSampleTense.title.includes("(-ir)")){
         verbType = irVerbs;
     }
+}
 
     let keys = Object.keys(verbType);
     let key = keys[Math.floor(Math.random() * keys.length)];
@@ -138,7 +140,7 @@ function newAnswer(){
         if(currentTestTense.title.includes("-ar")){
             const reflexiveEnding = presAr;
             currentAnswer = currentTestTense[currentTestPerson] + " " + JSON.stringify(Object.keys(currentTestVerb)).slice(2,-4) + reflexiveEnding[currentTestPerson].slice(1);
-        } else if(currentSampleTense.title.includes("-er")){
+        } else if(currentTestTense.title.includes("-er")){
             const reflexiveEnding = presEr;
             currentAnswer = currentTestTense[currentTestPerson] + " " + JSON.stringify(Object.keys(currentTestVerb)).slice(2, -4) + reflexiveEnding[currentTestPerson].slice(1);
         } else if(currentTestTense.title.includes("-ir")){
@@ -148,7 +150,7 @@ function newAnswer(){
     } else {
         currentAnswer = JSON.stringify(Object.keys(currentTestVerb)).slice(2,-4) + currentTestTense[currentTestPerson].slice(1);
     }
-    // console.log("answer: ", currentAnswer);
+    console.log("answer: ", currentAnswer);
 }
 
 function revealHint(){
