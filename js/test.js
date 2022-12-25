@@ -54,8 +54,25 @@ function newSampleTense(){
 }
 
 function newSampleVerb(){
-    const verbs = [arVerbs, erVerbs, irVerbs, reflexiveArVerbs, reflexiveErVerbs, reflexiveIrVerbs];
-    let verbType = verbs[Math.floor(Math.random() * verbs.length)];
+    // const allVerbs = [arVerbs, erVerbs, irVerbs, reflexiveArVerbs, reflexiveErVerbs, reflexiveIrVerbs];
+
+    let verbType;
+    if (currentSampleTense.title.includes("Reflexive")){
+        if (currentSampleTense.title.includes("(-ar)")){
+            verbType = reflexiveArVerbs;
+        } else if (currentSampleTense.title.includes("(-er)")){
+            verbType = reflexiveErVerbs;
+        } else if (currentSampleTense.title.includes("(-ir)")){
+            verbType = reflexiveIrVerbs;
+        }
+    } else if (currentSampleTense.title.includes("(-ar)")){
+        verbType = arVerbs;
+    } else if (currentSampleTense.title.includes("(-er)")){
+        verbType = erVerbs;
+    } else if (currentSampleTense.title.includes("(-ir)")){
+        verbType = irVerbs;
+    }
+
     let keys = Object.keys(verbType);
     let key = keys[Math.floor(Math.random() * keys.length)];
     let value = verbType[key];
