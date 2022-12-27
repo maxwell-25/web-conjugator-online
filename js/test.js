@@ -121,7 +121,7 @@ function newTest(){
     currentTestPerson = currentTestCluster[2];
     // console.log("currentTestPerson: ", currentTestPerson);
 
-    document.getElementById("word-count").innerHTML = "Words remaining: " + currentSample.length;
+    document.getElementById("word-count").innerHTML = `Words remaining: ${currentSample.length}`;
 
     updateEnglish();
 
@@ -194,7 +194,7 @@ function resetTable(){
 }
 
 function saveScore(){
-    document.getElementById("test-score").innerHTML="Score: " + percentage + "%";
+    document.getElementById("test-score").innerHTML=`Score: ${percentage}%`;
     document.getElementById("test").style.display="none";
     document.getElementById("test-score-container").style.display="flex";
 }

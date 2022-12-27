@@ -48,6 +48,7 @@ function appView(){
 // | MAIN
 
 // Generate currentTenseDicts as nested arrays based on currentTense
+// "JSON.parse(JSON.stringify()) clones the dictionaries
 function newTenseDicts(){
     if (currentTense === "pres"){
         currentTenseDicts = [JSON.parse(JSON.stringify(presAr)), JSON.parse(JSON.stringify(presEr)), JSON.parse(JSON.stringify(presIr))];
@@ -135,7 +136,7 @@ function newPerson(){
 
 function saveScore(){
     // console.log("PERCENTAGE: ", percentage);
-    document.getElementById("app-score").innerHTML="Score: " + percentage + "%";
+    document.getElementById("app-score").innerHTML=`Score: ${percentage}%`;
     document.getElementById("app").style.display="none";
     document.getElementById("app-score-container").style.display="flex";
 }
