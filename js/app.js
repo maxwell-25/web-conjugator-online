@@ -1,5 +1,3 @@
-// I THINK I CAN MASSIVELY CUT DOWN THE CODE IN APP.JS (ALL THE "IF TENSE ===" STUFF) BY USING VARIABLES IN MY CONST ARRAYS RATHER THAN STRINGS – AS I'VE DONE IN TEST.JS
-
 // | ARRAYS AND VARIABLES
 
 const personIds = ["yo-per", "tú-per", "él/ella-per", "nosotros/nosotras-per", "vosotros/vosotras-per", "ellos/ellas-per"];
@@ -10,7 +8,6 @@ const exampleIds = ["yo-ex", "tú-ex", "él/ella-ex", "nosotros/nosotras-ex", "v
 
 const tenses = ["pres", "pret", "imperf", "fut", "cond", "ref", "presCon", "perf", "pluperf", "presSubj", "imperaPos", "imperaNeg"];
 
-// DO I NEED TO REWRITE APP TO REMOVE GLOBAL VARS?
 let count = 0;
 let correct = 0;
 let percentage = 0;
